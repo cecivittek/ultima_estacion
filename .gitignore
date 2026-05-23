@@ -1,3 +1,10 @@
+ultima_estacion/Library/
+ultima_estacion/Temp/
+ultima_estacion/Logs/
+ultima_estacion/UserSettings/
+ultima_estacion/obj/
+ultima_estacion/Build/
+ultima_estacion/Builds/
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
