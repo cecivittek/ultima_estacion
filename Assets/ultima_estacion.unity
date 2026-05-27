@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 1489916313}
   - component: {fileID: 1489916312}
   - component: {fileID: 1489916311}
+  - component: {fileID: 1489916314}
   m_Layer: 0
   m_Name: PPRINCIPAL
   m_TagString: Untagged
@@ -325,6 +326,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1489916314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489916310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddb997a41d4bf348b3986d51f25cd75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PP_CONTROLADOR
+  velocidad: 3
 --- !u!1 &1954960223
 GameObject:
   m_ObjectHideFlags: 0
