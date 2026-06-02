@@ -409,6 +409,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjetoSeleccionable
   nombreObjeto: celular
   escenaDestino: ultima_estacion_celular
+  jugador: {fileID: 5121665463724525256, guid: 376a70a4b45ad08439554ffbf2440ce9, type: 3}
+  distancia: 0
 --- !u!61 &642269804
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -720,6 +722,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjetoSeleccionable
   nombreObjeto: mate
   escenaDestino: ultima_estacion_mate
+  jugador: {fileID: 5121665463724525256, guid: 376a70a4b45ad08439554ffbf2440ce9, type: 3}
+  distancia: 0
 --- !u!61 &1714094546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -873,6 +877,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjetoSeleccionable
   nombreObjeto: pelota
   escenaDestino: ultima_estacion
+  jugador: {fileID: 5121665463724525256, guid: 376a70a4b45ad08439554ffbf2440ce9, type: 3}
+  distancia: 0
 --- !u!58 &2086357198
 CircleCollider2D:
   m_ObjectHideFlags: 0
