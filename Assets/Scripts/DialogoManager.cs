@@ -136,11 +136,13 @@ public class DialogoManager : MonoBehaviour
     };
 
     void Update()
-    {
-        if (dialogoActivo && Input.GetKeyDown(KeyCode.Space))
-        {
-            SiguienteLinea();
-        }
+    {if (Input.GetKeyDown(KeyCode.Alpha1)) IniciarDialogoMessi();
+if (Input.GetKeyDown(KeyCode.Alpha2)) IniciarDialogoDuki();
+if (Input.GetKeyDown(KeyCode.Alpha3)) IniciarDialogoMilagros();
+if (Input.GetKeyDown(KeyCode.Alpha4)) IniciarDialogoWanda();
+if (Input.GetKeyDown(KeyCode.Alpha5)) IniciarDialogoSusana();
+if (Input.GetKeyDown(KeyCode.Alpha6)) IniciarDialogoFrancella();
+if (Input.GetKeyDown(KeyCode.Alpha7)) IniciarDialogoVagabunda();
     }
 
     // ===================== INICIAR DIALOGOS =====================
