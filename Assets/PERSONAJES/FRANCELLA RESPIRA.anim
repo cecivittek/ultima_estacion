@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PP_RESPIRA
+  m_Name: FRANCELLA RESPIRA
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1161934938, guid: a9b47263f43a665489320e87ed666a11, type: 3}
-    - time: 0.6333333
-      value: {fileID: -458165164, guid: a9b47263f43a665489320e87ed666a11, type: 3}
-    - time: 1.3666667
-      value: {fileID: 1162990380, guid: a9b47263f43a665489320e87ed666a11, type: 3}
+      value: {fileID: -52775966, guid: bf84ac9c23ce666498d6acaa24d837d1, type: 3}
+    - time: 1
+      value: {fileID: 786301892, guid: bf84ac9c23ce666498d6acaa24d837d1, type: 3}
     - time: 2
-      value: {fileID: 1162990380, guid: a9b47263f43a665489320e87ed666a11, type: 3}
+      value: {fileID: 1887703966, guid: bf84ac9c23ce666498d6acaa24d837d1, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,10 +48,9 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1161934938, guid: a9b47263f43a665489320e87ed666a11, type: 3}
-    - {fileID: -458165164, guid: a9b47263f43a665489320e87ed666a11, type: 3}
-    - {fileID: 1162990380, guid: a9b47263f43a665489320e87ed666a11, type: 3}
-    - {fileID: 1162990380, guid: a9b47263f43a665489320e87ed666a11, type: 3}
+    - {fileID: -52775966, guid: bf84ac9c23ce666498d6acaa24d837d1, type: 3}
+    - {fileID: 786301892, guid: bf84ac9c23ce666498d6acaa24d837d1, type: 3}
+    - {fileID: 1887703966, guid: bf84ac9c23ce666498d6acaa24d837d1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
