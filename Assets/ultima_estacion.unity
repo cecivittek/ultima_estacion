@@ -199,6 +199,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd3814874c63487a9cd6bfb7c5ad5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogoManager
+  textNombre: {fileID: 0}
+  textDialogo: {fileID: 0}
+  botonSiguiente: {fileID: 0}
+  botonDarObjeto: {fileID: 0}
+  panelDialogo: {fileID: 0}
+  fondoDialogos: {fileID: 0}
+  fondoPrincipal: {fileID: 0}
 --- !u!4 &189002318
 Transform:
   m_ObjectHideFlags: 0
@@ -467,7 +474,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -1255,7 +1262,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
