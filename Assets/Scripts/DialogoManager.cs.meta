@@ -1,2 +1,26 @@
 fileFormatVersion: 2
 guid: edd3814874c63487a9cd6bfb7c5ad5a4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - textNombre: {instanceID: 0}
+  - textDialogo: {instanceID: 0}
+  - botonSiguiente: {instanceID: 0}
+  - botonDarObjeto: {instanceID: 0}
+  - panelDialogo: {instanceID: 0}
+  - fondoDialogos: {instanceID: 0}
+  - fondoPrincipal: {instanceID: 0}
+  - personajeDialogo: {instanceID: 0}
+  - spriteMessiCharla: {fileID: -175557357, guid: 328fd30036b21aa4c8b1d7cb6c6389df, type: 3}
+  - spriteDukiCharla: {instanceID: 0}
+  - spriteMilagrosCharla: {instanceID: 0}
+  - spriteWandaCharla: {instanceID: 0}
+  - spriteSusanaCharla: {instanceID: 0}
+  - spriteFrancellaCharla: {instanceID: 0}
+  - spriteVagabundaCharla: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
