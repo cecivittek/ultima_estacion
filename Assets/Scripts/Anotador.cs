@@ -6,8 +6,8 @@ public class Anotador : MonoBehaviour
 {
     public static Anotador instancia;
 
-    public GameObject prefabPista;  // un Text con el formato de cada pista
-    public Transform contenido;     // el Content del Scroll View
+    public GameObject prefabPista;
+    public Transform contenido;
 
     void Awake()
     {
@@ -16,8 +16,11 @@ public class Anotador : MonoBehaviour
 
     public void AgregarPista(string personaje, string pista)
     {
+        if (prefabPista == null || contenido == null) return;
+
         GameObject nuevaPista = Instantiate(prefabPista, contenido);
         TextMeshProUGUI texto = nuevaPista.GetComponent<TextMeshProUGUI>();
-        texto.text = "• " + personaje + ": " + pista;
+        if (texto != null)
+            texto.text = "<b>" + personaje + "</b>\n" + pista;
     }
 }

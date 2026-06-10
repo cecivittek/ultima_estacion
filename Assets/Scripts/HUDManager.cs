@@ -28,6 +28,12 @@ public class HUDManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            panelInventario.SetActive(false);
+            panelAnotador.SetActive(false);
+        }
+
         if (estacionActual >= totalEstaciones) return;
 
         timer += Time.deltaTime;
@@ -53,9 +59,19 @@ public class HUDManager : MonoBehaviour
         panelAnotador.SetActive(false);
     }
 
+    public void CerrarInventario()
+    {
+        panelInventario.SetActive(false);
+    }
+
     public void AbrirAnotador()
     {
         panelAnotador.SetActive(!panelAnotador.activeSelf);
         panelInventario.SetActive(false);
+    }
+
+    public void CerrarAnotador()
+    {
+        panelAnotador.SetActive(false);
     }
 }

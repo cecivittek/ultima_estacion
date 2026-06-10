@@ -68,8 +68,8 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Duki", "¿Qué onda? Todo esto es una locura, bro. Venía a bancar a De Paul y ahora estoy huyendo de un T-Rex. Si esto no es una letra de trap, no sé qué es." },
         new string[] { "Jugador", "¿Escuchaste algo raro?" },
         new string[] { "Duki", "Mirá, tenía un auricular puesto pero el otro libre. Escuché una voz decir 'Catedral' con demasiada calma. En medio del caos, eso no es normal, bro. Y escuché algo como 'ya está todo listo'. Dicho bajito. Como para sí mismo." },
-        new string[] { "Jugador", "[Dar cigarrillo]" },
-        new string[] { "Duki", "¡Naaa, como sabías que necesitaba uno? En este contexto no hago preguntas. Dale, te cuento algo más." },
+        new string[] { "Jugador", "[Dar Copa del Mundo]" },
+        new string[] { "Duki", "¡La copa del mundo, bro! Venía a bancar a De Paul y ahora la tengo en las manos. Okay, esto no se lo cuento a nadie. Dale, te cuento algo más." },
         new string[] { "Duki", "La voz que escuché era de una mina. Hablaba en voz muy baja pero era claramente una mujer. Dijo algo raro: 'me voy a hacer viral'. En medio de un ataque de dinosaurios. Alguien que piensa en las redes ahora... me parece algo tétrico." },
         new string[] { "Duki", "Tomá. No hago favores pero acá tenés. Mi autógrafo." },
         new string[] { "Duki", "Ya está, bro. No sé nada más. Estoy inspirándome para componer un nuevo tema. No me interrumpas." },
@@ -171,7 +171,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Jugador", "[Dar mate]" },
         new string[] { "Vagabundo", "Mmm que rico, está un poco lavado pero por lo menos me calienta el cuerpo. Ya que estamos girando el mate, te cuento." },
         new string[] { "Vagabundo", "Vi a alguien que cuando encontraron el control, miró a los demás antes de mirarlo. No sé el nombre, tenía tatuajes creo." },
-        new string[] { "Vagabundo", "Tomá igual, en este quilombo no soy el único que necesita uno." },
+        new string[] { "Vagabundo", "Esto era lo que necesitaba. Gracias, pibe." },
         new string[] { "Vagabundo", "Ya te dije todo lo que sé. Déjame tranquilo que el subte me da sueño." },
     };
 
@@ -240,7 +240,7 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoDuki()
     {
         personajeActual = "Duki";
-        dialogoActual = tieneCigarrillo ? dialogoDukiConObjeto : dialogoDukiSinObjeto;
+        dialogoActual = tieneCopa ? dialogoDukiConObjeto : dialogoDukiSinObjeto;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteDukiCharla);
         IniciarDialogo();
     }
@@ -332,30 +332,49 @@ public class DialogoManager : MonoBehaviour
             case "Messi":
                 tienePelota = false;
                 tieneCopa = true;
+                InventarioManager.instancia?.QuitarObjeto("pelota");
+                InventarioManager.instancia?.AgregarObjeto("copa");
+                Anotador.instancia?.AgregarPista("Messi", "Exhaló con satisfacción cuando cerraron las puertas. Estaba cantando. Cree que llegar a Catedral está asegurado.");
                 break;
             case "Duki":
-                tieneCigarrillo = false;
+                tieneCopa = false;
                 tieneAutografo = true;
+                InventarioManager.instancia?.QuitarObjeto("copa");
+                InventarioManager.instancia?.AgregarObjeto("autografo");
+                Anotador.instancia?.AgregarPista("Duki", "Era una mujer. Dijo 'me voy a hacer viral' en medio del caos.");
                 break;
             case "Milagros":
                 tieneAutografo = false;
                 tieneScreenshots = true;
+                InventarioManager.instancia?.QuitarObjeto("autografo");
+                InventarioManager.instancia?.AgregarObjeto("screenshots");
+                Anotador.instancia?.AgregarPista("Milagros", "Vi a alguien con el control antes de subir. Lo guardó al ser observada. Chica con cadenas y ropa oscura.");
                 break;
             case "Wanda":
                 tieneScreenshots = false;
                 tieneCartera = true;
+                InventarioManager.instancia?.QuitarObjeto("screenshots");
+                InventarioManager.instancia?.AgregarObjeto("cartera");
+                Anotador.instancia?.AgregarPista("Wanda", "Se para como en un escenario. Alguien del espectáculo con experiencia, no es novata.");
                 break;
             case "Susana":
                 tieneCartera = false;
                 tieneMartinFierro = true;
+                InventarioManager.instancia?.QuitarObjeto("cartera");
+                InventarioManager.instancia?.AgregarObjeto("martinFierro");
+                Anotador.instancia?.AgregarPista("Susana", "Cuando encontraron el control, miró a los demás en vez de mirarlo. Joven, del ambiente artístico.");
                 break;
             case "Francella":
                 tieneMartinFierro = false;
                 tieneMate = true;
+                InventarioManager.instancia?.QuitarObjeto("martinFierro");
+                InventarioManager.instancia?.AgregarObjeto("mate");
+                Anotador.instancia?.AgregarPista("Francella", "Acariciaba el control con el pulgar. Tenía anillos grandes.");
                 break;
             case "Vagabundo":
                 tieneMate = false;
-                tieneCigarrillo = true;
+                InventarioManager.instancia?.QuitarObjeto("mate");
+                Anotador.instancia?.AgregarPista("Vagabundo", "Miró a los demás antes de mirar el control. Tenía tatuajes.");
                 break;
         }
         SiguienteLinea();
