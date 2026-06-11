@@ -17,7 +17,8 @@ public class InventarioManager : MonoBehaviour
     public Sprite spriteMartinFierro;
     public Sprite spriteMate;
 
-    public float tamanoSlot = 100f;
+    [Header("Layout")]
+    public float escala = 80f;
     public float espaciado = 10f;
     public Vector2 posicionInicio = Vector2.zero;
 
@@ -55,27 +56,37 @@ public class InventarioManager : MonoBehaviour
     {
         if (slots.ContainsKey(id)) return;
 
-        GameObject slot = new GameObject(id, typeof(RectTransform), typeof(Image));
+        // Slot: container invisible, solo para posicionamiento
+        GameObject slot = new GameObject(id, typeof(RectTransform));
         slot.transform.SetParent(contenido, false);
+        slot.transform.localScale = Vector3.one;
 
-        RectTransform rt = slot.GetComponent<RectTransform>();
-        rt.anchorMin = new Vector2(0, 0.5f);
-        rt.anchorMax = new Vector2(0, 0.5f);
-        rt.pivot     = new Vector2(0, 0.5f);
-        rt.sizeDelta = new Vector2(100f, 100f);
-        rt.anchoredPosition = posicionInicio + new Vector2(slots.Count * (tamanoSlot + espaciado), 0);
+        RectTransform slotRt = slot.GetComponent<RectTransform>();
+        slotRt.anchorMin = new Vector2(0, 0.5f);
+        slotRt.anchorMax = new Vector2(0, 0.5f);
+        slotRt.pivot     = new Vector2(0, 0.5f);
+        slotRt.sizeDelta = new Vector2(escala, escala);
+        slotRt.anchoredPosition = posicionInicio + new Vector2(slots.Count * (escala + espaciado), 0);
 
-        float escala = tamanoSlot / 100f;
-        slot.transform.localScale = new Vector3(escala, escala, 1f);
+        // Sprite: Image con RectTransform propio, escalable
+        GameObject spriteGO = new GameObject("sprite", typeof(RectTransform), typeof(Image));
+        spriteGO.transform.SetParent(slot.transform, false);
+        spriteGO.transform.localScale = Vector3.one;
 
-        Image img = slot.GetComponent<Image>();
+        RectTransform spriteRt = spriteGO.GetComponent<RectTransform>();
+        spriteRt.anchorMin = new Vector2(0.5f, 0.5f);
+        spriteRt.anchorMax = new Vector2(0.5f, 0.5f);
+        spriteRt.pivot     = new Vector2(0.5f, 0.5f);
+        spriteRt.sizeDelta = new Vector2(escala, escala);
+        spriteRt.anchoredPosition = Vector2.zero;
+
+        Image img = spriteGO.GetComponent<Image>();
         if (sprites.TryGetValue(id, out Sprite sp) && sp != null)
             img.sprite = sp;
         img.preserveAspect = true;
         img.color = Color.white;
 
         slots[id] = slot;
-        Debug.Log("Inventario: agregado " + id + " en posicion " + rt.anchoredPosition);
     }
 
     public void QuitarObjeto(string id)
@@ -88,21 +99,29 @@ public class InventarioManager : MonoBehaviour
 
     void RearmarPosiciones()
     {
-        float escala = tamanoSlot / 100f;
         int i = 0;
         foreach (var s in slots.Values)
         {
             if (s == null) continue;
-            s.transform.localScale = new Vector3(escala, escala, 1f);
-            RectTransform rt = s.GetComponent<RectTransform>();
-            rt.anchoredPosition = posicionInicio + new Vector2(i * (tamanoSlot + espaciado), 0);
+
+            RectTransform slotRt = s.GetComponent<RectTransform>();
+            slotRt.sizeDelta = new Vector2(escala, escala);
+            slotRt.anchoredPosition = posicionInicio + new Vector2(i * (escala + espaciado), 0);
+
+            Transform spriteT = s.transform.Find("sprite");
+            if (spriteT != null)
+            {
+                RectTransform spriteRt = spriteT.GetComponent<RectTransform>();
+                spriteRt.sizeDelta = new Vector2(escala, escala);
+            }
+
             i++;
         }
     }
 
     void OnValidate()
     {
-        tamanoSlot = Mathf.Max(tamanoSlot, 10f);
+        escala = Mathf.Max(escala, 10f);
         if (Application.isPlaying)
             RearmarPosiciones();
     }

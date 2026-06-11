@@ -363,7 +363,7 @@ MonoBehaviour:
   spriteCartera: {fileID: 21300000, guid: 114d004f99a706c47b100643185b32c5, type: 3}
   spriteMartinFierro: {fileID: 21300000, guid: 95991daa1aee8de408cb5fb1f064fd77, type: 3}
   spriteMate: {fileID: 21300000, guid: 2c25b790c3bb875488d97d2a7896db26, type: 3}
-  tamanoSlot: 100
+  escala: 250
   espaciado: 10
   posicionInicio: {x: 0, y: 0}
 --- !u!4 &165900378
