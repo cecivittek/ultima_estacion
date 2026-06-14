@@ -11,7 +11,7 @@ public class Introimagenes : MonoBehaviour
 
     void Start()
     {
-        MostrarImagen(01);
+        MostrarImagen(00);
     }
 
     public void Siguiente()
