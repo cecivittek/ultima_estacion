@@ -14,25 +14,32 @@ public class PersonajeDialogo : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    void LateUpdate()
+   void LateUpdate()
+{
+    if (camara != null)
     {
+        transform.position = new Vector3(
+            camara.position.x + 3f,
+            camara.position.y - 1.5f,
+            0f
+        );
+    }
+}
+
+   public void MostrarPersonaje(Sprite sprite)
+    {
+        sr.sprite = sprite;
+        gameObject.SetActive(true);
+        sr.sortingOrder = 100;  // bien adelante, que nada lo tape
         if (camara != null)
         {
             transform.position = new Vector3(
                 camara.position.x + 3f,
-                camara.position.y -1.5f,
+                camara.position.y - 1.5f,
                 0f
             );
+            
         }
-    }
-
-    public void MostrarPersonaje(Sprite sprite)
-    {
-        Debug.Log("MostrarPersonaje llamado!");
-        sr.sprite = sprite;
-        gameObject.SetActive(true);
-        transform.position = new Vector3(camara.position.x + 3f, camara.position.y, 0f);
-        Debug.Log("Posicion: " + transform.position);
     }
 
     public void OcultarPersonaje()

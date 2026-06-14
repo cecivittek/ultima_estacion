@@ -10,11 +10,22 @@ public class DialogoManager : MonoBehaviour
     public TextMeshProUGUI textDialogo;
     public Button botonSiguiente;
     public Button botonDarObjeto;
+    public Button botonCerrar;
     public GameObject panelDialogo;
     public GameObject fondoDialogos;
     public GameObject fondoPrincipal;
+    public GameObject panelInventario;
+    public GameObject hud;
+    public GameObject personajesGrupo;
     public PersonajeDialogo personajeDialogo;
     public Sprite spriteMessiCharla;
+    public Sprite spriteMessiContento;
+    public Sprite spriteDukiContento;
+    public Sprite spriteMilagrosContento;
+    public Sprite spriteWandaContento;
+    public Sprite spriteSusanaContento;
+    public Sprite spriteFrancellaContento;
+    public Sprite spriteVagabundoContento;
     public Sprite spriteDukiCharla;
     public Sprite spriteMilagrosCharla;
     public Sprite spriteWandaCharla;
@@ -34,6 +45,17 @@ public class DialogoManager : MonoBehaviour
     private int indiceDialogo = 0;
     private string[][] dialogoActual;
     private string personajeActual = "";
+    // Que objeto es el correcto para cada personaje
+    private Dictionary<string, string> objetoCorrecto = new Dictionary<string, string>
+    {
+        { "Messi",     "pelota" },
+        { "Duki",      "copa" },
+        { "Milagros",  "autografo" },
+        { "Wanda",     "screenshots" },
+        { "Susana",    "cartera" },
+        { "Francella", "martinFierro" },
+        { "Vagabundo", "mate" },
+    };
 
     private string[][] dialogoMessiSinObjeto = new string[][]
     {
@@ -214,16 +236,31 @@ public class DialogoManager : MonoBehaviour
                 textDialogo = t;
         }
 
-        GameObject[] todosGO = Resources.FindObjectsOfTypeAll<GameObject>();
+      GameObject[] todosGO = Resources.FindObjectsOfTypeAll<GameObject>();
         foreach (GameObject go in todosGO)
         {
             if (go.scene.isLoaded && go.name == "PanelDialogo")
                 panelDialogo = go;
+            if (go.scene.isLoaded && go.name == "HUD")
+                hud = go;
+                if (go.scene.isLoaded && go.name == "PERSONAJES")
+                personajesGrupo = go;
+                if (go.scene.isLoaded && go.name == "PanelInventario")
+                panelInventario = go;
+        }
+
+        Button[] botonesCerrar = Resources.FindObjectsOfTypeAll<Button>();
+        foreach (Button b in botonesCerrar)
+        {
+            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonCerrar")
+                botonCerrar = b;
         }
 
         if (botonSiguiente != null) botonSiguiente.onClick.AddListener(SiguienteLinea);
-        if (botonDarObjeto != null) botonDarObjeto.onClick.AddListener(DarObjeto);
+        if (botonDarObjeto != null) botonDarObjeto.onClick.AddListener(AbrirInventarioParaElegir);
+        if (botonCerrar != null) botonCerrar.onClick.AddListener(CerrarDialogo);
         if (botonDarObjeto != null) botonDarObjeto.gameObject.SetActive(false);
+
 
         Debug.Log("botonSiguiente: " + botonSiguiente);
         Debug.Log("panelDialogo: " + panelDialogo);
@@ -232,7 +269,7 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoMessi()
     {
         personajeActual = "Messi";
-        dialogoActual = tienePelota ? dialogoMessiConObjeto : dialogoMessiSinObjeto;
+        dialogoActual = dialogoMessiConObjeto;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteMessiCharla);
         IniciarDialogo();
     }
@@ -240,7 +277,7 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoDuki()
     {
         personajeActual = "Duki";
-        dialogoActual = tieneCopa ? dialogoDukiConObjeto : dialogoDukiSinObjeto;
+        dialogoActual = dialogoDukiConObjeto;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteDukiCharla);
         IniciarDialogo();
     }
@@ -248,7 +285,7 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoMilagros()
     {
         personajeActual = "Milagros";
-        dialogoActual = tieneAutografo ? dialogoMilagrosConObjeto : dialogoMilagrosSinObjeto;
+        dialogoActual = dialogoMilagrosConObjeto;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteMilagrosCharla);
         IniciarDialogo();
     }
@@ -256,15 +293,16 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoWanda()
     {
         personajeActual = "Wanda";
-        dialogoActual = tieneScreenshots ? dialogoWandaConObjeto : dialogoWandaSinObjeto;
-        if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteWandaCharla);
+        dialogoActual = dialogoWandaConObjeto;
+        Debug.Log("Wanda - personajeDialogo: " + personajeDialogo + " | sprite: " + spriteWandaCharla);
+    if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteWandaCharla);
         IniciarDialogo();
     }
 
     public void IniciarDialogoSusana()
     {
         personajeActual = "Susana";
-        dialogoActual = tieneCartera ? dialogoSusanaConObjeto : dialogoSusanaSinObjeto;
+        dialogoActual = dialogoSusanaConObjeto;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteSusanaCharla);
         IniciarDialogo();
     }
@@ -272,7 +310,7 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoFrancella()
     {
         personajeActual = "Francella";
-        dialogoActual = tieneMartinFierro ? dialogoFrancellaConObjeto : dialogoFrancellaSinObjeto;
+        dialogoActual = dialogoFrancellaConObjeto;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteFrancellaCharla);
         IniciarDialogo();
     }
@@ -280,13 +318,14 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoVagabundo()
     {
         personajeActual = "Vagabundo";
-        dialogoActual = tieneMate ? dialogoVagabundoConObjeto : dialogoVagabundoSinObjeto;
+        dialogoActual = dialogoVagabundoConObjeto;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteVagabundoCharla);
         IniciarDialogo();
     }
 
     void IniciarDialogo()
     {
+        if (hud != null) hud.SetActive(false);
         indiceDialogo = 0;
         MostrarLineaActual();
     }
@@ -298,10 +337,10 @@ public class DialogoManager : MonoBehaviour
         string nombre = dialogoActual[indiceDialogo][0];
         string texto = dialogoActual[indiceDialogo][1];
 
-        if (nombre == "Jugador" && texto.StartsWith("[Dar"))
+       if (nombre == "Jugador" && texto.StartsWith("[Dar"))
         {
             textNombre.text = "";
-            textDialogo.text = texto;
+            textDialogo.text = "Tal vez pueda ofrecerle algo a cambio.";
             if (botonSiguiente != null) botonSiguiente.gameObject.SetActive(false);
             if (botonDarObjeto != null) botonDarObjeto.gameObject.SetActive(true);
         }
@@ -324,12 +363,46 @@ public class DialogoManager : MonoBehaviour
         }
         MostrarLineaActual();
     }
+void AbrirInventarioParaElegir()
+    {
+        if (InventarioManager.instancia == null) return;
 
+        // Mostrar el inventario
+        if (panelInventario != null) panelInventario.SetActive(true);
+        if (panelDialogo != null) panelDialogo.SetActive(false);
+        InventarioManager.instancia.modoSeleccion = true;
+        InventarioManager.instancia.alClickearObjeto = ObjetoElegido;
+    }
+
+    void ObjetoElegido(string idObjeto)
+    {
+        // Apagar modo selección para que no se dispare de nuevo
+        InventarioManager.instancia.modoSeleccion = false;
+        InventarioManager.instancia.alClickearObjeto = null;
+        if (panelInventario != null) panelInventario.SetActive(false);
+        if (panelDialogo != null) panelDialogo.SetActive(true);
+
+        // ¿Es el objeto correcto para este personaje?
+        bool acerto = objetoCorrecto.ContainsKey(personajeActual)
+                      && objetoCorrecto[personajeActual] == idObjeto;
+
+        if (acerto)
+        {
+            DarObjeto(); // sigue tu lógica de siempre (premio + pista + diálogo bueno)
+        }
+        else
+        {
+            textDialogo.text = "No, esto no me sirve. ¿Tenés otra cosa?";
+            // dejamos el botón de inventario por si quiere reintentar
+        }
+    }
     void DarObjeto()
     {
         switch (personajeActual)
         {
             case "Messi":
+            if (personajeDialogo != null && spriteMessiContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteMessiContento);
                 tienePelota = false;
                 tieneCopa = true;
                 InventarioManager.instancia?.QuitarObjeto("pelota");
@@ -337,6 +410,9 @@ public class DialogoManager : MonoBehaviour
                 Anotador.instancia?.AgregarPista("Messi", "Exhaló con satisfacción cuando cerraron las puertas. Estaba cantando. Cree que llegar a Catedral está asegurado.");
                 break;
             case "Duki":
+                if (personajeDialogo != null && spriteDukiContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteDukiContento);
+                tieneCopa = false;
                 tieneCopa = false;
                 tieneAutografo = true;
                 InventarioManager.instancia?.QuitarObjeto("copa");
@@ -344,20 +420,29 @@ public class DialogoManager : MonoBehaviour
                 Anotador.instancia?.AgregarPista("Duki", "Era una mujer. Dijo 'me voy a hacer viral' en medio del caos.");
                 break;
             case "Milagros":
+                if (personajeDialogo != null && spriteMilagrosContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteMilagrosContento);
+                tieneAutografo = false;
                 tieneAutografo = false;
                 tieneScreenshots = true;
                 InventarioManager.instancia?.QuitarObjeto("autografo");
                 InventarioManager.instancia?.AgregarObjeto("screenshots");
                 Anotador.instancia?.AgregarPista("Milagros", "Vi a alguien con el control antes de subir. Lo guardó al ser observada. Chica con cadenas y ropa oscura.");
                 break;
-            case "Wanda":
+           case "Wanda":
+                if (personajeDialogo != null && spriteWandaContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteWandaContento);
+                tieneScreenshots = false;
                 tieneScreenshots = false;
                 tieneCartera = true;
                 InventarioManager.instancia?.QuitarObjeto("screenshots");
                 InventarioManager.instancia?.AgregarObjeto("cartera");
                 Anotador.instancia?.AgregarPista("Wanda", "Se para como en un escenario. Alguien del espectáculo con experiencia, no es novata.");
                 break;
-            case "Susana":
+           case "Susana":
+                if (personajeDialogo != null && spriteSusanaContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteSusanaContento);
+                tieneCartera = false;
                 tieneCartera = false;
                 tieneMartinFierro = true;
                 InventarioManager.instancia?.QuitarObjeto("cartera");
@@ -365,6 +450,9 @@ public class DialogoManager : MonoBehaviour
                 Anotador.instancia?.AgregarPista("Susana", "Cuando encontraron el control, miró a los demás en vez de mirarlo. Joven, del ambiente artístico.");
                 break;
             case "Francella":
+                if (personajeDialogo != null && spriteFrancellaContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteFrancellaContento);
+                tieneMartinFierro = false;
                 tieneMartinFierro = false;
                 tieneMate = true;
                 InventarioManager.instancia?.QuitarObjeto("martinFierro");
@@ -372,6 +460,9 @@ public class DialogoManager : MonoBehaviour
                 Anotador.instancia?.AgregarPista("Francella", "Acariciaba el control con el pulgar. Tenía anillos grandes.");
                 break;
             case "Vagabundo":
+                if (personajeDialogo != null && spriteVagabundoContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteVagabundoContento);
+                tieneMate = false;
                 tieneMate = false;
                 InventarioManager.instancia?.QuitarObjeto("mate");
                 Anotador.instancia?.AgregarPista("Vagabundo", "Miró a los demás antes de mirar el control. Tenía tatuajes.");
@@ -382,13 +473,13 @@ public class DialogoManager : MonoBehaviour
 
     void CerrarDialogo()
     {
+        if (hud != null) hud.SetActive(true);
         if (personajeDialogo != null) personajeDialogo.OcultarPersonaje();
         if (panelDialogo != null) panelDialogo.SetActive(false);
         if (fondoDialogos != null) fondoDialogos.SetActive(false);
         if (fondoPrincipal != null) fondoPrincipal.SetActive(true);
         if (botonDarObjeto != null) botonDarObjeto.gameObject.SetActive(false);
         if (botonSiguiente != null) botonSiguiente.gameObject.SetActive(true);
-        GameObject personajes = GameObject.Find("PERSONAJES");
-        if (personajes != null) personajes.SetActive(true);
+        if (personajesGrupo != null) personajesGrupo.SetActive(true);
     }
 }

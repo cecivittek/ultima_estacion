@@ -7,6 +7,8 @@ public class InventarioManager : MonoBehaviour
     public static InventarioManager instancia;
 
     public Transform contenido;
+    public System.Action<string> alClickearObjeto;
+    public bool modoSeleccion = false;
 
     [Header("Sprites de objetos")]
     public Sprite spritePelota;
@@ -85,6 +87,16 @@ public class InventarioManager : MonoBehaviour
             img.sprite = sp;
         img.preserveAspect = true;
         img.color = Color.white;
+
+        // Hacer el objeto clickeable
+        Button boton = spriteGO.AddComponent<Button>();
+        string idCapturado = id;
+        boton.onClick.AddListener(() =>
+        {
+            Debug.Log("CLICK en objeto: " + idCapturado + " | modoSeleccion: " + modoSeleccion);
+            if (modoSeleccion && alClickearObjeto != null)
+                alClickearObjeto(idCapturado);
+        });
 
         slots[id] = slot;
     }
