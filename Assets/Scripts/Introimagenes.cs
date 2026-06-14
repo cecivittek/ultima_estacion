@@ -11,6 +11,8 @@ public class Introimagenes : MonoBehaviour
     public float velocidadFade = 1f;
     public AudioSource audioSource;
     public AudioClip[] sonidos;
+    public AudioSource narracionSource;
+    public AudioClip[] narraciones;
 
     private int indiceActual = 0;
 
@@ -44,6 +46,7 @@ public class Introimagenes : MonoBehaviour
         {
             MostrarImagen(indiceActual);
         }
+
         t = 1;
         while (t > 0)
         {
@@ -61,6 +64,12 @@ public class Introimagenes : MonoBehaviour
         {
             audioSource.clip = sonidos[indice];
             audioSource.Play();
+        }
+
+        if (narracionSource != null && narraciones.Length > indice && narraciones[indice] != null)
+        {
+            narracionSource.clip = narraciones[indice];
+            narracionSource.Play();
         }
     }
 }
