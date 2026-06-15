@@ -407,7 +407,7 @@ void AbrirInventarioParaElegir()
                 tieneCopa = true;
                 InventarioManager.instancia?.QuitarObjeto("pelota");
                 InventarioManager.instancia?.AgregarObjeto("copa");
-                Anotador.instancia?.AgregarPista("Messi", "Exhaló con satisfacción cuando cerraron las puertas. Estaba cantando. Cree que llegar a Catedral está asegurado.");
+                Anotador.AgregarPista("Messi", "Exhaló con satisfacción cuando cerraron las puertas. Estaba cantando. Cree que llegar a Catedral está asegurado.");
                 break;
             case "Duki":
                 if (personajeDialogo != null && spriteDukiContento != null)
@@ -417,7 +417,7 @@ void AbrirInventarioParaElegir()
                 tieneAutografo = true;
                 InventarioManager.instancia?.QuitarObjeto("copa");
                 InventarioManager.instancia?.AgregarObjeto("autografo");
-                Anotador.instancia?.AgregarPista("Duki", "Era una mujer. Dijo 'me voy a hacer viral' en medio del caos.");
+                Anotador.AgregarPista("Duki", "Era una mujer. Dijo 'me voy a hacer viral' en medio del caos.");
                 break;
             case "Milagros":
                 if (personajeDialogo != null && spriteMilagrosContento != null)
@@ -427,7 +427,7 @@ void AbrirInventarioParaElegir()
                 tieneScreenshots = true;
                 InventarioManager.instancia?.QuitarObjeto("autografo");
                 InventarioManager.instancia?.AgregarObjeto("screenshots");
-                Anotador.instancia?.AgregarPista("Milagros", "Vi a alguien con el control antes de subir. Lo guardó al ser observada. Chica con cadenas y ropa oscura.");
+                Anotador.AgregarPista("Milagros", "Vi a alguien con el control antes de subir. Lo guardó al ser observada. Chica con cadenas y ropa oscura.");
                 break;
            case "Wanda":
                 if (personajeDialogo != null && spriteWandaContento != null)
@@ -437,7 +437,7 @@ void AbrirInventarioParaElegir()
                 tieneCartera = true;
                 InventarioManager.instancia?.QuitarObjeto("screenshots");
                 InventarioManager.instancia?.AgregarObjeto("cartera");
-                Anotador.instancia?.AgregarPista("Wanda", "Se para como en un escenario. Alguien del espectáculo con experiencia, no es novata.");
+                Anotador.AgregarPista("Wanda", "Se para como en un escenario. Alguien del espectáculo con experiencia, no es novata.");
                 break;
            case "Susana":
                 if (personajeDialogo != null && spriteSusanaContento != null)
@@ -447,7 +447,7 @@ void AbrirInventarioParaElegir()
                 tieneMartinFierro = true;
                 InventarioManager.instancia?.QuitarObjeto("cartera");
                 InventarioManager.instancia?.AgregarObjeto("martinFierro");
-                Anotador.instancia?.AgregarPista("Susana", "Cuando encontraron el control, miró a los demás en vez de mirarlo. Joven, del ambiente artístico.");
+                Anotador.AgregarPista("Susana", "Cuando encontraron el control, miró a los demás en vez de mirarlo. Joven, del ambiente artístico.");
                 break;
             case "Francella":
                 if (personajeDialogo != null && spriteFrancellaContento != null)
@@ -457,7 +457,7 @@ void AbrirInventarioParaElegir()
                 tieneMate = true;
                 InventarioManager.instancia?.QuitarObjeto("martinFierro");
                 InventarioManager.instancia?.AgregarObjeto("mate");
-                Anotador.instancia?.AgregarPista("Francella", "Acariciaba el control con el pulgar. Tenía anillos grandes.");
+                Anotador.AgregarPista("Francella", "Acariciaba el control con el pulgar. Tenía anillos grandes.");
                 break;
             case "Vagabundo":
                 if (personajeDialogo != null && spriteVagabundoContento != null)
@@ -465,7 +465,7 @@ void AbrirInventarioParaElegir()
                 tieneMate = false;
                 tieneMate = false;
                 InventarioManager.instancia?.QuitarObjeto("mate");
-                Anotador.instancia?.AgregarPista("Vagabundo", "Miró a los demás antes de mirar el control. Tenía tatuajes.");
+                Anotador.AgregarPista("Vagabundo", "Miró a los demás antes de mirar el control. Tenía tatuajes.");
                 break;
         }
         SiguienteLinea();
