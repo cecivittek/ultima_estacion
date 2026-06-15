@@ -253,7 +253,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4706,12 +4706,20 @@ PrefabInstance:
       value: FRANCELLA SUBTE_0
       objectReference: {fileID: 0}
     - target: {fileID: 7198671769308320159, guid: b429c6fca98a8fd48aed621ceb576829, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198671769308320159, guid: b429c6fca98a8fd48aed621ceb576829, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198671769308320159, guid: b429c6fca98a8fd48aed621ceb576829, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33
+      value: -33.1
       objectReference: {fileID: 0}
     - target: {fileID: 7198671769308320159, guid: b429c6fca98a8fd48aed621ceb576829, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.84999996
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 7198671769308320159, guid: b429c6fca98a8fd48aed621ceb576829, type: 3}
       propertyPath: m_LocalPosition.z
