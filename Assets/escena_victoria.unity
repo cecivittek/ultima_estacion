@@ -219,10 +219,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2099140809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1500, y: 600}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 38, y: 161.9}
+  m_SizeDelta: {x: -738.44995, y: 244.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476137230
 MonoBehaviour:
@@ -297,7 +297,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 44, y: 58.5}
-  m_SizeDelta: {x: 1130.1, y: -395}
+  m_SizeDelta: {x: 1130.1, y: -646.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877171805
 MonoBehaviour:
@@ -321,9 +321,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "MILAGROS ERA LA IMPOSTORA\nDurante todo el viaje trabaj\xF3 en secreto
     para ayudar a Mirtha. A cambio, recibir\xEDa el Algoritmo Eterno, una inteligencia
-    capaz de convertirla en la persona m\xE1s vista de las redes para siempre.\nPero
-    su plan fue descubierto.\nMilagros fue desenmascarada.\nEl Algoritmo Eterno nunca
-    fue activado.\nHas resuelto el caso."
+    capaz de convertirla en la persona m\xE1s vista de las redes para siempre. Pero
+    su plan fue descubierto. Milagros fue desenmascarada. El Algoritmo Eterno nunca
+    fue activado. Has resuelto el caso."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fe4a3a47651d34e8391a69df4baabcce, type: 2}
   m_sharedMaterial: {fileID: -2517645319483631569, guid: fe4a3a47651d34e8391a69df4baabcce, type: 2}
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
