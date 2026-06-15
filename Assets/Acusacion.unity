@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 281681508}
   - component: {fileID: 281681507}
   - component: {fileID: 281681509}
+  - component: {fileID: 281681510}
   m_Layer: 5
   m_Name: Boton Francella
   m_TagString: Untagged
@@ -376,18 +377,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1221525842}
-        m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
-        m_MethodName: SeleccionarPersonaje
-        m_Mode: 5
+      - m_Target: {fileID: 281681510}
+        m_TargetAssemblyTypeName: BotonPersonaje, Assembly-CSharp
+        m_MethodName: AlClickear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Francella
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &281681510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281681505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
+  nombrePersonaje: Francella
+  imagenFondo: {fileID: 655463694}
 --- !u!1 &346682667
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +919,7 @@ GameObject:
   - component: {fileID: 473849705}
   - component: {fileID: 473849704}
   - component: {fileID: 473849706}
+  - component: {fileID: 473849707}
   m_Layer: 5
   m_Name: Boton Wanda
   m_TagString: Untagged
@@ -1073,18 +1090,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1221525842}
-        m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
-        m_MethodName: SeleccionarPersonaje
-        m_Mode: 5
+      - m_Target: {fileID: 473849707}
+        m_TargetAssemblyTypeName: BotonPersonaje, Assembly-CSharp
+        m_MethodName: AlClickear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Wanda
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &473849707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473849702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
+  nombrePersonaje: Wanda
+  imagenFondo: {fileID: 346682669}
 --- !u!1 &507931671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1370,7 @@ GameObject:
   - component: {fileID: 587658097}
   - component: {fileID: 587658096}
   - component: {fileID: 587658098}
+  - component: {fileID: 587658099}
   m_Layer: 5
   m_Name: Boton Messi
   m_TagString: Untagged
@@ -1508,18 +1541,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1221525842}
-        m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
-        m_MethodName: SeleccionarPersonaje
-        m_Mode: 5
+      - m_Target: {fileID: 587658099}
+        m_TargetAssemblyTypeName: BotonPersonaje, Assembly-CSharp
+        m_MethodName: AlClickear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Messi
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &587658099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587658094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
+  nombrePersonaje: Messi
+  imagenFondo: {fileID: 1193909601}
 --- !u!1 &636589804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,6 +1849,7 @@ GameObject:
   - component: {fileID: 1023342447}
   - component: {fileID: 1023342446}
   - component: {fileID: 1023342448}
+  - component: {fileID: 1023342449}
   m_Layer: 5
   m_Name: Boton Susana
   m_TagString: Untagged
@@ -1971,18 +2020,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1221525842}
-        m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
-        m_MethodName: SeleccionarPersonaje
-        m_Mode: 5
+      - m_Target: {fileID: 1023342449}
+        m_TargetAssemblyTypeName: BotonPersonaje, Assembly-CSharp
+        m_MethodName: AlClickear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Susana
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1023342449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023342444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
+  nombrePersonaje: Susana
+  imagenFondo: {fileID: 555594597}
 --- !u!1 &1193909599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,6 +2154,8 @@ MonoBehaviour:
   culpable: Milagros
   panelResultado: {fileID: 758595165}
   textoResultado: {fileID: 1945949249}
+  colorSeleccionado: {r: 0, g: 1, b: 0, a: 1}
+  colorNormal: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1221525843
 Transform:
   m_ObjectHideFlags: 0
@@ -2208,6 +2274,7 @@ GameObject:
   - component: {fileID: 1350366334}
   - component: {fileID: 1350366333}
   - component: {fileID: 1350366335}
+  - component: {fileID: 1350366336}
   m_Layer: 5
   m_Name: Boton Milipili
   m_TagString: Untagged
@@ -2378,18 +2445,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1221525842}
-        m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
-        m_MethodName: SeleccionarPersonaje
-        m_Mode: 5
+      - m_Target: {fileID: 1350366336}
+        m_TargetAssemblyTypeName: BotonPersonaje, Assembly-CSharp
+        m_MethodName: AlClickear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Milagros
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1350366336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350366331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
+  nombrePersonaje: Milagros
+  imagenFondo: {fileID: 511234771}
 --- !u!1 &1391719624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2675,6 +2757,7 @@ GameObject:
   - component: {fileID: 1531238389}
   - component: {fileID: 1531238388}
   - component: {fileID: 1531238390}
+  - component: {fileID: 1531238391}
   m_Layer: 5
   m_Name: Boton Duki
   m_TagString: Untagged
@@ -2845,18 +2928,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1221525842}
-        m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
-        m_MethodName: SeleccionarPersonaje
-        m_Mode: 5
+      - m_Target: {fileID: 1531238391}
+        m_TargetAssemblyTypeName: BotonPersonaje, Assembly-CSharp
+        m_MethodName: AlClickear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Duki
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1531238391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531238386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
+  nombrePersonaje: Duki
+  imagenFondo: {fileID: 418375767}
 --- !u!1 &1652098233
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,6 +3246,7 @@ GameObject:
   - component: {fileID: 1923836352}
   - component: {fileID: 1923836351}
   - component: {fileID: 1923836353}
+  - component: {fileID: 1923836354}
   m_Layer: 5
   m_Name: Boton Vagabundo
   m_TagString: Untagged
@@ -3318,18 +3417,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1221525842}
-        m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
-        m_MethodName: SeleccionarPersonaje
-        m_Mode: 5
+      - m_Target: {fileID: 1923836354}
+        m_TargetAssemblyTypeName: BotonPersonaje, Assembly-CSharp
+        m_MethodName: AlClickear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Vagabundo
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1923836354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923836349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
+  nombrePersonaje: Vagabundo
+  imagenFondo: {fileID: 198265718}
 --- !u!1 &1945949247
 GameObject:
   m_ObjectHideFlags: 0

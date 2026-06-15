@@ -1,36 +1,45 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class AcusacionManager : MonoBehaviour
 {
-    [SerializeField] private string culpable = "Duki"; // cambiá al culpable real
-    
+    [SerializeField] private string culpable = "Milagros";
     [SerializeField] private GameObject panelResultado;
     [SerializeField] private TextMeshProUGUI textoResultado;
-    
-    private string personajeSeleccionado = "";
 
-    public void SeleccionarPersonaje(string nombre)
+    public Color colorSeleccionado = Color.green;
+    public Color colorNormal = Color.white;
+
+    private string personajeSeleccionado = "";
+    private BotonPersonaje botonActual;
+
+    public void SeleccionarPersonaje(string nombre, BotonPersonaje boton)
     {
+        if (botonActual != null)
+            botonActual.imagenFondo.color = colorNormal;
+
         personajeSeleccionado = nombre;
-        Debug.Log("Seleccionaste: " + nombre);
+        botonActual = boton;
+        boton.imagenFondo.color = colorSeleccionado;
     }
 
     public void HacerAcusacion()
     {
         if (personajeSeleccionado == "")
         {
-            textoResultado.text = "¡Seleccioná un personaje primero!";
-            panelResultado.SetActive(true);
+            if (panelResultado != null)
+            {
+                textoResultado.text = "¡Seleccioná un personaje primero!";
+                panelResultado.SetActive(true);
+            }
             return;
         }
 
         if (personajeSeleccionado == culpable)
-            textoResultado.text = "¡CORRECTO! Encontraste al culpable!";
+            SceneManager.LoadScene("escena_victoria");
         else
-            textoResultado.text = "¡INCORRECTO! Era " + culpable;
-
-        panelResultado.SetActive(true);
+            SceneManager.LoadScene("escena_derrota");
     }
 }
