@@ -177,6 +177,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: e426070f7cea63846a1235775d4930b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa8c82e9618f67f42a8fdc78ba737d0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -402,6 +403,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
   manager: {fileID: 1221525844}
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
   nombrePersonaje: Francella
   imagenFondo: {fileID: 655463694}
 --- !u!1 &346682667
@@ -462,6 +467,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: e426070f7cea63846a1235775d4930b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa8c82e9618f67f42a8fdc78ba737d0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -662,6 +668,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1221525842}
         m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
         m_MethodName: HacerAcusacion
         m_Mode: 1
@@ -731,6 +738,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: e426070f7cea63846a1235775d4930b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa8c82e9618f67f42a8fdc78ba737d0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1115,6 +1123,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
   manager: {fileID: 1221525844}
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
   nombrePersonaje: Wanda
   imagenFondo: {fileID: 346682669}
 --- !u!1 &507931671
@@ -1266,6 +1278,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: e426070f7cea63846a1235775d4930b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa8c82e9618f67f42a8fdc78ba737d0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1341,6 +1354,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: e426070f7cea63846a1235775d4930b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa8c82e9618f67f42a8fdc78ba737d0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1566,6 +1580,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
   manager: {fileID: 1221525844}
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
   nombrePersonaje: Messi
   imagenFondo: {fileID: 1193909601}
 --- !u!1 &636589804
@@ -1744,6 +1762,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: e426070f7cea63846a1235775d4930b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa8c82e9618f67f42a8fdc78ba737d0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2045,6 +2064,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
   manager: {fileID: 1221525844}
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
   nombrePersonaje: Susana
   imagenFondo: {fileID: 555594597}
 --- !u!1 &1193909599
@@ -2105,6 +2128,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: e426070f7cea63846a1235775d4930b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa8c82e9618f67f42a8fdc78ba737d0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2132,6 +2156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1221525843}
   - component: {fileID: 1221525844}
+  - component: {fileID: 1221525842}
   m_Layer: 0
   m_Name: GameManagerAcusacion
   m_TagString: Untagged
@@ -2139,6 +2164,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1221525842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221525841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f56f8753a62dd4598181cddffc2d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AcusacionManager
+  culpable: Milagros
+  panelResultado: {fileID: 758595165}
+  textoResultado: {fileID: 1945949249}
+  colorSeleccionado: {r: 0, g: 1, b: 0, a: 1}
+  colorNormal: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1221525843
 Transform:
   m_ObjectHideFlags: 0
@@ -2470,6 +2512,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
   manager: {fileID: 1221525844}
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
   nombrePersonaje: Milagros
   imagenFondo: {fileID: 511234771}
 --- !u!1 &1391719624
@@ -2953,6 +2999,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
   manager: {fileID: 1221525844}
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
   nombrePersonaje: Duki
   imagenFondo: {fileID: 418375767}
 --- !u!1 &1652098233
@@ -3442,6 +3492,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
   manager: {fileID: 1221525844}
+  m_Script: {fileID: 11500000, guid: 174f4a4253526ca4e819b99dbf2cc382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonPersonaje
+  manager: {fileID: 1221525842}
   nombrePersonaje: Vagabundo
   imagenFondo: {fileID: 198265718}
 --- !u!1 &1945949247
@@ -3639,6 +3693,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: e426070f7cea63846a1235775d4930b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa8c82e9618f67f42a8fdc78ba737d0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
