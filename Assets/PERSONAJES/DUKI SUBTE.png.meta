@@ -123,12 +123,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 281
-        y: 30
-        width: 289
+        y: 33
+        width: 302
         height: 502
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 1, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -144,10 +144,10 @@ TextureImporter:
       name: DUKI SUBTE_2
       rect:
         serializedVersion: 2
-        x: 558
-        y: 31
-        width: 284
-        height: 495
+        x: 606
+        y: 24
+        width: 300
+        height: 510
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: DUKI SUBTE_3
       rect:
         serializedVersion: 2
-        x: 959
-        y: 29
-        width: 305
-        height: 502
+        x: 1003
+        y: 27
+        width: 315
+        height: 510
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,13 +188,13 @@ TextureImporter:
       name: DUKI SUBTE_4
       rect:
         serializedVersion: 2
-        x: 1267
+        x: 1336
         y: 0
-        width: 351
+        width: 353
         height: 535
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 6, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
