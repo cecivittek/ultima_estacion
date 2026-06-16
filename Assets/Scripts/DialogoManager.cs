@@ -15,6 +15,7 @@ public class DialogoManager : MonoBehaviour
     public GameObject fondoDialogos;
     public GameObject fondoPrincipal;
     public GameObject panelInventario;
+    public Button botonCerrarInventario;
     public GameObject hud;
     public GameObject personajesGrupo;
     public PersonajeDialogo personajeDialogo;
@@ -254,11 +255,14 @@ public class DialogoManager : MonoBehaviour
         {
             if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonCerrar")
                 botonCerrar = b;
+            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BtnCerrarInventario")
+                botonCerrarInventario = b;
         }
 
         if (botonSiguiente != null) botonSiguiente.onClick.AddListener(SiguienteLinea);
         if (botonDarObjeto != null) botonDarObjeto.onClick.AddListener(AbrirInventarioParaElegir);
         if (botonCerrar != null) botonCerrar.onClick.AddListener(CerrarDialogo);
+        if (botonCerrarInventario != null) botonCerrarInventario.onClick.AddListener(CancelarSeleccionInventario);
         if (botonDarObjeto != null) botonDarObjeto.gameObject.SetActive(false);
 
 
@@ -294,7 +298,7 @@ public class DialogoManager : MonoBehaviour
     {
         personajeActual = "Wanda";
         dialogoActual = dialogoWandaConObjeto;
-        Debug.Log("Wanda - personajeDialogo: " + personajeDialogo + " | sprite: " + spriteWandaCharla);
+    
     if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteWandaCharla);
         IniciarDialogo();
     }
@@ -471,8 +475,16 @@ void AbrirInventarioParaElegir()
         SiguienteLinea();
     }
 
-    void CerrarDialogo()
+   void CerrarDialogo()
     {
+        // Limpiar el inventario por si quedó abierto
+        if (panelInventario != null) panelInventario.SetActive(false);
+        if (InventarioManager.instancia != null)
+        {
+            InventarioManager.instancia.modoSeleccion = false;
+            InventarioManager.instancia.alClickearObjeto = null;
+        }
+
         if (hud != null) hud.SetActive(true);
         if (personajeDialogo != null) personajeDialogo.OcultarPersonaje();
         if (panelDialogo != null) panelDialogo.SetActive(false);
@@ -481,5 +493,17 @@ void AbrirInventarioParaElegir()
         if (botonDarObjeto != null) botonDarObjeto.gameObject.SetActive(false);
         if (botonSiguiente != null) botonSiguiente.gameObject.SetActive(true);
         if (personajesGrupo != null) personajesGrupo.SetActive(true);
+    }
+    void CancelarSeleccionInventario()
+    {
+        // Solo actúa si estábamos eligiendo objeto para un personaje
+        if (InventarioManager.instancia != null && InventarioManager.instancia.modoSeleccion)
+        {
+            InventarioManager.instancia.modoSeleccion = false;
+            InventarioManager.instancia.alClickearObjeto = null;
+            if (panelInventario != null) panelInventario.SetActive(false);
+            // Volver al diálogo
+            if (panelDialogo != null) panelDialogo.SetActive(true);
+        }
     }
 }
