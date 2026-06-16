@@ -15,6 +15,7 @@ public class Anotador : MonoBehaviour
 
     [Header("Layout")]
     public float anchoTexto           = 300f;
+    public float alturaMaximaPagina   = 600f;   // <-- poner acá el alto de PaginaIzquierda
     public float paddingTop           = 20f;
     public float paddingLateral       = 15f;
     public float espaciadoEntrePistas = 12f;
@@ -37,9 +38,6 @@ public class Anotador : MonoBehaviour
     {
         if (cola.Count > 0 && !procesando)
             StartCoroutine(ProcesarCola());
-
-        // Al abrir el panel redistributye las pistas ya colocadas
-        StartCoroutine(RedistribuirAlAbrir());
     }
 
     public static void AgregarPista(string personaje, string pista)
@@ -60,7 +58,6 @@ public class Anotador : MonoBehaviour
         procesando = false;
     }
 
-    // Suma la altura de todos los hijos ya colocados en este lado
     float AlturaOcupada(RectTransform lado)
     {
         float total = paddingTop;
@@ -108,64 +105,13 @@ public class Anotador : MonoBehaviour
         float altura = tmp != null ? tmp.preferredHeight : 20f;
         rt.sizeDelta = new Vector2(anchoTexto, altura);
 
-        // Overflow en tiempo real (solo cuando el panel está activo y tiene tamaño)
-        if (!llenandoDerecho && lado.rect.height > 1f && (yActual + altura) > lado.rect.height)
+        // Overflow: si la pista se pasa del límite, moverla al lado derecho
+        if (!llenandoDerecho && (yActual + altura) > alturaMaximaPagina)
         {
             float yDer = AlturaOcupada(ladoDerecho);
             go.transform.SetParent(ladoDerecho, false);
             rt.anchoredPosition = new Vector2(paddingLateral, -yDer);
             llenandoDerecho = true;
-        }
-    }
-
-    // Corre al abrir el panel: redistribuye pistas acumuladas mientras estaba inactivo
-    IEnumerator RedistribuirAlAbrir()
-    {
-        yield return null;
-        yield return null; // dos frames para que el canvas recalcule
-        Canvas.ForceUpdateCanvases();
-
-        if (ladoIzquierdo == null || ladoDerecho == null) yield break;
-        float alturaIzq = ladoIzquierdo.rect.height;
-        if (alturaIzq <= 1f) alturaIzq = ladoIzquierdo.sizeDelta.y;
-        Debug.Log("[Anotador] alturaIzq = " + alturaIzq);
-        if (alturaIzq <= 1f) yield break;
-
-        // Recolectar todas las pistas en orden (izquierdo primero, luego derecho)
-        List<RectTransform> todas = new List<RectTransform>();
-        foreach (Transform t in ladoIzquierdo)
-            if (t is RectTransform rt) todas.Add(rt);
-        foreach (Transform t in ladoDerecho)
-            if (t is RectTransform rt) todas.Add(rt);
-
-        if (todas.Count == 0) yield break;
-
-        // Mover todas al lado izquierdo para redistribuir desde cero
-        foreach (var rt in todas)
-            rt.SetParent(ladoIzquierdo, false);
-
-        float yIzq = paddingTop;
-        float yDer = paddingTop;
-        llenandoDerecho = false;
-
-        foreach (var rt in todas)
-        {
-            float altura = rt.sizeDelta.y;
-
-            if (!llenandoDerecho && (yIzq + altura) > alturaIzq)
-                llenandoDerecho = true;
-
-            if (llenandoDerecho)
-            {
-                rt.SetParent(ladoDerecho, false);
-                rt.anchoredPosition = new Vector2(paddingLateral, -yDer);
-                yDer += altura + espaciadoEntrePistas;
-            }
-            else
-            {
-                rt.anchoredPosition = new Vector2(paddingLateral, -yIzq);
-                yIzq += altura + espaciadoEntrePistas;
-            }
         }
     }
 

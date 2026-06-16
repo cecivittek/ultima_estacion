@@ -11,6 +11,7 @@ public class HUDManager : MonoBehaviour
     [Header("Paneles")]
     public GameObject panelInventario;
     public GameObject panelAnotador;
+    public GameObject fondoOscuro;
 
     private int estacionActual = 0;
     private int totalEstaciones = 16;
@@ -32,6 +33,7 @@ public class HUDManager : MonoBehaviour
         {
             panelInventario.SetActive(false);
             panelAnotador.SetActive(false);
+            fondoOscuro.SetActive(false);
         }
 
         if (estacionActual >= totalEstaciones) return;
@@ -56,12 +58,14 @@ public class HUDManager : MonoBehaviour
     public void AbrirInventario()
     {
         panelInventario.SetActive(!panelInventario.activeSelf);
+        fondoOscuro.SetActive(!fondoOscuro.activeSelf);
         panelAnotador.SetActive(false);
     }
 
     public void CerrarInventario()
     {
         panelInventario.SetActive(false);
+        fondoOscuro.SetActive(false);
     }
 
     public void AbrirAnotador()
