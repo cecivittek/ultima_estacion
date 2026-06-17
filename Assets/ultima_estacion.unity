@@ -553,6 +553,7 @@ MonoBehaviour:
   fondoDialogos: {fileID: 0}
   fondoPrincipal: {fileID: 0}
   panelInventario: {fileID: 0}
+  botonCerrarInventario: {fileID: 0}
   hud: {fileID: 0}
   personajesGrupo: {fileID: 0}
   personajeDialogo: {fileID: 409943434}
@@ -1392,7 +1393,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.09, y: 6.16}
+  m_Size: {x: 2.92, y: 6.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4216,6 +4217,14 @@ PrefabInstance:
     - target: {fileID: 1741378537252391602, guid: 23db9e3e33d5e694eb34c8ba0ab1924b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655980334168195245, guid: 23db9e3e33d5e694eb34c8ba0ab1924b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655980334168195245, guid: 23db9e3e33d5e694eb34c8ba0ab1924b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4511973171177551115, guid: 23db9e3e33d5e694eb34c8ba0ab1924b, type: 3}
       propertyPath: m_Name

@@ -166,8 +166,8 @@ TextureImporter:
       name: MESSI SUBTE_3
       rect:
         serializedVersion: 2
-        x: 1105
-        y: 54
+        x: 913
+        y: 58
         width: 218
         height: 420
       alignment: 0
@@ -188,7 +188,7 @@ TextureImporter:
       name: MESSI SUBTE_4
       rect:
         serializedVersion: 2
-        x: 1328
+        x: 1189
         y: 42
         width: 243
         height: 437
