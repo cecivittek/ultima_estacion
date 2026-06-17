@@ -135,9 +135,9 @@ TextureImporter:
       name: WANDA CHARLA_1
       rect:
         serializedVersion: 2
-        x: 718
+        x: 754
         y: 0
-        width: 718
+        width: 682
         height: 792
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
