@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HUDManager : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class HUDManager : MonoBehaviour
     private float tiempoPorEstacion;
     private float timer = 0f;
 
+    private float tiempoTranscurridoTotal = 0f;
+    private bool acusacionDisparada = false;
+
     void Start()
     {
         tiempoPorEstacion = tiempoTotal / totalEstaciones;
@@ -34,6 +38,18 @@ public class HUDManager : MonoBehaviour
             panelInventario.SetActive(false);
             panelAnotador.SetActive(false);
             fondoOscuro.SetActive(false);
+        }
+
+        if (!acusacionDisparada)
+        {
+            tiempoTranscurridoTotal += Time.deltaTime;
+
+            if (tiempoTranscurridoTotal >= tiempoTotal)
+            {
+                acusacionDisparada = true;
+                IrAAcusacion();
+                return;
+            }
         }
 
         if (estacionActual >= totalEstaciones) return;
@@ -77,5 +93,10 @@ public class HUDManager : MonoBehaviour
     public void CerrarAnotador()
     {
         panelAnotador.SetActive(false);
+    }
+
+    public void IrAAcusacion()
+    {
+        SceneManager.LoadScene("Acusacion");
     }
 }
