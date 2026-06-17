@@ -404,6 +404,7 @@ MonoBehaviour:
   manager: {fileID: 1221525842}
   nombrePersonaje: Francella
   imagenFondo: {fileID: 655463694}
+  spritePersonaje: {fileID: 1483545972}
 --- !u!1 &346682667
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +839,8 @@ GameObject:
   m_Component:
   - component: {fileID: 435510457}
   - component: {fileID: 435510456}
+  - component: {fileID: 435510459}
+  - component: {fileID: 435510458}
   m_Layer: 0
   m_Name: MILI CHARLA_1
   m_TagString: Untagged
@@ -919,6 +922,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &435510458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435510455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badec52ef2c423b41a055a05e40c2989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersonajeClickeable
+  botonAsociado: {fileID: 1350366336}
+--- !u!61 &435510459
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435510455}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.32, y: 7.9}
+    newSize: {x: 8.32, y: 7.9}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8.32, y: 7.9}
+  m_EdgeRadius: 0
 --- !u!1 &473849702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1191,7 @@ MonoBehaviour:
   manager: {fileID: 1221525842}
   nombrePersonaje: Wanda
   imagenFondo: {fileID: 346682669}
+  spritePersonaje: {fileID: 507931672}
 --- !u!1 &507931671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,6 +1202,8 @@ GameObject:
   m_Component:
   - component: {fileID: 507931673}
   - component: {fileID: 507931672}
+  - component: {fileID: 507931675}
+  - component: {fileID: 507931674}
   m_Layer: 0
   m_Name: WANDA CHARLA_1
   m_TagString: Untagged
@@ -1220,6 +1285,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &507931674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507931671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badec52ef2c423b41a055a05e40c2989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersonajeClickeable
+  botonAsociado: {fileID: 473849707}
+--- !u!61 &507931675
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507931671}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.45, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.18, y: 7.92}
+    newSize: {x: 7.18, y: 7.92}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 7.18, y: 7.92}
+  m_EdgeRadius: 0
 --- !u!1 &511234769
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,6 +1704,7 @@ MonoBehaviour:
   manager: {fileID: 1221525842}
   nombrePersonaje: Messi
   imagenFondo: {fileID: 1193909601}
+  spritePersonaje: {fileID: 1470817370}
 --- !u!1 &636589804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,6 +2184,7 @@ MonoBehaviour:
   manager: {fileID: 1221525842}
   nombrePersonaje: Susana
   imagenFondo: {fileID: 555594597}
+  spritePersonaje: {fileID: 1652098234}
 --- !u!1 &1193909599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2325,6 +2451,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74952d65d9669b48983ff3b41f06ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AcusacionManager
+  culpable: Milagros
+  panelResultado: {fileID: 0}
+  textoResultado: {fileID: 0}
+  colorSeleccionado: {r: 0, g: 1, b: 0, a: 1}
+  colorNormal: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1348754227
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,6 +2466,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1348754229}
   - component: {fileID: 1348754228}
+  - component: {fileID: 1348754231}
+  - component: {fileID: 1348754230}
   m_Layer: 0
   m_Name: DUKI CHARLA_1
   m_TagString: Untagged
@@ -2416,6 +2549,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1348754230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348754227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badec52ef2c423b41a055a05e40c2989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersonajeClickeable
+  botonAsociado: {fileID: 1531238391}
+--- !u!61 &1348754231
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348754227}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.51, y: 8.02}
+    newSize: {x: 8.51, y: 8.02}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8.51, y: 8.02}
+  m_EdgeRadius: 0
 --- !u!1 &1350366331
 GameObject:
   m_ObjectHideFlags: 0
@@ -2626,6 +2818,7 @@ MonoBehaviour:
   manager: {fileID: 1221525842}
   nombrePersonaje: Milagros
   imagenFondo: {fileID: 511234771}
+  spritePersonaje: {fileID: 435510456}
 --- !u!1 &1391719624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,6 +2920,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1470817371}
   - component: {fileID: 1470817370}
+  - component: {fileID: 1470817373}
+  - component: {fileID: 1470817372}
   m_Layer: 0
   m_Name: MESSI CHARLA_1
   m_TagString: Untagged
@@ -2808,6 +3003,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1470817372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470817369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badec52ef2c423b41a055a05e40c2989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersonajeClickeable
+  botonAsociado: {fileID: 587658099}
+--- !u!61 &1470817373
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470817369}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.79, y: 7.05}
+    newSize: {x: 6.79, y: 7.05}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 6.79, y: 7.05}
+  m_EdgeRadius: 0
 --- !u!1 &1483545971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,6 +3072,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1483545973}
   - component: {fileID: 1483545972}
+  - component: {fileID: 1483545975}
+  - component: {fileID: 1483545974}
   m_Layer: 0
   m_Name: FRANCELLA CHARLA_1
   m_TagString: Untagged
@@ -2899,6 +3155,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1483545974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483545971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badec52ef2c423b41a055a05e40c2989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersonajeClickeable
+  botonAsociado: {fileID: 281681510}
+--- !u!61 &1483545975
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483545971}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.14, y: 7.21}
+    newSize: {x: 6.14, y: 7.21}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 6.14, y: 7.21}
+  m_EdgeRadius: 0
 --- !u!1 &1531238386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,6 +3424,7 @@ MonoBehaviour:
   manager: {fileID: 1221525842}
   nombrePersonaje: Duki
   imagenFondo: {fileID: 418375767}
+  spritePersonaje: {fileID: 1348754228}
 --- !u!1 &1652098233
 GameObject:
   m_ObjectHideFlags: 0
@@ -3119,6 +3435,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1652098235}
   - component: {fileID: 1652098234}
+  - component: {fileID: 1652098237}
+  - component: {fileID: 1652098236}
   m_Layer: 0
   m_Name: SUSANA CHARLA_1
   m_TagString: Untagged
@@ -3200,6 +3518,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1652098236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652098233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badec52ef2c423b41a055a05e40c2989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersonajeClickeable
+  botonAsociado: {fileID: 1023342449}
+--- !u!61 &1652098237
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652098233}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.72, y: 8.66}
+    newSize: {x: 7.72, y: 8.66}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 7.72, y: 8.66}
+  m_EdgeRadius: 0
 --- !u!1 &1660009603
 GameObject:
   m_ObjectHideFlags: 0
@@ -3210,6 +3587,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1660009605}
   - component: {fileID: 1660009604}
+  - component: {fileID: 1660009607}
+  - component: {fileID: 1660009606}
   m_Layer: 0
   m_Name: VAGABUNDO CHARLA_1
   m_TagString: Untagged
@@ -3291,6 +3670,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1660009606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660009603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badec52ef2c423b41a055a05e40c2989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersonajeClickeable
+  botonAsociado: {fileID: 1923836354}
+--- !u!61 &1660009607
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660009603}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.72, y: 8.1}
+    newSize: {x: 6.72, y: 8.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 6.72, y: 8.1}
+  m_EdgeRadius: 0
 --- !u!1 &1871236839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3598,6 +4036,7 @@ MonoBehaviour:
   manager: {fileID: 1221525842}
   nombrePersonaje: Vagabundo
   imagenFondo: {fileID: 198265718}
+  spritePersonaje: {fileID: 1660009604}
 --- !u!1 &1945949247
 GameObject:
   m_ObjectHideFlags: 0
