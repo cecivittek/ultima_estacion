@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ultima_estacion_mate.unity
-    guid: 104e441747140dc499c2a7ec0645ddae
+    path: Assets/MenuInicio.unity
+    guid: 3c33f5935d74c4e4c8e4f9af4f83e865
+  - enabled: 1
+    path: Assets/Intro.unity
+    guid: 139716d5752402d419f7a87ff34feba1
   - enabled: 1
     path: Assets/eleccion_objeto.unity
     guid: 084efa0e76628b24980ab8e1503d3959
@@ -15,16 +18,19 @@ EditorBuildSettings:
     path: Assets/ultima_estacion.unity
     guid: 12480757eb06b3c41b141af67980fb0b
   - enabled: 1
+    path: Assets/ultima_estacion_mate.unity
+    guid: 104e441747140dc499c2a7ec0645ddae
+  - enabled: 1
     path: Assets/ultima_estacion_celular.unity
     guid: badc0027ca312224caa14cd0bb406c22
+  - enabled: 1
+    path: Assets/Acusacion.unity
+    guid: d3ac3e4b8e9714f82ba1cc5a9063bed5
   - enabled: 1
     path: Assets/escena_victoria.unity
     guid: 5e7975bc21c2b7441846abc3700d6747
   - enabled: 1
     path: Assets/escena_derrota.unity
     guid: d1def058675cbd44fa31d34b8c57f9ec
-  - enabled: 1
-    path: Assets/Acusacion.unity
-    guid: d3ac3e4b8e9714f82ba1cc5a9063bed5
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
