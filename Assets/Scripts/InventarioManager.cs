@@ -50,11 +50,11 @@ public class InventarioManager : MonoBehaviour
             inicializado = true;
             if (contenido == null)
                 contenido = transform;
-            AgregarObjeto("pelota");
+            AgregarObjeto("pelota", silencioso: true);
         }
     }
 
-    public void AgregarObjeto(string id)
+    public void AgregarObjeto(string id, bool silencioso = false)
     {
         if (slots.ContainsKey(id)) return;
 
@@ -62,6 +62,9 @@ public class InventarioManager : MonoBehaviour
         GameObject slot = new GameObject(id, typeof(RectTransform));
         slot.transform.SetParent(contenido, false);
         slot.transform.localScale = Vector3.one;
+
+        LayoutElement le = slot.AddComponent<LayoutElement>();
+        le.ignoreLayout = true;
 
         RectTransform slotRt = slot.GetComponent<RectTransform>();
         slotRt.anchorMin = new Vector2(0, 0.5f);
@@ -99,14 +102,21 @@ public class InventarioManager : MonoBehaviour
         });
 
         slots[id] = slot;
+
+        if (!silencioso)
+            HUDManager.instancia?.MostrarObjetoNuevo();
     }
 
     public void QuitarObjeto(string id)
     {
         if (!slots.TryGetValue(id, out GameObject slot)) return;
-        Destroy(slot);
-        slots.Remove(id);
-        RearmarPosiciones();
+        Transform spriteT = slot.transform.Find("sprite");
+        if (spriteT != null)
+        {
+            Image img = spriteT.GetComponent<Image>();
+            if (img != null)
+                img.color = new Color(1f, 1f, 1f, 0.5f);
+        }
     }
 
     void RearmarPosiciones()

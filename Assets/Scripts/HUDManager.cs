@@ -1,9 +1,12 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class HUDManager : MonoBehaviour
 {
+    public static HUDManager instancia;
+
     [Header("Mapa")]
     public RectTransform marcadorEstacion;
     public float posicionXInicio = -480f; // extremo izquierdo del mapa
@@ -13,15 +16,32 @@ public class HUDManager : MonoBehaviour
     public GameObject panelInventario;
     public GameObject panelAnotador;
     public GameObject fondoOscuro;
+    public GameObject panelObjetoNuevo;
 
-    private int estacionActual = 0;
+    private float timerObjetoNuevo    = 0f;
+    private bool  notificacionPendiente = false;
+    public int estacionActual = 0;
     private int totalEstaciones = 16;
-    private float tiempoTotal = 26f * 60f;
+    private float tiempoTotal = 15f * 60f;
     private float tiempoPorEstacion;
     private float timer = 0f;
 
     private float tiempoTranscurridoTotal = 0f;
     private bool acusacionDisparada = false;
+
+    void Awake()
+    {
+        instancia = this;
+    }
+
+    void OnEnable()
+    {
+        if (notificacionPendiente)
+        {
+            notificacionPendiente = false;
+            MostrarObjetoNuevo();
+        }
+    }
 
     void Start()
     {
@@ -38,6 +58,13 @@ public class HUDManager : MonoBehaviour
             panelInventario.SetActive(false);
             panelAnotador.SetActive(false);
             fondoOscuro.SetActive(false);
+        }
+
+        if (timerObjetoNuevo > 0f)
+        {
+            timerObjetoNuevo -= Time.deltaTime;
+            if (timerObjetoNuevo <= 0f && panelObjetoNuevo != null)
+                panelObjetoNuevo.SetActive(false);
         }
 
         if (!acusacionDisparada)
@@ -93,6 +120,26 @@ public class HUDManager : MonoBehaviour
     public void CerrarAnotador()
     {
         panelAnotador.SetActive(false);
+    }
+
+    public void MostrarObjetoNuevo()
+    {
+        if (panelObjetoNuevo == null) return;
+
+        // Si el HUD está inactivo (durante un diálogo), guardar para después
+        if (!gameObject.activeInHierarchy)
+        {
+            notificacionPendiente = true;
+            return;
+        }
+
+        CanvasGroup cg = panelObjetoNuevo.GetComponent<CanvasGroup>();
+        if (cg == null) cg = panelObjetoNuevo.AddComponent<CanvasGroup>();
+        cg.blocksRaycasts = false;
+        cg.interactable   = false;
+
+        panelObjetoNuevo.SetActive(true);
+        timerObjetoNuevo = 5f;
     }
 
     public void IrAAcusacion()
