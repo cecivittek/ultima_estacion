@@ -25,6 +25,11 @@ public class Introimagenes : MonoBehaviour
     {
         StartCoroutine(Transicion());
     }
+    public void Omitir()
+{
+    StopAllCoroutines();
+    StartCoroutine(TransicionOmitir());
+}
 
     IEnumerator Transicion()
     {
@@ -55,6 +60,18 @@ public class Introimagenes : MonoBehaviour
             yield return null;
         }
     }
+    IEnumerator TransicionOmitir()
+{
+    float t = 0;
+    while (t < 1)
+    {
+        t += Time.deltaTime * velocidadFade;
+        pantallaFade.color = new Color(0, 0, 0, t);
+        yield return null;
+    }
+
+    SceneManager.LoadScene("eleccion_objeto");
+}
 
     void MostrarImagen(int indice)
     {

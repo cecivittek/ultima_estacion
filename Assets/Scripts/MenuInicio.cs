@@ -28,15 +28,18 @@ public class MenuInicio : MonoBehaviour
         if (panelComoJugar != null)
             panelComoJugar.SetActive(false);
     }
- 
-    // Conectar al botón "Salir" -> OnClick()
+
     public void Salir()
-    {
+        {
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
+            UnityEditor.EditorApplication.isPlaying = false;
 #else
-        Application.Quit();
+            Application.Quit();
 #endif
+        }
+
+        public void SalirDelJuego()
+        {
+            Application.Quit();
+        }
     }
-}
- 
