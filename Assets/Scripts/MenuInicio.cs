@@ -42,4 +42,5 @@ public class MenuInicio : MonoBehaviour
         {
             Application.Quit();
         }
+
     }
