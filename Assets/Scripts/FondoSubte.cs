@@ -1,52 +1,41 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class FondoSubte : MonoBehaviour
 {
-    [Header("Referencias")]
-    public RawImage imagenTunel;
-    public GameObject panelEstacion;
+    public SpriteRenderer tunel1;
+    public SpriteRenderer tunel2;
+    public float velocidadScroll = 2f;
 
-    [Header("Scroll túnel")]
-    public float velocidadScroll = 0.08f;
+    private float anchuraSprite;
 
-    [Header("Estación")]
-    public float duracionEstacion = 2.5f;
+    void Start()
+    {
+        if (tunel1 != null)
+            anchuraSprite = tunel1.bounds.size.x;
 
-    private float timerEstacion = 0f;
-    private int ultimaEstacion  = -1;
+        if (tunel1 != null && tunel2 != null)
+            tunel2.transform.position = tunel1.transform.position + new Vector3(anchuraSprite, 0, 0);
+    }
 
     void Update()
     {
-        if (imagenTunel != null)
-        {
-            Rect uv = imagenTunel.uvRect;
-            uv.x += velocidadScroll * Time.deltaTime;
-            imagenTunel.uvRect = uv;
-        }
-
-        if (HUDManager.instancia != null)
-        {
-            int estacion = HUDManager.instancia.estacionActual;
-            if (estacion != ultimaEstacion)
-            {
-                ultimaEstacion = estacion;
-                MostrarEstacion();
-            }
-        }
-
-        if (timerEstacion > 0f)
-        {
-            timerEstacion -= Time.deltaTime;
-            if (timerEstacion <= 0f && panelEstacion != null)
-                panelEstacion.SetActive(false);
-        }
+        Mover(tunel1, tunel2);
+        Mover(tunel2, tunel1);
     }
 
-    void MostrarEstacion()
+    void Mover(SpriteRenderer sr, SpriteRenderer otro)
     {
-        if (panelEstacion == null) return;
-        panelEstacion.SetActive(true);
-        timerEstacion = duracionEstacion;
+        if (sr == null || otro == null) return;
+        sr.transform.position += Vector3.left * velocidadScroll * Time.deltaTime;
+
+        float bordeIzq = Camera.main.transform.position.x - Camera.main.orthographicSize * Camera.main.aspect;
+        if (sr.transform.position.x + anchuraSprite / 2f < bordeIzq)
+        {
+            sr.transform.position = new Vector3(
+                otro.transform.position.x + anchuraSprite,
+                sr.transform.position.y,
+                sr.transform.position.z
+            );
+        }
     }
 }
