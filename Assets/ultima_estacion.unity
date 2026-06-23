@@ -225,7 +225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: 250}
+  m_AnchoredPosition: {x: 740, y: 220}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88286061
@@ -452,8 +452,8 @@ MonoBehaviour:
   spriteMartinFierro: {fileID: 21300000, guid: 95991daa1aee8de408cb5fb1f064fd77, type: 3}
   spriteMate: {fileID: 21300000, guid: 2c25b790c3bb875488d97d2a7896db26, type: 3}
   escala: 250
-  espaciado: 10
-  posicionInicio: {x: 0, y: 0}
+  espaciado: -28
+  posicionInicio: {x: -740, y: -20}
 --- !u!4 &165900378
 Transform:
   m_ObjectHideFlags: 0
