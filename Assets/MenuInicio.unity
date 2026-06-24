@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 67671857}
   - component: {fileID: 67671856}
   - component: {fileID: 67671859}
+  - component: {fileID: 67671860}
   m_Layer: 5
   m_Name: BotonComoJugar
   m_TagString: Untagged
@@ -253,7 +254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 617.1, y: -150}
+  m_AnchoredPosition: {x: 617.1, y: -175.06}
   m_SizeDelta: {x: 350, y: 126.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &67671856
@@ -344,8 +345,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e426070f7cea63846a1235775d4930b6, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -374,6 +375,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c87bafff55d8f31459820456db0c8c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BotonIrAEscena
+--- !u!114 &67671860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67671854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f87959ee8756478f8d2b08889debd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
+  colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
+  margenBorde: 6
 --- !u!1 &85531579
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +561,7 @@ GameObject:
   - component: {fileID: 170993301}
   - component: {fileID: 170993300}
   - component: {fileID: 170993299}
+  - component: {fileID: 170993302}
   m_Layer: 5
   m_Name: BotonJugar
   m_TagString: Untagged
@@ -570,7 +586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 616.1, y: 0}
+  m_AnchoredPosition: {x: 616.1, y: -39.29}
   m_SizeDelta: {x: 350, y: 126.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &170993299
@@ -661,8 +677,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e426070f7cea63846a1235775d4930b6, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -679,6 +695,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170993297}
   m_CullTransparentMesh: 1
+--- !u!114 &170993302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170993297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f87959ee8756478f8d2b08889debd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
+  colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
+  margenBorde: 6
 --- !u!1 &350129415
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +858,7 @@ GameObject:
   - component: {fileID: 534272446}
   - component: {fileID: 534272445}
   - component: {fileID: 534272444}
+  - component: {fileID: 534272447}
   m_Layer: 5
   m_Name: BotonSalir
   m_TagString: Untagged
@@ -852,7 +883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 617.7, y: -300}
+  m_AnchoredPosition: {x: 617.7, y: -317.9}
   m_SizeDelta: {x: 350, y: 126.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &534272444
@@ -943,8 +974,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e426070f7cea63846a1235775d4930b6, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -961,6 +992,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534272442}
   m_CullTransparentMesh: 1
+--- !u!114 &534272447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534272442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f87959ee8756478f8d2b08889debd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
+  colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
+  margenBorde: 6
 --- !u!1 &888988763
 GameObject:
   m_ObjectHideFlags: 0

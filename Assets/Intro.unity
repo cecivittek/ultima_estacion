@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 67000321}
   - component: {fileID: 67000320}
   - component: {fileID: 67000319}
+  - component: {fileID: 67000322}
   m_Layer: 5
   m_Name: siguiente
   m_TagString: Untagged
@@ -264,6 +265,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67000317}
   m_CullTransparentMesh: 1
+--- !u!114 &67000322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67000317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f87959ee8756478f8d2b08889debd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
+  colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
+  margenBorde: 6
 --- !u!1 &153307984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,6 +1090,7 @@ GameObject:
   - component: {fileID: 887981685}
   - component: {fileID: 887981684}
   - component: {fileID: 887981683}
+  - component: {fileID: 887981686}
   m_Layer: 5
   m_Name: atras
   m_TagString: Untagged
@@ -1208,6 +1224,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887981681}
   m_CullTransparentMesh: 1
+--- !u!114 &887981686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887981681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f87959ee8756478f8d2b08889debd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
+  colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
+  margenBorde: 6
 --- !u!1 &891067585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1520,7 @@ GameObject:
   - component: {fileID: 1060813005}
   - component: {fileID: 1060813004}
   - component: {fileID: 1060813003}
+  - component: {fileID: 1060813006}
   m_Layer: 5
   m_Name: Omitir
   m_TagString: Untagged
@@ -1623,6 +1654,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060813001}
   m_CullTransparentMesh: 1
+--- !u!114 &1060813006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060813001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f87959ee8756478f8d2b08889debd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
+  colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
+  margenBorde: 6
 --- !u!1 &1272702870
 GameObject:
   m_ObjectHideFlags: 0

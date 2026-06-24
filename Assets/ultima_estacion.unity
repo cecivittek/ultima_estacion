@@ -2214,6 +2214,7 @@ GameObject:
   - component: {fileID: 1158783241}
   - component: {fileID: 1158783240}
   - component: {fileID: 1158783239}
+  - component: {fileID: 1158783242}
   m_Layer: 5
   m_Name: Boton Acusacion
   m_TagString: Untagged
@@ -2329,8 +2330,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e426070f7cea63846a1235775d4930b6, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2347,6 +2348,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158783237}
   m_CullTransparentMesh: 1
+--- !u!114 &1158783242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158783237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f87959ee8756478f8d2b08889debd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
+  colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
+  margenBorde: 6
 --- !u!1 &1161485943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2497,6 +2512,7 @@ GameObject:
   - component: {fileID: 1235205156}
   - component: {fileID: 1235205155}
   - component: {fileID: 1235205154}
+  - component: {fileID: 1235205158}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -2642,6 +2658,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235205152}
   m_CullTransparentMesh: 1
+--- !u!114 &1235205158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235205152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f87959ee8756478f8d2b08889debd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
+  colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
+  margenBorde: 6
 --- !u!1 &1258023724
 GameObject:
   m_ObjectHideFlags: 0

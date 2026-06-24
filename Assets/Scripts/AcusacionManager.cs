@@ -1,37 +1,48 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using TMPro;
-
+ 
 public class AcusacionManager : MonoBehaviour
 {
     [SerializeField] private string culpable = "Milagros";
     [SerializeField] private GameObject panelResultado;
     [SerializeField] private TextMeshProUGUI textoResultado;
-
-    public Color colorSeleccionado = Color.green;
-    public Color colorNormal = Color.white;
-
+    [SerializeField] private iraescena cambiadorEscena; // el script del fade
+ 
+    [Header("Colores del fondo del boton")]
+    public Color colorNormal = new Color(0.05f, 0.08f, 0.22f);   // navy 0D1439
+    public Color colorSeleccionado = new Color(0.2f, 0.8f, 0.2f); // verde
+ 
     private string personajeSeleccionado = "";
     private BotonPersonaje botonActual;
-
-    public void SeleccionarPersonaje(string nombre, BotonPersonaje boton)
+ 
+    private void Start()
+    {
+        BotonPersonaje[] todos = FindObjectsByType<BotonPersonaje>(FindObjectsSortMode.None);
+        foreach (BotonPersonaje boton in todos)
+        {
+            boton.fondo.color = colorNormal;
+            boton.MostrarContorno(false);
+        }
+    }
+ 
+    public void SeleccionarPersonaje(BotonPersonaje boton)
     {
         if (botonActual != null)
         {
-            botonActual.imagenFondo.color = colorNormal;
-            if (botonActual.spritePersonaje != null)
-                botonActual.spritePersonaje.color = colorNormal;
+            botonActual.fondo.color = colorNormal;
+            botonActual.MarcarSeleccionado(false);
+            botonActual.MostrarContorno(false);
         }
-
-        personajeSeleccionado = nombre;
+ 
         botonActual = boton;
-        boton.imagenFondo.color = colorSeleccionado;
-
-        if (boton.spritePersonaje != null)
-            boton.spritePersonaje.color = colorSeleccionado;
+        personajeSeleccionado = boton.nombrePersonaje;
+ 
+        boton.fondo.color = colorSeleccionado;
+        boton.MarcarSeleccionado(true);
+        boton.MostrarContorno(true);
     }
-
+ 
     public void HacerAcusacion()
     {
         if (personajeSeleccionado == "")
@@ -43,17 +54,21 @@ public class AcusacionManager : MonoBehaviour
             }
             return;
         }
-
-        if (personajeSeleccionado == culpable)
-            SceneManager.LoadScene("escena_victoria");
+ 
+        string escenaDestino = (personajeSeleccionado == culpable) ? "escena_victoria" : "escena_derrota";
+ 
+        if (cambiadorEscena != null)
+            cambiadorEscena.IrAEscena(escenaDestino);
         else
-            SceneManager.LoadScene("escena_derrota");
+            SceneManager.LoadScene(escenaDestino); // respaldo si no se asigna el fade
     }
-
+ 
     public void VolverAlSubte()
     {
-        SceneManager.LoadScene("ultima_estacion");
+        if (cambiadorEscena != null)
+            cambiadorEscena.IrAEscena("ultima_estacion");
+        else
+            SceneManager.LoadScene("ultima_estacion");
     }
 }
-
  

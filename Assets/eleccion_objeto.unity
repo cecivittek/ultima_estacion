@@ -1666,6 +1666,7 @@ GameObject:
   - component: {fileID: 2050709386}
   - component: {fileID: 2050709385}
   - component: {fileID: 2050709384}
+  - component: {fileID: 2050709388}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -1811,6 +1812,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050709382}
   m_CullTransparentMesh: 1
+--- !u!114 &2050709388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050709382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f87959ee8756478f8d2b08889debd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
+  colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
+  margenBorde: 6
 --- !u!1 &2086357194
 GameObject:
   m_ObjectHideFlags: 0
