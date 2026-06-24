@@ -153,7 +153,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Susana", "Mirá, yo tengo ojo clínico. Años de entrevistar gente. Hay alguien acá que tiene un aura rara. Alguien que parece que no se sorprendió cuando vió los dinosaurios." },
         new string[] { "Jugador", "[Dar cartera Louis Vuitton]" },
         new string[] { "Susana", "¡MI CARTERA! ¡Ay, pensé que la había perdido para siempre! Las fotos de Pacha... el rouge... todo está. Vos sos un ángel." },
-        new string[] { "Susana", "Vi la cara del infiltrado, querido. Cuando encontraron el control, todos miraron al control. Esta persona miró a los demás. Era un chico joven. Del ambiente artístico, me parece. Tiene esa presencia escénica. Pero en ese momento no quería que lo vieran. Eso me llamó la atención." },
+        new string[] { "Susana", "Vi la cara del infiltrado, querido. Cuando encontraron el control, todos miraron el objeto, pero esta persona miró a los demás. Era un chico joven, del ambiente artístico. Quería pasar desapercibido." },
         new string[] { "Susana", "Merecés un premio por toda esta investigación. Tomá." },
         new string[] { "Susana", "Ya te dije todo, querido. Ahora necesito sentarme. Este vagón está muy frío." },
     };
