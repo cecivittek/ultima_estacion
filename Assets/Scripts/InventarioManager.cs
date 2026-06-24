@@ -48,8 +48,10 @@ public class InventarioManager : MonoBehaviour
         if (!inicializado)
         {
             inicializado = true;
+
             if (contenido == null)
                 contenido = transform;
+
             AgregarObjeto("pelota", silencioso: true);
         }
     }
@@ -58,7 +60,6 @@ public class InventarioManager : MonoBehaviour
     {
         if (slots.ContainsKey(id)) return;
 
-        // Slot: container invisible, solo para posicionamiento
         GameObject slot = new GameObject(id, typeof(RectTransform));
         slot.transform.SetParent(contenido, false);
         slot.transform.localScale = Vector3.one;
@@ -69,11 +70,10 @@ public class InventarioManager : MonoBehaviour
         RectTransform slotRt = slot.GetComponent<RectTransform>();
         slotRt.anchorMin = new Vector2(0, 0.5f);
         slotRt.anchorMax = new Vector2(0, 0.5f);
-        slotRt.pivot     = new Vector2(0, 0.5f);
+        slotRt.pivot = new Vector2(0, 0.5f);
         slotRt.sizeDelta = new Vector2(escala, escala);
         slotRt.anchoredPosition = posicionInicio + new Vector2(slots.Count * (escala + espaciado), 0);
 
-        // Sprite: Image con RectTransform propio, escalable
         GameObject spriteGO = new GameObject("sprite", typeof(RectTransform), typeof(Image));
         spriteGO.transform.SetParent(slot.transform, false);
         spriteGO.transform.localScale = Vector3.one;
@@ -81,22 +81,30 @@ public class InventarioManager : MonoBehaviour
         RectTransform spriteRt = spriteGO.GetComponent<RectTransform>();
         spriteRt.anchorMin = new Vector2(0.5f, 0.5f);
         spriteRt.anchorMax = new Vector2(0.5f, 0.5f);
-        spriteRt.pivot     = new Vector2(0.5f, 0.5f);
+        spriteRt.pivot = new Vector2(0.5f, 0.5f);
         spriteRt.sizeDelta = new Vector2(escala, escala);
         spriteRt.anchoredPosition = Vector2.zero;
 
         Image img = spriteGO.GetComponent<Image>();
+
         if (sprites.TryGetValue(id, out Sprite sp) && sp != null)
             img.sprite = sp;
+
         img.preserveAspect = true;
         img.color = Color.white;
+        img.raycastTarget = true;
 
-        // Hacer el objeto clickeable
         Button boton = spriteGO.AddComponent<Button>();
+
         string idCapturado = id;
+
         boton.onClick.AddListener(() =>
         {
+            if (clicks.instancia != null)
+                clicks.instancia.ReproducirClic();
+
             Debug.Log("CLICK en objeto: " + idCapturado + " | modoSeleccion: " + modoSeleccion);
+
             if (modoSeleccion && alClickearObjeto != null)
                 alClickearObjeto(idCapturado);
         });
@@ -110,10 +118,13 @@ public class InventarioManager : MonoBehaviour
     public void QuitarObjeto(string id)
     {
         if (!slots.TryGetValue(id, out GameObject slot)) return;
+
         Transform spriteT = slot.transform.Find("sprite");
+
         if (spriteT != null)
         {
             Image img = spriteT.GetComponent<Image>();
+
             if (img != null)
                 img.color = new Color(1f, 1f, 1f, 0.5f);
         }
@@ -122,6 +133,7 @@ public class InventarioManager : MonoBehaviour
     void RearmarPosiciones()
     {
         int i = 0;
+
         foreach (var s in slots.Values)
         {
             if (s == null) continue;
@@ -131,6 +143,7 @@ public class InventarioManager : MonoBehaviour
             slotRt.anchoredPosition = posicionInicio + new Vector2(i * (escala + espaciado), 0);
 
             Transform spriteT = s.transform.Find("sprite");
+
             if (spriteT != null)
             {
                 RectTransform spriteRt = spriteT.GetComponent<RectTransform>();
@@ -144,6 +157,7 @@ public class InventarioManager : MonoBehaviour
     void OnValidate()
     {
         escala = Mathf.Max(escala, 10f);
+
         if (Application.isPlaying)
             RearmarPosiciones();
     }
