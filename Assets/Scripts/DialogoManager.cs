@@ -62,7 +62,7 @@ public class DialogoManager : MonoBehaviour
     {
         new string[] { "Messi", "Hola. Sí, soy yo. No hace falta foto. Todo esto es una locura. Pero bueno. Ya vi cosas raras en Qatar." },
         new string[] { "Jugador", "¿Escuchaste algo raro en el vagón?" },
-        new string[] { "Messi", "Miro mucho. La gente no se da cuenta, pero analizo todo. Como en la cancha. Hay alguien acá que se mueve distinto. No nervioso. Calculado. Como un jugador que ya sabe cuál va a ser la jugada antes de que empiece." },
+        new string[] { "Messi", "Yo miro mucho, eh. La gente no se da cuenta pero yo veo todo. Y hay alguien acá que está re tranquilo. Todos asustados y este tipo como si nada, tranqui, sabiéndola. Me da mala espina." },
         new string[] { "Messi", "No, esto no es para mí. Pero gracias igual." },
     };
 
@@ -70,10 +70,10 @@ public class DialogoManager : MonoBehaviour
     {
         new string[] { "Messi", "Hola. Sí, soy yo. No hace falta foto. Todo esto es una locura. Pero bueno. Ya vi cosas raras en Qatar." },
         new string[] { "Jugador", "¿Escuchaste algo raro en el vagón?" },
-        new string[] { "Messi", "Miro mucho. La gente no se da cuenta, pero analizo todo. Como en la cancha. Hay alguien acá que se mueve distinto. No nervioso. Calculado. Como un jugador que ya sabe cuál va a ser la jugada antes de que empiece." },
+        new string[] { "Messi", "Yo miro mucho, eh. La gente no se da cuenta pero yo veo todo. Y hay alguien acá que está re tranquilo. Todos asustados y este tipo como si nada, tranqui, sabiéndola. Me da mala espina." },
         new string[] { "Jugador", "[Dar pelota]" },
         new string[] { "Messi", "Mira que bueno, nunca hubiera conseguido uno, Anto se va a volver loca. Dale, te cuento." },
-        new string[] { "Messi", "Vi a alguien exhalar cuando cerraron las puertas. No de alivio. De satisfacción. Es la cara de un jugador cuando el partido ya está ganado. Estaba cantando algo. Esta persona cree que ya ganó. Que llegar a Catedral está asegurado." },
+        new string[] { "Messi", "Cuando se cerraron las puertas, vi a alguien soltar el aire. Pero no aliviado, ¿viste? Más bien contento. Como cuando ya sabés que ganaste el partido. Encima estaba cantando bajito. Para mí esa persona ya se siente ganadora. Como que llegar a Catedral lo tiene asegurado." },
         new string[] { "Messi", "Cuidámela eh." },
         new string[] { "Messi", "Ya te dije todo lo que sé. ¿Tenés algo para tomar?" },
     };
@@ -82,7 +82,7 @@ public class DialogoManager : MonoBehaviour
     {
         new string[] { "Duki", "¿Qué onda? Todo esto es una locura, bro. Venía a bancar a De Paul y ahora estoy huyendo de un T-Rex. Si esto no es una letra de trap, no sé qué es." },
         new string[] { "Jugador", "¿Escuchaste algo raro?" },
-        new string[] { "Duki", "Mirá, tenía un auricular puesto pero el otro libre. Escuché una voz decir 'Catedral' con demasiada calma. En medio del caos, eso no es normal, bro. Y escuché algo como 'ya está todo listo'. Dicho bajito. Como para sí mismo." },
+        new string[] { "Duki", "Mirá, tenía un auri puesto y el otro libre. Escuché a alguien decir 'Catedral' re tranquilo, bro. Con todo el quilombo que había, hablar así de piola no es normal. Y dijo algo como 'ya está todo listo', bajito, para adentro." },
         new string[] { "Duki", "Bro, ¿qué es esto? No me sirve. Guardatelo." },
     };
 
@@ -90,7 +90,7 @@ public class DialogoManager : MonoBehaviour
     {
         new string[] { "Duki", "¿Qué onda? Todo esto es una locura, bro. Venía a bancar a De Paul y ahora estoy huyendo de un T-Rex. Si esto no es una letra de trap, no sé qué es." },
         new string[] { "Jugador", "¿Escuchaste algo raro?" },
-        new string[] { "Duki", "Mirá, tenía un auricular puesto pero el otro libre. Escuché una voz decir 'Catedral' con demasiada calma. En medio del caos, eso no es normal, bro. Y escuché algo como 'ya está todo listo'. Dicho bajito. Como para sí mismo." },
+        new string[] { "Duki", "Mirá, tenía un auri puesto y el otro libre. Escuché a alguien decir 'Catedral' re tranquilo, bro. Con todo el quilombo que había, hablar así de piola no es normal. Y dijo algo como 'ya está todo listo', bajito, para adentro." },
         new string[] { "Jugador", "[Dar Copa del Mundo]" },
         new string[] { "Duki", "¡La copa del mundo, bro! Venía a bancar a De Paul y ahora la tengo en las manos. Okay, esto no se lo cuento a nadie. Dale, te cuento algo más." },
         new string[] { "Duki", "La voz que escuché era de una mina. Hablaba en voz muy baja pero era claramente una mujer. Dijo algo raro: 'me voy a hacer viral'. En medio de un ataque de dinosaurios. Alguien que piensa en las redes ahora... me parece algo tétrico." },
@@ -133,7 +133,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Wanda", "Miro todo. Es un don. Vi a alguien que cuando apareció el control, no puso cara de sorpresa. Todo el mundo abrió los ojos. Pero esta persona, cara de nada. Yo sé lo que es actuar sorpresa. Lo hice en televisión por años." },
         new string[] { "Jugador", "[Dar screenshots]" },
         new string[] { "Wanda", "Ay, ay, ay. Me muero. ¿Sabes todo lo que puedo conseguir con esta captura de pantalla? Lo hundo como el Titanic en dos segundos si quiero." },
-        new string[] { "Wanda", "No te voy a decir el nombre porque me tengo que guardar algo siempre para mí. Pero esta persona estaba parada como si estuviera en el escenario. La gente del espectáculo con experiencia se para así, no es para novatos." },
+        new string[] { "Wanda", "No te voy a decir el nombre porque algo me tengo que guardar yo, querida. Pero esta persona estaba parada como arriba de un escenario, ¿entendés? Con esa pose. Eso lo tenés cuando estás hace años en el ambiente, no te sale de la nada." },
         new string[] { "Wanda", "Tomá, se le cayó a alguien en el caos y ya tengo esta edición." },
         new string[] { "Wanda", "Ya te dije un montón, no me hables más." },
     };
@@ -162,7 +162,7 @@ public class DialogoManager : MonoBehaviour
     {
         new string[] { "Francella", "¡Eh! ¡Qué cosa, no! ¡Quién lo iba a decir! Dinosaurios. En Buenos Aires. Esto parece de película." },
         new string[] { "Jugador", "¿Notaste algo raro?" },
-        new string[] { "Francella", "Notás cosas cuando sos actor. Hay alguien acá que está actuando el miedo. Y el miedo actuado tiene un ritmo distinto al miedo real. Lo noto en la respiración, en los ojos. Años de oficio." },
+        new string[] { "Francella", "Uno nota cosas cuando es actor, viste. Y hay alguien acá que está fingiendo el miedo. Se le nota, no le sale natural. En la respiración, en los ojos. Después de tantos años arriba del escenario uno se da cuenta de esas cosas." },
         new string[] { "Francella", "Ay, no. Esto no lo necesito. Pero aprecio el gesto." },
     };
 
@@ -170,7 +170,7 @@ public class DialogoManager : MonoBehaviour
     {
         new string[] { "Francella", "¡Eh! ¡Qué cosa, no! ¡Quién lo iba a decir! Dinosaurios. En Buenos Aires. Esto parece de película." },
         new string[] { "Jugador", "¿Notaste algo raro?" },
-        new string[] { "Francella", "Notás cosas cuando sos actor. Hay alguien acá que está actuando el miedo. Y el miedo actuado tiene un ritmo distinto al miedo real. Lo noto en la respiración, en los ojos. Años de oficio." },
+        new string[] { "Francella", "Uno nota cosas cuando es actor, viste. Y hay alguien acá que está fingiendo el miedo. Se le nota, no le sale natural. En la respiración, en los ojos. Después de tantos años arriba del escenario uno se da cuenta de esas cosas." },
         new string[] { "Jugador", "[Dar Martín Fierro]" },
         new string[] { "Francella", "¡No te puedo creer! ¡Es la verdad, que locura! Ahora yo también sé cuanto pesa la copa del mundo, esta pesadita eh. Está bien. Te cuento todo." },
         new string[] { "Francella", "Vi a alguien acariciar el control con el pulgar. Así, suave. Como quien tiene algo que le da seguridad. Tenía anillos, grandes. Lo vi claramente." },
