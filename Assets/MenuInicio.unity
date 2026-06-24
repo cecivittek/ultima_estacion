@@ -1760,6 +1760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2028144185}
   - component: {fileID: 2028144186}
+  - component: {fileID: 2028144187}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -1796,6 +1797,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MenuInicio
   nombreEscenaJuego: Intro
   panelComoJugar: {fileID: 0}
+  cambiadorEscena: {fileID: 2028144187}
+--- !u!114 &2028144187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028144184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87bafff55d8f31459820456db0c8c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::iraescena
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

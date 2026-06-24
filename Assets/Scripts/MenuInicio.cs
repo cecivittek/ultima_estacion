@@ -9,10 +9,16 @@ public class MenuInicio : MonoBehaviour
     [Header("Panel de instrucciones (arrastrar el GameObject del panel)")]
     [SerializeField] private GameObject panelComoJugar;
  
+    [Header("Script de fade (arrastrar el mismo GameObject o uno con Iraescena)")]
+    [SerializeField] private iraescena cambiadorEscena;
+ 
     // Conectar al botón "Jugar" -> OnClick()
     public void Jugar()
     {
-        SceneManager.LoadScene(nombreEscenaJuego);
+        if (cambiadorEscena != null)
+            cambiadorEscena.IrAEscena(nombreEscenaJuego);
+        else
+            SceneManager.LoadScene(nombreEscenaJuego); // respaldo si no se asigna el fade
     }
  
     // Conectar al botón "Cómo Jugar" -> OnClick()
@@ -28,19 +34,15 @@ public class MenuInicio : MonoBehaviour
         if (panelComoJugar != null)
             panelComoJugar.SetActive(false);
     }
-
+ 
+    // Conectar al botón "Salir" -> OnClick()
     public void Salir()
-        {
+    {
 #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
 #else
-            Application.Quit();
+        Application.Quit();
 #endif
-        }
-
-        public void SalirDelJuego()
-        {
-            Application.Quit();
-        }
-
     }
+}
+ 

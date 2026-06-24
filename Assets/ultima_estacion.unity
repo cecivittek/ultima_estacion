@@ -2078,6 +2078,7 @@ GameObject:
   - component: {fileID: 1080390220}
   - component: {fileID: 1080390219}
   - component: {fileID: 1080390222}
+  - component: {fileID: 1080390223}
   m_Layer: 5
   m_Name: BotonDarObjeto
   m_TagString: Untagged
@@ -2202,6 +2203,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0.78431374, g: 0.39215687, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1080390223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080390217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f87959ee8756478f8d2b08889debd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
+  colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
+  margenBorde: 6
 --- !u!1 &1158783237
 GameObject:
   m_ObjectHideFlags: 0
@@ -3725,6 +3740,7 @@ GameObject:
   - component: {fileID: 1643529209}
   - component: {fileID: 1643529208}
   - component: {fileID: 1643529211}
+  - component: {fileID: 1643529212}
   m_Layer: 5
   m_Name: BotonSiguiente
   m_TagString: Untagged
@@ -3849,6 +3865,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0.78431374, g: 0.39215687, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &1643529212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643529206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f87959ee8756478f8d2b08889debd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
+  colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
+  margenBorde: 6
 --- !u!1 &1662857941
 GameObject:
   m_ObjectHideFlags: 0
@@ -4501,6 +4531,7 @@ GameObject:
   - component: {fileID: 1902178384}
   - component: {fileID: 1902178383}
   - component: {fileID: 1902178386}
+  - component: {fileID: 1902178387}
   m_Layer: 5
   m_Name: BotonCerrar
   m_TagString: Untagged
@@ -4625,6 +4656,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0.78431374, g: 0.39215687, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1902178387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902178381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942f87959ee8756478f8d2b08889debd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
+  colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
+  margenBorde: 6
 --- !u!1 &1908384536 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5288766556714913973, guid: b429c6fca98a8fd48aed621ceb576829, type: 3}

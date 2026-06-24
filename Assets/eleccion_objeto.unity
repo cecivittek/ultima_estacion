@@ -715,7 +715,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 0117d8c5c62fa204590b8729e6b66c89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7058824}
@@ -1230,7 +1230,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: a14e496702c073f4ebd1e0278cf0b4e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1826,6 +1826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
   colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
   margenBorde: 6
+  forzarSimple: 0
 --- !u!1 &2086357194
 GameObject:
   m_ObjectHideFlags: 0

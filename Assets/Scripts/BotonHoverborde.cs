@@ -11,6 +11,9 @@ public class BotonHoverBorde : MonoBehaviour, IPointerEnterHandler, IPointerExit
     [Header("Cuanto mas grande es el borde que el boton, en pixeles")]
     public float margenBorde = 6f;
  
+    [Header("Forzar borde simple (sin 9-slice). Activar en botones muy alargados donde el sprite Sliced deforma el contorno.")]
+    public bool forzarSimple = false;
+ 
     private GameObject borde;
  
     private void Awake()
@@ -20,7 +23,7 @@ public class BotonHoverBorde : MonoBehaviour, IPointerEnterHandler, IPointerExit
  
         borde = new GameObject("BordeHover", typeof(RectTransform), typeof(Image));
         borde.transform.SetParent(transform.parent, false); // hermano del boton, no hijo
-        borde.transform.SetSiblingIndex(0); // primero en la lista = atras de todo
+        borde.transform.SetSiblingIndex(transform.GetSiblingIndex()); // justo antes que el boton (detras de el, no de todo el Canvas)
  
         RectTransform rtBorde = borde.GetComponent<RectTransform>();
         rtBorde.anchorMin = rtFondo.anchorMin;
@@ -31,7 +34,7 @@ public class BotonHoverBorde : MonoBehaviour, IPointerEnterHandler, IPointerExit
  
         Image imgBorde = borde.GetComponent<Image>();
         imgBorde.sprite = fondo.sprite;
-        imgBorde.type = fondo.type;
+        imgBorde.type = forzarSimple ? Image.Type.Simple : fondo.type; // Simple solo si el sprite Sliced deforma el contorno
         imgBorde.color = colorBorde;
         imgBorde.raycastTarget = false;
  
@@ -46,6 +49,13 @@ public class BotonHoverBorde : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerExit(PointerEventData eventData)
     {
         borde.SetActive(false);
+    }
+ 
+    // Si el boton se desactiva con el mouse encima, Unity NO dispara OnPointerExit,
+    // asi que el borde quedaria visible y huerfano. Lo apagamos a mano aca.
+    private void OnDisable()
+    {
+        if (borde != null) borde.SetActive(false);
     }
 }
  
