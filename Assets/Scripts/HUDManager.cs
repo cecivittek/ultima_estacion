@@ -9,8 +9,8 @@ public class HUDManager : MonoBehaviour
 
     [Header("Mapa")]
     public RectTransform marcadorEstacion;
-    public float posicionXInicio = -480f; // extremo izquierdo del mapa
-    public float posicionXFin = 480f;     // extremo derecho del mapa
+    public float posicionXInicio = -480f;
+    public float posicionXFin = 480f;
 
     [Header("Paneles")]
     public GameObject panelInventario;
@@ -18,8 +18,11 @@ public class HUDManager : MonoBehaviour
     public GameObject fondoOscuro;
     public GameObject panelObjetoNuevo;
 
-    private float timerObjetoNuevo    = 0f;
-    private bool  notificacionPendiente = false;
+    [Header("Fade")]
+    [SerializeField] private iraescena cambiadorEscena;
+
+    private float timerObjetoNuevo = 0f;
+    private bool notificacionPendiente = false;
     public int estacionActual = 0;
     private int totalEstaciones = 16;
     private float tiempoTotal = 15f * 60f;
@@ -126,7 +129,6 @@ public class HUDManager : MonoBehaviour
     {
         if (panelObjetoNuevo == null) return;
 
-        // Si el HUD está inactivo (durante un diálogo), guardar para después
         if (!gameObject.activeInHierarchy)
         {
             notificacionPendiente = true;
@@ -136,7 +138,7 @@ public class HUDManager : MonoBehaviour
         CanvasGroup cg = panelObjetoNuevo.GetComponent<CanvasGroup>();
         if (cg == null) cg = panelObjetoNuevo.AddComponent<CanvasGroup>();
         cg.blocksRaycasts = false;
-        cg.interactable   = false;
+        cg.interactable = false;
 
         panelObjetoNuevo.SetActive(true);
         timerObjetoNuevo = 5f;
@@ -144,6 +146,9 @@ public class HUDManager : MonoBehaviour
 
     public void IrAAcusacion()
     {
-        SceneManager.LoadScene("Acusacion");
+        if (cambiadorEscena != null)
+            cambiadorEscena.IrAEscena("Acusacion");
+        else
+            SceneManager.LoadScene("Acusacion");
     }
 }

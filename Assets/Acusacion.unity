@@ -1862,6 +1862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
   colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
   margenBorde: 6
+  forzarSimple: 0
 --- !u!1 &555594595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,7 +2937,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1221525842}
         m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
         m_MethodName: VolverAlSubte
         m_Mode: 1
@@ -3012,6 +3013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
   colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
   margenBorde: 6
+  forzarSimple: 0
 --- !u!1 &1193909599
 GameObject:
   m_ObjectHideFlags: 0
@@ -4481,6 +4483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
   colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
   margenBorde: 6
+  forzarSimple: 0
 --- !u!1 &2108974266
 GameObject:
   m_ObjectHideFlags: 0
