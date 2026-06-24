@@ -73,7 +73,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Messi", "Yo miro mucho, eh. La gente no se da cuenta pero yo veo todo. Y hay alguien acá que está re tranquilo. Todos asustados y este tipo como si nada, tranqui, sabiéndola. Me da mala espina." },
         new string[] { "Jugador", "[Dar pelota]" },
         new string[] { "Messi", "Mira que bueno, nunca hubiera conseguido uno, Anto se va a volver loca. Dale, te cuento." },
-        new string[] { "Messi", "Cuando se cerraron las puertas, vi a alguien soltar el aire. Pero no aliviado, ¿viste? Más bien contento. Como cuando ya sabés que ganaste el partido. Encima estaba cantando bajito. Para mí esa persona ya se siente ganadora. Como que llegar a Catedral lo tiene asegurado." },
+        new string[] { "Messi", "Cuando se cerraron las puertas, vi a alguien soltar el aire. No aliviado: contento. Como cuando ya sabés que ganaste. Encima cantaba bajito. Para mí ya se siente ganador, como si llegar a Catedral lo tuviera asegurado." },
         new string[] { "Messi", "Cuidámela eh." },
         new string[] { "Messi", "Ya te dije todo lo que sé. ¿Tenés algo para tomar?" },
     };
