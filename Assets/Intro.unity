@@ -279,6 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
   colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
   margenBorde: 6
+  forzarSimple: 0
 --- !u!1 &153307984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,6 +1239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
   colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
   margenBorde: 6
+  forzarSimple: 0
 --- !u!1 &891067585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1668,6 +1670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BotonHoverBorde
   colorBorde: {r: 0.2, g: 0.8, b: 0.2, a: 1}
   margenBorde: 6
+  forzarSimple: 0
 --- !u!1 &1272702870
 GameObject:
   m_ObjectHideFlags: 0

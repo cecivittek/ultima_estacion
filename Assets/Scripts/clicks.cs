@@ -29,9 +29,14 @@ public class clicks : MonoBehaviour
  
     private void ConectarSonidoATodosLosBotones(Scene escena, LoadSceneMode modo)
     {
-        Button[] todosLosBotones = FindObjectsByType<Button>(FindObjectsSortMode.None);
+        // FindObjectsInactive.Include: tambien encuentra botones dentro de objetos
+        // desactivados (ej. PanelDialogo apagado al inicio), que de otro modo se saltean.
+        Button[] todosLosBotones = FindObjectsByType<Button>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         foreach (Button boton in todosLosBotones)
         {
+            // RemoveListener antes de Add evita que el sonido se duplique si el
+            // boton ya estaba conectado de una carga de escena anterior.
+            boton.onClick.RemoveListener(ReproducirClic);
             boton.onClick.AddListener(ReproducirClic);
         }
     }
