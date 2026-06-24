@@ -18,4 +18,12 @@ public class PersonajeHover : MonoBehaviour
     {
         highlight.SetActive(false);
     }
+
+    void OnMouseDown()
+    {
+        if (clicks.instancia != null)
+        {
+            clicks.instancia.ReproducirClic();
+        }
+    }
 }
