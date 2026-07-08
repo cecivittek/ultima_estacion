@@ -10,6 +10,9 @@ public class InventarioManager : MonoBehaviour
     public System.Action<string> alClickearObjeto;
     public bool modoSeleccion = false;
 
+    [Header("Objeto inicial")]
+    public string objetoInicial = "pelota";
+
     [Header("Sprites de objetos")]
     public Sprite spritePelota;
     public Sprite spriteCopa;
@@ -18,6 +21,7 @@ public class InventarioManager : MonoBehaviour
     public Sprite spriteCartera;
     public Sprite spriteMartinFierro;
     public Sprite spriteMate;
+    public Sprite spriteCigarrillo;
 
     [Header("Layout")]
     public float escala = 80f;
@@ -40,6 +44,7 @@ public class InventarioManager : MonoBehaviour
             { "cartera",      spriteCartera },
             { "martinFierro", spriteMartinFierro },
             { "mate",         spriteMate },
+            { "cigarrillo",   spriteCigarrillo },
         };
     }
 
@@ -52,7 +57,7 @@ public class InventarioManager : MonoBehaviour
             if (contenido == null)
                 contenido = transform;
 
-            AgregarObjeto("pelota", silencioso: true);
+            AgregarObjeto(objetoInicial, silencioso: true);
         }
     }
 

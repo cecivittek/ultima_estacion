@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5006504429839846514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1973336867217935804}
+  - component: {fileID: 6932638823716969391}
+  m_Layer: 0
+  m_Name: InventarioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1973336867217935804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5006504429839846514}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.27595, y: 0.20443, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6932638823716969391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5006504429839846514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71077f0929d22ad4996355c7e7ec5092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventarioManager
+  contenido: {fileID: 0}
+  modoSeleccion: 0
+  objetoInicial: pelota
+  spritePelota: {fileID: 21300000, guid: 92d9cfa3b89f24e48ba929d776881dba, type: 3}
+  spriteCopa: {fileID: 21300000, guid: 8c1d9572635c4704aa34ba446d35c6e2, type: 3}
+  spriteAutografo: {fileID: 21300000, guid: c8394af450196f140b92b9fa8f98c96f, type: 3}
+  spriteScreenshots: {fileID: 21300000, guid: 5ef2c8e01a0c5bf489da675431929a73, type: 3}
+  spriteCartera: {fileID: 21300000, guid: 114d004f99a706c47b100643185b32c5, type: 3}
+  spriteMartinFierro: {fileID: 21300000, guid: 95991daa1aee8de408cb5fb1f064fd77, type: 3}
+  spriteMate: {fileID: 21300000, guid: 2c25b790c3bb875488d97d2a7896db26, type: 3}
+  spriteCigarrillo: {fileID: 0}
+  escala: 250
+  espaciado: -28
+  posicionInicio: {x: -740, y: -20}

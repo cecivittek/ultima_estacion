@@ -1,10 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class DialogoManager : MonoBehaviour
+public class DialogoManagerMate : MonoBehaviour
 {
     public TextMeshProUGUI textNombre;
     public TextMeshProUGUI textDialogo;
@@ -19,128 +18,28 @@ public class DialogoManager : MonoBehaviour
     public GameObject hud;
     public GameObject personajesGrupo;
     public PersonajeDialogo personajeDialogo;
+
     public Sprite spriteMessiCharla;
     public Sprite spriteMessiContento;
-    public Sprite spriteDukiContento;
-    public Sprite spriteMilagrosContento;
-    public Sprite spriteWandaContento;
-    public Sprite spriteSusanaContento;
-    public Sprite spriteFrancellaContento;
-    public Sprite spriteVagabundoContento;
     public Sprite spriteDukiCharla;
+    public Sprite spriteDukiContento;
     public Sprite spriteMilagrosCharla;
+    public Sprite spriteMilagrosContento;
     public Sprite spriteWandaCharla;
+    public Sprite spriteWandaContento;
     public Sprite spriteSusanaCharla;
+    public Sprite spriteSusanaContento;
     public Sprite spriteFrancellaCharla;
+    public Sprite spriteFrancellaContento;
     public Sprite spriteVagabundoCharla;
-
-    [Header("Camino")]
-    public bool esCaminoMate = false;
+    public Sprite spriteVagabundoContento;
 
     private int indiceDialogo = 0;
     private string[][] dialogoActual;
     private string personajeActual = "";
 
-    // ── CAMINO PELOTA ────────────────────────────────────────────────────────
-
-    private Dictionary<string, string> objetoCorrectoPelota = new Dictionary<string, string>
-    {
-        { "Messi",     "pelota" },
-        { "Duki",      "copa" },
-        { "Milagros",  "autografo" },
-        { "Wanda",     "screenshots" },
-        { "Susana",    "cartera" },
-        { "Francella", "martinFierro" },
-        { "Vagabundo", "mate" },
-    };
-
-    private string[][] dialogoMessiPelota = new string[][]
-    {
-        new string[] { "Messi",   "Hola. Sí, soy yo. No hace falta foto. Todo esto es una locura. Pero bueno. Ya vi cosas raras en Qatar." },
-        new string[] { "Jugador", "¿Escuchaste algo raro en el vagón?" },
-        new string[] { "Messi",   "Yo miro mucho, eh. La gente no se da cuenta pero yo veo todo. Y hay alguien acá que está re tranquilo. Todos asustados y este tipo como si nada, tranqui, sabiéndola. Me da mala espina." },
-        new string[] { "Jugador", "[Dar pelota]" },
-        new string[] { "Messi",   "Mira que bueno, nunca hubiera conseguido uno, Anto se va a volver loca. Dale, te cuento." },
-        new string[] { "Messi",   "Cuando se cerraron las puertas, vi a alguien soltar el aire. No aliviado: contento. Como cuando ya sabés que ganaste. Encima cantaba bajito. Para mí ya se siente ganador, como si llegar a Catedral lo tuviera asegurado." },
-        new string[] { "Messi",   "Cuidámela eh." },
-        new string[] { "Messi",   "Ya te dije todo lo que sé. ¿Tenés algo para tomar?" },
-    };
-
-    private string[][] dialogoDukiPelota = new string[][]
-    {
-        new string[] { "Duki",    "¿Qué onda? Todo esto es una locura, bro. Venía a bancar a De Paul y ahora estoy huyendo de un T-Rex. Si esto no es una letra de trap, no sé qué es." },
-        new string[] { "Jugador", "¿Escuchaste algo raro?" },
-        new string[] { "Duki",    "Mirá, tenía un auri puesto y el otro libre. Escuché a alguien decir 'Catedral' re tranquilo, bro. Con todo el quilombo que había, hablar así de piola no es normal. Y dijo algo como 'ya está todo listo', bajito, para adentro." },
-        new string[] { "Jugador", "[Dar Copa del Mundo]" },
-        new string[] { "Duki",    "¡La copa del mundo, bro! Venía a bancar a De Paul y ahora la tengo en las manos. Okay, esto no se lo cuento a nadie. Dale, te cuento algo más." },
-        new string[] { "Duki",    "La voz que escuché era de una mina. Hablaba en voz muy baja pero era claramente una mujer. Dijo algo raro: 'me voy a hacer viral'. En medio de un ataque de dinosaurios. Alguien que piensa en las redes ahora... me parece algo tétrico." },
-        new string[] { "Duki",    "Tomá. No hago favores pero acá tenés. Mi autógrafo." },
-        new string[] { "Duki",    "Ya está, bro. No sé nada más. Estoy inspirándome para componer un nuevo tema. No me interrumpas." },
-    };
-
-    private string[][] dialogoMilagrosPelota = new string[][]
-    {
-        new string[] { "Milagros Pilar", "¡Chicos, no se imaginan esto! ¡Un dinosaurio de verdad! Ay, hola. ¿Me seguís? No importa. ¿Tenés buena luz acá? Es una tragedia, obvio. Pero el contenido... el contenido es increíble." },
-        new string[] { "Jugador",        "¿Viste algo sospechoso?" },
-        new string[] { "Milagros Pilar", "Yo capturo todo, es casi un reflejo. Vi a alguien que subió al subte sin correr. Todos corrían y esta persona caminaba. Caminaba como si supiera que el subte la iba a esperar." },
-        new string[] { "Jugador",        "[Dar autógrafo de Duki]" },
-        new string[] { "Milagros Pilar", "¡DUKI! ¡Ay, me muero literalmente! ¿Cómo lo conseguiste? ¿Me lo das? ¿Lo puedo postear? Okay okay." },
-        new string[] { "Milagros Pilar", "Te cuento algo que no le dije a nadie. Antes de subir, en el caos, vi a alguien con el control en la mano. Lo guardó cuando empezaron a mirar. Era una chica. Con cadenas, ropa oscura." },
-        new string[] { "Milagros Pilar", "Mirá estas capturas. Son mi chisme mejor guardado." },
-        new string[] { "Milagros Pilar", "Ya te conté todo, gordi. Ahora dejame que tengo que editar el reel de los dinosaurios. ¿Sabés el alcance que va a tener?" },
-    };
-
-    private string[][] dialogoWandaPelota = new string[][]
-    {
-        new string[] { "Wanda",   "Esto es un desastre absoluto. No puedo correr con estos tacos. ¿Vos quién sos? No te conozco ¿Trabajas para mí?" },
-        new string[] { "Jugador", "¿Escuchaste algo raro en el vagón?" },
-        new string[] { "Wanda",   "Miro todo. Es un don. Vi a alguien que cuando apareció el control, no puso cara de sorpresa. Todo el mundo abrió los ojos. Pero esta persona, cara de nada. Yo sé lo que es actuar sorpresa. Lo hice en televisión por años." },
-        new string[] { "Jugador", "[Dar screenshots]" },
-        new string[] { "Wanda",   "Ay, ay, ay. Me muero. ¿Sabes todo lo que puedo conseguir con esta captura de pantalla? Lo hundo como el Titanic en dos segundos si quiero." },
-        new string[] { "Wanda",   "No te voy a decir el nombre porque algo me tengo que guardar yo, querida. Pero esta persona estaba parada como arriba de un escenario, ¿entendés? Con esa pose. Eso lo tenés cuando estás hace años en el ambiente, no te sale de la nada." },
-        new string[] { "Wanda",   "Tomá, se le cayó a alguien en el caos y ya tengo esta edición." },
-        new string[] { "Wanda",   "Ya te dije un montón, no me hables más." },
-    };
-
-    private string[][] dialogoSusanaPelota = new string[][]
-    {
-        new string[] { "Susana",  "¡Esto es una pesadilla! ¡Yo tenía grabación mañana! ¿Y vos quién sos, querido? En esta situación todos somos iguales. Bueno, casi." },
-        new string[] { "Jugador", "¿Vio algo sospechoso?" },
-        new string[] { "Susana",  "Mirá, yo tengo ojo clínico. Años de entrevistar gente. Hay alguien acá que tiene un aura rara. Alguien que parece que no se sorprendió cuando vió los dinosaurios." },
-        new string[] { "Jugador", "[Dar cartera Louis Vuitton]" },
-        new string[] { "Susana",  "¡MI CARTERA! ¡Ay, pensé que la había perdido para siempre! Las fotos de Pacha... el rouge... todo está. Vos sos un ángel." },
-        new string[] { "Susana",  "Vi la cara del infiltrado, querido. Cuando encontraron el control, todos miraron el objeto, pero esta persona miró a los demás. Era un chico joven, del ambiente artístico. Quería pasar desapercibido." },
-        new string[] { "Susana",  "Merecés un premio por toda esta investigación. Tomá." },
-        new string[] { "Susana",  "Ya te dije todo, querido. Ahora necesito sentarme. Este vagón está muy frío." },
-    };
-
-    private string[][] dialogoFrancellaPelota = new string[][]
-    {
-        new string[] { "Francella", "¡Eh! ¡Qué cosa, no! ¡Quién lo iba a decir! Dinosaurios. En Buenos Aires. Esto parece de película." },
-        new string[] { "Jugador",   "¿Notaste algo raro?" },
-        new string[] { "Francella", "Uno nota cosas cuando es actor, viste. Y hay alguien acá que está fingiendo el miedo. Se le nota, no le sale natural. En la respiración, en los ojos. Después de tantos años arriba del escenario uno se da cuenta de esas cosas." },
-        new string[] { "Jugador",   "[Dar Martín Fierro]" },
-        new string[] { "Francella", "¡No te puedo creer! ¡Es la verdad, que locura! Ahora yo también sé cuanto pesa la copa del mundo, esta pesadita eh. Está bien. Te cuento todo." },
-        new string[] { "Francella", "Vi a alguien acariciar el control con el pulgar. Así, suave. Como quien tiene algo que le da seguridad. Tenía anillos, grandes. Lo vi claramente." },
-        new string[] { "Francella", "No tengo nada para vos, disculpá, salí corriendo y no agarré nada. Pero te puedo ofrecer un mate calentito." },
-        new string[] { "Francella", "Ya te dije todo lo que podía decirte. El resto lo tenés que resolver vos. Apurate. Tick tock." },
-    };
-
-    private string[][] dialogoVagabundoPelota = new string[][]
-    {
-        new string[] { "Vagabundo", "Ey. No me pises las cosas. Dinosaurios... dinosaurios. Vi cosas peores en Once. ¿Qué querés?" },
-        new string[] { "Jugador",   "¿Viste algo raro en el vagón?" },
-        new string[] { "Vagabundo", "Todo me parece raro. Pero hay alguien acá que no está asustado. Cuando hay dinosaurios afuera, la gente se asusta. Yo vivo en la calle, aprendo a leer a la gente. El que no tiene miedo... algo sabe." },
-        new string[] { "Jugador",   "[Dar mate]" },
-        new string[] { "Vagabundo", "Mmm que rico, está un poco lavado pero por lo menos me calienta el cuerpo. Ya que estamos girando el mate, te cuento." },
-        new string[] { "Vagabundo", "Vi a alguien que cuando encontraron el control, miró a los demás antes de mirarlo. No sé el nombre, tenía tatuajes creo." },
-        new string[] { "Vagabundo", "Esto era lo que necesitaba. Gracias, pibe." },
-        new string[] { "Vagabundo", "Ya te dije todo lo que sé. Déjame tranquilo que el subte me da sueño." },
-    };
-
-    // ── CAMINO MATE ──────────────────────────────────────────────────────────
-
-    private Dictionary<string, string> objetoCorrectoMate = new Dictionary<string, string>
+    // Cadena: mate→Vagabundo→cigarrillo→Duki→autografo→Milagros→screenshots→Wanda→cartera→Susana→martinFierro→Messi→copa→Francella
+    private Dictionary<string, string> objetoCorrecto = new Dictionary<string, string>
     {
         { "Vagabundo", "mate" },
         { "Duki",      "cigarrillo" },
@@ -151,7 +50,7 @@ public class DialogoManager : MonoBehaviour
         { "Francella", "copa" },
     };
 
-    private Dictionary<string, string> mensajeEquivocadoMate = new Dictionary<string, string>
+    private Dictionary<string, string> mensajeEquivocado = new Dictionary<string, string>
     {
         { "Vagabundo", "¿No tenés algo calentito para darme? No sabés el frío que paso acá." },
         { "Duki",      "Bro, ¿qué es esto? No me sirve. Guardatelo." },
@@ -162,7 +61,7 @@ public class DialogoManager : MonoBehaviour
         { "Francella", "Ay, no. Esto no lo necesito. Pero aprecio el gesto." },
     };
 
-    private string[][] dialogoVagabundoMate = new string[][]
+    private string[][] dialogoVagabundo = new string[][]
     {
         new string[] { "Vagabundo", "Ey. No me pises las cosas. Dinosaurios... dinosaurios. Vi cosas peores en Once. ¿Qué querés?" },
         new string[] { "Jugador",   "¿Viste algo raro en el vagón?" },
@@ -173,7 +72,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Vagabundo", "Ya te dije todo lo que sé. Déjame tranquilo que el subte me da sueño." },
     };
 
-    private string[][] dialogoDukiMate = new string[][]
+    private string[][] dialogoDuki = new string[][]
     {
         new string[] { "Duki",    "¿Qué onda? Todo esto es una locura, bro. Venía a bancar a De Paul y ahora estoy huyendo de un T-Rex. Si esto no es una letra de trap, no sé qué es." },
         new string[] { "Jugador", "¿Escuchaste algo raro?" },
@@ -184,7 +83,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Duki",    "Ya está, bro. No sé nada más. Estoy inspirándome para componer un nuevo tema. No me interrumpas." },
     };
 
-    private string[][] dialogoMilagrosMate = new string[][]
+    private string[][] dialogoMilagros = new string[][]
     {
         new string[] { "Milagros Pilar", "¡Chicos, no se imaginan esto! ¡Un dinosaurio de verdad! Ay, hola. ¿Me seguís? No importa. ¿Tenés buena luz acá? Es una tragedia, obvio. Pero el contenido... el contenido es increíble." },
         new string[] { "Jugador",        "¿Viste algo sospechoso?" },
@@ -195,7 +94,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Milagros Pilar", "Ya te conté todo, gordi. Ahora dejáme que tengo que editar el reel de los dinosaurios. ¿Sabés el alcance que va a tener?" },
     };
 
-    private string[][] dialogoWandaMate = new string[][]
+    private string[][] dialogoWanda = new string[][]
     {
         new string[] { "Wanda",   "Esto es un desastre absoluto. No puedo correr con estos tacos. ¿Vos quién sos? No te conozco ¿Trabajas para mí?" },
         new string[] { "Jugador", "¿Escuchaste algo raro en el vagón?" },
@@ -206,7 +105,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Wanda",   "Ya te dije un montón, no me hables más." },
     };
 
-    private string[][] dialogoSusanaMate = new string[][]
+    private string[][] dialogoSusana = new string[][]
     {
         new string[] { "Susana",  "¡Esto es una pesadilla! ¡Yo tenía un día muy ocupado! ¿Y vos quién sos, querido? En esta situación todos somos iguales. Bueno, casi." },
         new string[] { "Jugador", "¿Vio algo sospechoso?" },
@@ -217,7 +116,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Susana",  "Ya te dije todo, querido. Ahora necesito sentarme. Este vagón está muy frío." },
     };
 
-    private string[][] dialogoMessiMate = new string[][]
+    private string[][] dialogoMessi = new string[][]
     {
         new string[] { "Messi",   "Hola. Sí, soy yo. No hace falta foto. Todo esto es una locura. Pero bueno. Ya vi cosas raras en Qatar." },
         new string[] { "Jugador", "¿Escuchaste algo raro en el vagón?" },
@@ -228,7 +127,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Messi",   "Ya te dije todo lo que sé. ¿Tenés algo para tomar?" },
     };
 
-    private string[][] dialogoFrancellaMate = new string[][]
+    private string[][] dialogoFrancella = new string[][]
     {
         new string[] { "Francella", "¡Eh! ¡Qué cosa, no! ¡Quién lo iba a decir! Dinosaurios. En Buenos Aires. Esto parece de película." },
         new string[] { "Jugador",   "¿Notaste algo raro?" },
@@ -238,8 +137,6 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Francella", "No tengo nada para vos, disculpá, salí corriendo y no agarré nada cuando llegaron los dinosaurios, espero que te sirva lo que vi." },
         new string[] { "Francella", "Ya te dije todo lo que podía decirte. El resto lo tenés que resolver vos. Apurate." },
     };
-
-    // ── INICIO ───────────────────────────────────────────────────────────────
 
     void Start()
     {
@@ -261,9 +158,9 @@ public class DialogoManager : MonoBehaviour
         Button[] todosButtons = Resources.FindObjectsOfTypeAll<Button>();
         foreach (Button b in todosButtons)
         {
-            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonSiguiente")     botonSiguiente = b;
-            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonDarObjeto")     botonDarObjeto = b;
-            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonCerrar")        botonCerrar = b;
+            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonSiguiente")  botonSiguiente = b;
+            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonDarObjeto")  botonDarObjeto = b;
+            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonCerrar")     botonCerrar = b;
             if (b.gameObject.scene.isLoaded && b.gameObject.name == "BtnCerrarInventario") botonCerrarInventario = b;
         }
 
@@ -283,30 +180,25 @@ public class DialogoManager : MonoBehaviour
             if (go.scene.isLoaded && go.name == "PanelInventario") panelInventario = go;
         }
 
-        if (botonSiguiente != null)        botonSiguiente.onClick.AddListener(SiguienteLinea);
-        if (botonDarObjeto != null)        botonDarObjeto.onClick.AddListener(AbrirInventarioParaElegir);
-        if (botonCerrar != null)           botonCerrar.onClick.AddListener(CerrarDialogo);
+        if (botonSiguiente != null)     botonSiguiente.onClick.AddListener(SiguienteLinea);
+        if (botonDarObjeto != null)     botonDarObjeto.onClick.AddListener(AbrirInventarioParaElegir);
+        if (botonCerrar != null)        botonCerrar.onClick.AddListener(CerrarDialogo);
         if (botonCerrarInventario != null) botonCerrarInventario.onClick.AddListener(CancelarSeleccionInventario);
-        if (botonDarObjeto != null)        botonDarObjeto.gameObject.SetActive(false);
-
-        Debug.Log("botonSiguiente: " + botonSiguiente);
-        Debug.Log("panelDialogo: " + panelDialogo);
+        if (botonDarObjeto != null)     botonDarObjeto.gameObject.SetActive(false);
     }
 
-    // ── INICIAR DIÁLOGOS ─────────────────────────────────────────────────────
-
-    public void IniciarDialogoMessi()
+    public void IniciarDialogoVagabundo()
     {
-        personajeActual = "Messi";
-        dialogoActual   = esCaminoMate ? dialogoMessiMate : dialogoMessiPelota;
-        if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteMessiCharla);
+        personajeActual = "Vagabundo";
+        dialogoActual   = dialogoVagabundo;
+        if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteVagabundoCharla);
         IniciarDialogo();
     }
 
     public void IniciarDialogoDuki()
     {
         personajeActual = "Duki";
-        dialogoActual   = esCaminoMate ? dialogoDukiMate : dialogoDukiPelota;
+        dialogoActual   = dialogoDuki;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteDukiCharla);
         IniciarDialogo();
     }
@@ -314,7 +206,7 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoMilagros()
     {
         personajeActual = "Milagros";
-        dialogoActual   = esCaminoMate ? dialogoMilagrosMate : dialogoMilagrosPelota;
+        dialogoActual   = dialogoMilagros;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteMilagrosCharla);
         IniciarDialogo();
     }
@@ -322,7 +214,7 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoWanda()
     {
         personajeActual = "Wanda";
-        dialogoActual   = esCaminoMate ? dialogoWandaMate : dialogoWandaPelota;
+        dialogoActual   = dialogoWanda;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteWandaCharla);
         IniciarDialogo();
     }
@@ -330,36 +222,30 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoSusana()
     {
         personajeActual = "Susana";
-        dialogoActual   = esCaminoMate ? dialogoSusanaMate : dialogoSusanaPelota;
+        dialogoActual   = dialogoSusana;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteSusanaCharla);
+        IniciarDialogo();
+    }
+
+    public void IniciarDialogoMessi()
+    {
+        personajeActual = "Messi";
+        dialogoActual   = dialogoMessi;
+        if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteMessiCharla);
         IniciarDialogo();
     }
 
     public void IniciarDialogoFrancella()
     {
         personajeActual = "Francella";
-        dialogoActual   = esCaminoMate ? dialogoFrancellaMate : dialogoFrancellaPelota;
+        dialogoActual   = dialogoFrancella;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteFrancellaCharla);
         IniciarDialogo();
     }
 
-    public void IniciarDialogoVagabundo()
-    {
-        personajeActual = "Vagabundo";
-        dialogoActual   = esCaminoMate ? dialogoVagabundoMate : dialogoVagabundoPelota;
-        if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteVagabundoCharla);
-        IniciarDialogo();
-    }
-
-    // ── LÓGICA DE DIÁLOGO ────────────────────────────────────────────────────
-
     void IniciarDialogo()
     {
-        if (hud != null)             hud.SetActive(false);
-        if (panelDialogo != null)    panelDialogo.SetActive(true);
-        if (fondoDialogos != null)   fondoDialogos.SetActive(true);
-        if (fondoPrincipal != null)  fondoPrincipal.SetActive(false);
-        if (personajesGrupo != null) personajesGrupo.SetActive(false);
+        if (hud != null) hud.SetActive(false);
         indiceDialogo = 0;
         MostrarLineaActual();
     }
@@ -414,8 +300,8 @@ public class DialogoManager : MonoBehaviour
         if (panelInventario != null) panelInventario.SetActive(false);
         if (panelDialogo != null)    panelDialogo.SetActive(true);
 
-        var correcto = esCaminoMate ? objetoCorrectoMate : objetoCorrectoPelota;
-        bool acerto  = correcto.ContainsKey(personajeActual) && correcto[personajeActual] == idObjeto;
+        bool acerto = objetoCorrecto.ContainsKey(personajeActual)
+                      && objetoCorrecto[personajeActual] == idObjeto;
 
         if (acerto)
         {
@@ -423,77 +309,15 @@ public class DialogoManager : MonoBehaviour
         }
         else
         {
-            string msg = "No, esto no me sirve. ¿Tenés otra cosa?";
-            if (esCaminoMate && mensajeEquivocadoMate.ContainsKey(personajeActual))
-                msg = mensajeEquivocadoMate[personajeActual];
+            string msg = mensajeEquivocado.ContainsKey(personajeActual)
+                ? mensajeEquivocado[personajeActual]
+                : "No, esto no me sirve. ¿Tenés otra cosa?";
             textNombre.text  = personajeActual;
             textDialogo.text = msg;
         }
     }
 
     void DarObjeto()
-    {
-        if (esCaminoMate) DarObjetoMate();
-        else              DarObjetoPelota();
-        SiguienteLinea();
-    }
-
-    void DarObjetoPelota()
-    {
-        switch (personajeActual)
-        {
-            case "Messi":
-                if (personajeDialogo != null && spriteMessiContento != null)
-                    personajeDialogo.MostrarPersonaje(spriteMessiContento);
-                InventarioManager.instancia?.QuitarObjeto("pelota");
-                InventarioManager.instancia?.AgregarObjeto("copa");
-                Anotador.AgregarPista("Messi", "Exhaló con satisfacción cuando cerraron las puertas. Estaba cantando. Cree que llegar a Catedral está asegurado.");
-                break;
-            case "Duki":
-                if (personajeDialogo != null && spriteDukiContento != null)
-                    personajeDialogo.MostrarPersonaje(spriteDukiContento);
-                InventarioManager.instancia?.QuitarObjeto("copa");
-                InventarioManager.instancia?.AgregarObjeto("autografo");
-                Anotador.AgregarPista("Duki", "Era una mujer. Dijo 'me voy a hacer viral' en medio del caos.");
-                break;
-            case "Milagros":
-                if (personajeDialogo != null && spriteMilagrosContento != null)
-                    personajeDialogo.MostrarPersonaje(spriteMilagrosContento);
-                InventarioManager.instancia?.QuitarObjeto("autografo");
-                InventarioManager.instancia?.AgregarObjeto("screenshots");
-                Anotador.AgregarPista("Milagros", "Vi a alguien con el control antes de subir. Lo guardó al ser observada. Chica con cadenas y ropa oscura.");
-                break;
-            case "Wanda":
-                if (personajeDialogo != null && spriteWandaContento != null)
-                    personajeDialogo.MostrarPersonaje(spriteWandaContento);
-                InventarioManager.instancia?.QuitarObjeto("screenshots");
-                InventarioManager.instancia?.AgregarObjeto("cartera");
-                Anotador.AgregarPista("Wanda", "Se para como en un escenario. Alguien del espectáculo con experiencia, no es novata.");
-                break;
-            case "Susana":
-                if (personajeDialogo != null && spriteSusanaContento != null)
-                    personajeDialogo.MostrarPersonaje(spriteSusanaContento);
-                InventarioManager.instancia?.QuitarObjeto("cartera");
-                InventarioManager.instancia?.AgregarObjeto("martinFierro");
-                Anotador.AgregarPista("Susana", "Cuando encontraron el control, miró a los demás en vez de mirarlo. Joven, del ambiente artístico.");
-                break;
-            case "Francella":
-                if (personajeDialogo != null && spriteFrancellaContento != null)
-                    personajeDialogo.MostrarPersonaje(spriteFrancellaContento);
-                InventarioManager.instancia?.QuitarObjeto("martinFierro");
-                InventarioManager.instancia?.AgregarObjeto("mate");
-                Anotador.AgregarPista("Francella", "Acariciaba el control con el pulgar. Tenía anillos grandes.");
-                break;
-            case "Vagabundo":
-                if (personajeDialogo != null && spriteVagabundoContento != null)
-                    personajeDialogo.MostrarPersonaje(spriteVagabundoContento);
-                InventarioManager.instancia?.QuitarObjeto("mate");
-                Anotador.AgregarPista("Vagabundo", "Miró a los demás antes de mirar el control. Tenía tatuajes.");
-                break;
-        }
-    }
-
-    void DarObjetoMate()
     {
         switch (personajeActual)
         {
@@ -504,6 +328,7 @@ public class DialogoManager : MonoBehaviour
                 InventarioManager.instancia?.AgregarObjeto("cigarrillo");
                 Anotador.AgregarPista("Vagabundo", "Miró a los demás antes de mirar el control. Tenía tatuajes.");
                 break;
+
             case "Duki":
                 if (personajeDialogo != null && spriteDukiContento != null)
                     personajeDialogo.MostrarPersonaje(spriteDukiContento);
@@ -511,6 +336,7 @@ public class DialogoManager : MonoBehaviour
                 InventarioManager.instancia?.AgregarObjeto("autografo");
                 Anotador.AgregarPista("Duki", "Era una mujer. Dijo 'me voy a hacer viral' en medio del caos.");
                 break;
+
             case "Milagros":
                 if (personajeDialogo != null && spriteMilagrosContento != null)
                     personajeDialogo.MostrarPersonaje(spriteMilagrosContento);
@@ -518,6 +344,7 @@ public class DialogoManager : MonoBehaviour
                 InventarioManager.instancia?.AgregarObjeto("screenshots");
                 Anotador.AgregarPista("Milagros", "Vi a alguien con el control antes de subir. Lo guardó al ser observado. Un chico con cadenas y ropa oscura.");
                 break;
+
             case "Wanda":
                 if (personajeDialogo != null && spriteWandaContento != null)
                     personajeDialogo.MostrarPersonaje(spriteWandaContento);
@@ -525,6 +352,7 @@ public class DialogoManager : MonoBehaviour
                 InventarioManager.instancia?.AgregarObjeto("cartera");
                 Anotador.AgregarPista("Wanda", "Se para como en un escenario. Alguien del espectáculo con experiencia.");
                 break;
+
             case "Susana":
                 if (personajeDialogo != null && spriteSusanaContento != null)
                     personajeDialogo.MostrarPersonaje(spriteSusanaContento);
@@ -532,6 +360,7 @@ public class DialogoManager : MonoBehaviour
                 InventarioManager.instancia?.AgregarObjeto("martinFierro");
                 Anotador.AgregarPista("Susana", "Cuando encontraron el control, miró a los demás en vez de mirarlo. Joven, del ambiente artístico.");
                 break;
+
             case "Messi":
                 if (personajeDialogo != null && spriteMessiContento != null)
                     personajeDialogo.MostrarPersonaje(spriteMessiContento);
@@ -539,6 +368,7 @@ public class DialogoManager : MonoBehaviour
                 InventarioManager.instancia?.AgregarObjeto("copa");
                 Anotador.AgregarPista("Messi", "Exhaló con satisfacción cuando cerraron las puertas. Estaba cantando. Cree que llegar a Catedral está asegurado.");
                 break;
+
             case "Francella":
                 if (personajeDialogo != null && spriteFrancellaContento != null)
                     personajeDialogo.MostrarPersonaje(spriteFrancellaContento);
@@ -546,6 +376,7 @@ public class DialogoManager : MonoBehaviour
                 Anotador.AgregarPista("Francella", "Acariciaba el control con el pulgar. Tenía anillos grandes.");
                 break;
         }
+        SiguienteLinea();
     }
 
     void CerrarDialogo()
@@ -575,10 +406,5 @@ public class DialogoManager : MonoBehaviour
             if (panelInventario != null) panelInventario.SetActive(false);
             if (panelDialogo != null)    panelDialogo.SetActive(true);
         }
-    }
-
-    public void IrAAcusacion()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Acusacion");
     }
 }

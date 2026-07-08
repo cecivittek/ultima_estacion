@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1330201484508320226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4833632553479814753}
+  - component: {fileID: 2323024548959060128}
+  m_Layer: 0
+  m_Name: DialogoManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4833632553479814753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330201484508320226}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2323024548959060128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330201484508320226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd3814874c63487a9cd6bfb7c5ad5a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoManager
+  textNombre: {fileID: 0}
+  textDialogo: {fileID: 0}
+  botonSiguiente: {fileID: 0}
+  botonDarObjeto: {fileID: 0}
+  botonCerrar: {fileID: 0}
+  panelDialogo: {fileID: 0}
+  fondoDialogos: {fileID: 0}
+  fondoPrincipal: {fileID: 0}
+  panelInventario: {fileID: 0}
+  botonCerrarInventario: {fileID: 0}
+  hud: {fileID: 0}
+  personajesGrupo: {fileID: 0}
+  personajeDialogo: {fileID: 0}
+  spriteMessiCharla: {fileID: -175557357, guid: 328fd30036b21aa4c8b1d7cb6c6389df, type: 3}
+  spriteMessiContento: {fileID: -265231524, guid: 328fd30036b21aa4c8b1d7cb6c6389df, type: 3}
+  spriteDukiContento: {fileID: -1469287492, guid: 29c1d11c673eb07479dfd6cfec35fb4d, type: 3}
+  spriteMilagrosContento: {fileID: 620128358, guid: 99e19fae6cf49854ea03ca6eb102ace3, type: 3}
+  spriteWandaContento: {fileID: -1174936323, guid: ce65789e1d6e75d4abb3ef0d905667da, type: 3}
+  spriteSusanaContento: {fileID: 1016475531, guid: 57c90eea6b7aa884db1c2c2bcb6485a2, type: 3}
+  spriteFrancellaContento: {fileID: 625933792, guid: 6b39d915a020d61489e4d41e4bb4fb22, type: 3}
+  spriteVagabundoContento: {fileID: 1740772375, guid: 54b25edf6624a29498fade86646dcb07, type: 3}
+  spriteDukiCharla: {fileID: -257626380, guid: 29c1d11c673eb07479dfd6cfec35fb4d, type: 3}
+  spriteMilagrosCharla: {fileID: 861391403, guid: 99e19fae6cf49854ea03ca6eb102ace3, type: 3}
+  spriteWandaCharla: {fileID: 693023507, guid: ce65789e1d6e75d4abb3ef0d905667da, type: 3}
+  spriteSusanaCharla: {fileID: -1265220926, guid: 57c90eea6b7aa884db1c2c2bcb6485a2, type: 3}
+  spriteFrancellaCharla: {fileID: -653791757, guid: 6b39d915a020d61489e4d41e4bb4fb22, type: 3}
+  spriteVagabundoCharla: {fileID: -1041224448, guid: 54b25edf6624a29498fade86646dcb07, type: 3}
