@@ -283,7 +283,7 @@ PrefabInstance:
       objectReference: {fileID: 1899313007}
     - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
       propertyPath: esCaminoMate
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
       propertyPath: panelDialogo
@@ -1710,6 +1710,10 @@ PrefabInstance:
       value: HUD
       objectReference: {fileID: 0}
     - target: {fileID: 7081905818530465554, guid: fe07dc01b28fe1c40a6b99bdaf3f52ca, type: 3}
+      propertyPath: fondoOscuro
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081905818530465554, guid: fe07dc01b28fe1c40a6b99bdaf3f52ca, type: 3}
       propertyPath: panelAnotador
       value: 
       objectReference: {fileID: 1071536976}
@@ -2024,6 +2028,10 @@ PrefabInstance:
     - target: {fileID: 3542771377964132334, guid: 3e578258ac562d045a57bd75f7b18c63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698091625149227811, guid: 3e578258ac562d045a57bd75f7b18c63, type: 3}
+      propertyPath: maxX
+      value: 124
       objectReference: {fileID: 0}
     - target: {fileID: 6698091625149227811, guid: 3e578258ac562d045a57bd75f7b18c63, type: 3}
       propertyPath: player

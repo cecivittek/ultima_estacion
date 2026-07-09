@@ -365,6 +365,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1072782781 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+  m_PrefabInstance: {fileID: 2103652399301198626}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd3814874c63487a9cd6bfb7c5ad5a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoManager
 --- !u!1 &1258023724
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +595,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4137859380992490782, guid: 1f813354dc4f84845aa501f0d1b5200c, type: 3}
   m_PrefabInstance: {fileID: 1359383571339553451}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1598799840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 306869627591728810, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+  m_PrefabInstance: {fileID: 4123660966929263041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1712856319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,6 +1027,10 @@ PrefabInstance:
       propertyPath: personajeDialogo
       value: 
       objectReference: {fileID: 409943434}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: botonCerrarInventario
+      value: 
+      objectReference: {fileID: 1598799840}
     - target: {fileID: 4833632553479814753, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1221,6 +1247,34 @@ PrefabInstance:
     - target: {fileID: 12485908284871291, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 306869627591728810, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 306869627591728810, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 306869627591728810, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1072782781}
+    - target: {fileID: 306869627591728810, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 306869627591728810, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CerrarDialogo
+      objectReference: {fileID: 0}
+    - target: {fileID: 306869627591728810, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogoManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 306869627591728810, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1015413800075072128, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

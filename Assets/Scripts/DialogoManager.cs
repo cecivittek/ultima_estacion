@@ -179,7 +179,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Jugador", "¿Escuchaste algo raro?" },
         new string[] { "Duki",    "Mirá, tenía un auricular puesto pero el otro libre. Escuché una voz decir 'Catedral' con demasiada calma. En medio del caos, eso no es normal, bro. Y escuché algo como 'ya está todo listo'. Dicho bajito. Como para sí mismo." },
         new string[] { "Jugador", "[Dar cigarrillo]" },
-        new string[] { "Duki",    "¿Naaa, como sabías que necesitaba uno? En este contexto no hago preguntas. Dale, te cuento algo más. La voz que escuché era de una mina. Hablaba en voz muy baja pero era claramente una mujer. Dijo algo raro: 'me voy a hacer viral'. En medio de un ataque de dinosaurios. Alguien que piensa en las redes ahora... me parece algo tétrico." },
+        new string[] { "Duki",    "¿Naaa, como sabías que necesitaba uno? Dale, te cuento algo más. La voz que escuché era de una mina. Dijo algo raro: 'me voy a hacer viral'. En medio de un ataque de dinosaurios. Alguien que piensa en las redes ahora... me parece algo tétrico." },
         new string[] { "Duki",    "Tomá. No hago favores pero acá tenés. Mi autógrafo." },
         new string[] { "Duki",    "Ya está, bro. No sé nada más. Estoy inspirándome para componer un nuevo tema. No me interrumpas." },
     };
@@ -190,7 +190,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Jugador",        "¿Viste algo sospechoso?" },
         new string[] { "Milagros Pilar", "Yo capturo todo, es casi un reflejo. En el video se ve como alguien subió al subte sin correr. Todos corrían y esta persona caminaba. Caminaba como si supiera que el subte la iba a esperar." },
         new string[] { "Jugador",        "[Dar autógrafo]" },
-        new string[] { "Milagros Pilar", "¡DUKI! ¡Ay, me muero literalmente! ¿Cómo lo conseguiste? ¿Me lo das? ¿Lo puedo postear? Okay okay. Te cuento algo que no le dije a nadie. Antes de subir, en el caos, vi a alguien con el control en la mano. Lo guardó cuando empezaron a mirar. Era un chico. Con cadenas, ropa oscura." },
+        new string[] { "Milagros Pilar", "¡DUKI! ¡Ay, me muero literal! ¿Cómo lo conseguiste? Te cuento algo que no le dije a nadie. Antes de subir, en el caos, vi a alguien con el control en la mano. Lo guardó cuando empezaron a mirar. Era un chico. Con cadenas, ropa oscura." },
         new string[] { "Milagros Pilar", "Mirá estas capturas. Son mi chisme mejor guardado." },
         new string[] { "Milagros Pilar", "Ya te conté todo, gordi. Ahora dejáme que tengo que editar el reel de los dinosaurios. ¿Sabés el alcance que va a tener?" },
     };
@@ -201,7 +201,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Jugador", "¿Escuchaste algo raro en el vagón?" },
         new string[] { "Wanda",   "Miro todo. Es un don. Vi a alguien que cuando apareció el control, no puso cara de sorpresa. Todo el mundo abrió los ojos. Pero esta persona, cara de nada. Yo sé lo que es actuar sorprendida. Lo hice en televisión por años." },
         new string[] { "Jugador", "[Dar screenshots]" },
-        new string[] { "Wanda",   "Ay, ay, ay. Me muero. ¿Sabes todo lo que puedo conseguir con esta captura de pantalla? Lo hundo como el Titanic en dos segundos si quiero. No te voy a decir el nombre porque me tengo que guardar algo siempre para mí, por las dudas. Pero esta persona estaba parada como si estuviera en el escenario. La gente del espectáculo con experiencia se para así, no es para novatos." },
+        new string[] { "Wanda",   "¿Sabes todo lo que puedo conseguir con esta captura de pantalla? No te voy a decir el nombre porque me tengo que guardar algo siempre para mí, por las dudas. Pero esta persona estaba parada como si estuviera en el escenario." },
         new string[] { "Wanda",   "Tomá, se le cayó a alguien en el caos y ya tengo esta edición." },
         new string[] { "Wanda",   "Ya te dije un montón, no me hables más." },
     };
@@ -212,7 +212,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Jugador", "¿Vio algo sospechoso?" },
         new string[] { "Susana",  "Mirá, yo tengo ojo clínico. Años de entrevistar gente. Hay alguien acá que tiene un aura rara. Alguien que parece que no se sorprendió cuando vió los dinosaurios." },
         new string[] { "Jugador", "[Dar cartera]" },
-        new string[] { "Susana",  "¡MI CARTERA! ¡Ay, pensé que la había perdido para siempre! Las fotos de Pacha... el rouge... todo está. Vos sos un ángel. Te cuento todo lo que vi. Vi la cara del infiltrado, querido. Cuando encontraron el control, todos miraron al control. Esta persona miró a los demás. Era un chico joven. Del ambiente artístico, me parece. Tiene esa presencia escénica. Pero en ese momento no quería que lo vieran. Eso me llamó la atención." },
+        new string[] { "Susana",  "¡MI CARTERA! Las fotos de Pacha... el rouge... está todo. Vos sos un angel. Cuando encontraron el control, todos miraron al control. Esta persona miró a los demás. Era alguien joven. Del ambiente artístico, me parece. Tiene esa presencia escénica. " },
         new string[] { "Susana",  "Merecés un premio por toda esta investigación. Tomá." },
         new string[] { "Susana",  "Ya te dije todo, querido. Ahora necesito sentarme. Este vagón está muy frío." },
     };
@@ -223,7 +223,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Jugador", "¿Escuchaste algo raro en el vagón?" },
         new string[] { "Messi",   "Miro mucho. La gente no se da cuenta, pero analizo todo. Como en la cancha. Hay alguien acá que se mueve distinto. No nervioso. Calculador. Como un jugador que ya sabe cuál va a ser la jugada antes de que empiece." },
         new string[] { "Jugador", "[Dar Martín Fierro]" },
-        new string[] { "Messi",   "Mira que bueno, nunca hubiera conseguido uno, Anto se va a volver loca. Dale, te cuento. Vi a alguien exhalar cuando cerraron las puertas. No de alivio. De satisfacción. Yo conozco esa cara. Es la cara de un jugador cuando el partido ya está ganado. Estaba cantando algo. Esta persona cree que ya ganó. Que llegar a Catedral está asegurado." },
+        new string[] { "Messi",   "Naa, nunca hubiera conseguido uno. Dale, te cuento. Vi a alguien exhalar cuando cerraron las puertas. No de alivio. De satisfacción. Yo conozco esa cara. Es la cara de un jugador cuando el partido ya está ganado. Estaba cantando algo." },
         new string[] { "Messi",   "Cuidámela eh." },
         new string[] { "Messi",   "Ya te dije todo lo que sé. ¿Tenés algo para tomar?" },
     };
@@ -234,7 +234,7 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Jugador",   "¿Notaste algo raro?" },
         new string[] { "Francella", "Notás cosas cuando sos actor. Cosas que otros no ven. Hay alguien acá que está actuando el miedo. Y el miedo actuado tiene un ritmo distinto al miedo real. Lo noto en la respiración, en los ojos. Años de oficio." },
         new string[] { "Jugador",   "[Dar Copa del Mundo]" },
-        new string[] { "Francella", "¡No te puedo creer! ¡Es la verdad, qué locura! Ahora yo también sé cuanto pesa la copa del mundo, esta pesadita eh. Está bien. Te cuento todo. Vi a alguien acariciar el control con el pulgar. Así, suave. Como quien tiene algo que le da seguridad. Tenía anillos, grandes. Lo vi claramente." },
+        new string[] { "Francella", "¡No te puedo creer! ¡Es la real, qué locura! Ahora yo también sé cuanto pesa la copa del mundo. Vi a alguien acariciar el control con el pulgar. Así, suave. Como quien tiene algo que le da seguridad. Tenía anillos, grandes. Lo vi claramente." },
         new string[] { "Francella", "No tengo nada para vos, disculpá, salí corriendo y no agarré nada cuando llegaron los dinosaurios, espero que te sirva lo que vi." },
         new string[] { "Francella", "Ya te dije todo lo que podía decirte. El resto lo tenés que resolver vos. Apurate." },
     };
@@ -433,6 +433,7 @@ public class DialogoManager : MonoBehaviour
 
     void DarObjeto()
     {
+        Debug.Log("DarObjeto: esCaminoMate=" + esCaminoMate + " personaje=" + personajeActual + " inventario=" + InventarioManager.instancia);
         if (esCaminoMate) DarObjetoMate();
         else              DarObjetoPelota();
         SiguienteLinea();
@@ -548,8 +549,9 @@ public class DialogoManager : MonoBehaviour
         }
     }
 
-    void CerrarDialogo()
+    public void CerrarDialogo()
     {
+        Debug.Log("CerrarDialogo llamado. panelDialogo=" + panelDialogo + " botonCerrar=" + botonCerrar);
         if (panelInventario != null) panelInventario.SetActive(false);
         if (InventarioManager.instancia != null)
         {
