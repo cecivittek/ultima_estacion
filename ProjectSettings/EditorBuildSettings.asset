@@ -30,7 +30,13 @@ EditorBuildSettings:
     path: Assets/escena_victoria.unity
     guid: 5e7975bc21c2b7441846abc3700d6747
   - enabled: 1
+    path: Assets/Victoria mate.unity
+    guid: 84e466fd05d20d1439c25b91187e004f
+  - enabled: 1
     path: Assets/escena_derrota.unity
     guid: d1def058675cbd44fa31d34b8c57f9ec
+  - enabled: 1
+    path: Assets/Acusacion mate.unity
+    guid: 30c255893fe45d74d8cef26820ef03bc
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

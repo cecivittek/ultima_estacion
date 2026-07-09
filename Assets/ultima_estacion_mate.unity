@@ -265,6 +265,62 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogoManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: hud
+      value: 
+      objectReference: {fileID: 722581200}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: textNombre
+      value: 
+      objectReference: {fileID: 928059875}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: botonCerrar
+      value: 
+      objectReference: {fileID: 1328620136}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: textDialogo
+      value: 
+      objectReference: {fileID: 1899313007}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: esCaminoMate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: panelDialogo
+      value: 
+      objectReference: {fileID: 2137216153}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: fondoDialogos
+      value: 
+      objectReference: {fileID: 367979441}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: botonDarObjeto
+      value: 
+      objectReference: {fileID: 1134576901}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: botonSiguiente
+      value: 
+      objectReference: {fileID: 1408912001}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: fondoPrincipal
+      value: 
+      objectReference: {fileID: 1979854267}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: panelInventario
+      value: 
+      objectReference: {fileID: 1071536977}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: personajesGrupo
+      value: 
+      objectReference: {fileID: 926097214}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: personajeDialogo
+      value: 
+      objectReference: {fileID: 1216317581}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: botonCerrarInventario
+      value: 
+      objectReference: {fileID: 352794137}
     - target: {fileID: 4833632553479814753, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.71848
@@ -619,6 +675,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0000076293945, y: 0.000000029802322}
   m_Size: {x: 2.68, y: 6.11}
   m_Direction: 0
+--- !u!114 &352794137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1489557023869745073, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+  m_PrefabInstance: {fileID: 1071536975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &367979441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1172783045094262899, guid: b209803e0429bd8498106ea9833c1dbe, type: 3}
+  m_PrefabInstance: {fileID: 1606889820}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &596174156
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,6 +924,11 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.000000029802322}
   m_Size: {x: 2.51, y: 6.7}
   m_Direction: 0
+--- !u!1 &722581200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6772427272511936725, guid: fe07dc01b28fe1c40a6b99bdaf3f52ca, type: 3}
+  m_PrefabInstance: {fileID: 1411768628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &841760758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -999,7 +1076,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7081905818530465554, guid: fe07dc01b28fe1c40a6b99bdaf3f52ca, type: 3}
   m_PrefabInstance: {fileID: 1411768628}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 722581200}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62db0338649244241b99e3a97a309eaa, type: 3}
@@ -1198,6 +1275,17 @@ Transform:
   - {fileID: 1680401909}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &928059875 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3933218553319262623, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+  m_PrefabInstance: {fileID: 1071536975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &975817073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1378,6 +1466,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7440759006956930225, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
   m_PrefabInstance: {fileID: 1071536975}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1134576901 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7302767131789082205, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+  m_PrefabInstance: {fileID: 1071536975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &1216317581 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7973513688383598476, guid: 096c8480b80ad8f42b558fdfa5b9f9d7, type: 3}
+  m_PrefabInstance: {fileID: 1910186249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb7d9e7729554bb3adbc741126334e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersonajeDialogo
+--- !u!114 &1328620136 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 306869627591728810, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+  m_PrefabInstance: {fileID: 1071536975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1350624263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1590,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1408912001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1586786980373862061, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+  m_PrefabInstance: {fileID: 1071536975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &1411768628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2547,6 +2679,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.1, y: 4.16}
   m_Direction: 0
+--- !u!114 &1899313007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1141315808779710765, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+  m_PrefabInstance: {fileID: 1071536975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1910186249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3001,6 +3144,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2137216153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3565347566680649618, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+  m_PrefabInstance: {fileID: 1071536975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

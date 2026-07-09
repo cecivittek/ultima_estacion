@@ -61,7 +61,7 @@ public class AcusacionManager : MonoBehaviour
         Debug.Log("Culpable: " + culpable);
         Debug.Log("Son iguales: " + (personajeSeleccionado == culpable));
 
-        string escenaDestino = (personajeSeleccionado == culpable) ? "Acusacion mate" : "escena_derrota";
+       string escenaDestino = (personajeSeleccionado == culpable) ? "Victoria mate" : "escena_derrota";
         Debug.Log("Escena destino: " + escenaDestino);
         fade.IrAEscena(escenaDestino);
     }
