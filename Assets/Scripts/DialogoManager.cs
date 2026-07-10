@@ -549,26 +549,26 @@ public class DialogoManager : MonoBehaviour
         }
     }
 
-    public void CerrarDialogo()
+   void CerrarDialogo()
+{
+    Debug.Log("CerrarDialogo ejecutado");
+    if (panelInventario != null) panelInventario.SetActive(false);
+    if (InventarioManager.instancia != null)
     {
-        Debug.Log("CerrarDialogo llamado. panelDialogo=" + panelDialogo + " botonCerrar=" + botonCerrar);
-        if (panelInventario != null) panelInventario.SetActive(false);
-        if (InventarioManager.instancia != null)
-        {
-            InventarioManager.instancia.modoSeleccion    = false;
-            InventarioManager.instancia.alClickearObjeto = null;
-        }
-        if (hud != null)             hud.SetActive(true);
-        if (personajeDialogo != null) personajeDialogo.OcultarPersonaje();
-        if (panelDialogo != null)    panelDialogo.SetActive(false);
-        if (fondoDialogos != null)   fondoDialogos.SetActive(false);
-        if (fondoPrincipal != null)  fondoPrincipal.SetActive(true);
-        if (botonDarObjeto != null)  botonDarObjeto.gameObject.SetActive(false);
-        if (botonSiguiente != null)  botonSiguiente.gameObject.SetActive(true);
-        if (personajesGrupo != null) personajesGrupo.SetActive(true);
+        InventarioManager.instancia.modoSeleccion    = false;
+        InventarioManager.instancia.alClickearObjeto = null;
     }
+    if (hud != null)             { hud.SetActive(true); Debug.Log("HUD activado"); }
+    if (personajeDialogo != null) { personajeDialogo.OcultarPersonaje(); Debug.Log("Personaje ocultado"); }
+    if (panelDialogo != null)    panelDialogo.SetActive(false);
+    if (fondoDialogos != null)   { fondoDialogos.SetActive(false); Debug.Log("FondoDialogos desactivado"); }
+    if (fondoPrincipal != null)  { fondoPrincipal.SetActive(true); Debug.Log("FondoPrincipal activado"); }
+    if (botonDarObjeto != null)  botonDarObjeto.gameObject.SetActive(false);
+    if (botonSiguiente != null)  botonSiguiente.gameObject.SetActive(true);
+    if (personajesGrupo != null) { personajesGrupo.SetActive(true); Debug.Log("PersonajesGrupo activado"); }
+}
 
-    void CancelarSeleccionInventario()
+    public void CancelarSeleccionInventario()
     {
         if (InventarioManager.instancia != null && InventarioManager.instancia.modoSeleccion)
         {
