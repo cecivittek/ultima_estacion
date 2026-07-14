@@ -1028,9 +1028,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 409943434}
     - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: spriteDukiEnojado
+      value: 
+      objectReference: {fileID: 21300000, guid: 64b249e648ed2fa4a9f154e34b72cd15, type: 3}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: spriteMessiEnojado
+      value: 
+      objectReference: {fileID: 21300000, guid: d670bb7aec1f35b44ad1a0655a9a5f6e, type: 3}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: spriteWandaEnojado
+      value: 
+      objectReference: {fileID: 21300000, guid: 878a9a91b06357641942c960b1ac0c0d, type: 3}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: spriteSusanaEnojado
+      value: 
+      objectReference: {fileID: 21300000, guid: cd25ea5403b409645b26a162b954537d, type: 3}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
       propertyPath: botonCerrarInventario
       value: 
       objectReference: {fileID: 1598799840}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: spriteMilagrosEnojado
+      value: 
+      objectReference: {fileID: 21300000, guid: 6e44923d70bdc1f4fa4d554ee48af64d, type: 3}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: spriteFrancellaEnojado
+      value: 
+      objectReference: {fileID: 21300000, guid: b15e54ab91e2f324ca4d5af88fa96c75, type: 3}
+    - target: {fileID: 2323024548959060128, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
+      propertyPath: spriteVagabundoEnojado
+      value: 
+      objectReference: {fileID: 21300000, guid: d73c01719b93f8446b4a2bde4fe63e4b, type: 3}
     - target: {fileID: 4833632553479814753, guid: 9cf947b796603a8488fa94bdc65931e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1287,6 +1315,18 @@ PrefabInstance:
     - target: {fileID: 2353580827276756308, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746950332999756104, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2517645319483631569, guid: fe4a3a47651d34e8391a69df4baabcce, type: 2}
+    - target: {fileID: 4746950332999756104, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8789710158780105044, guid: 57655d4b2e6955e4aa499cc37f997278, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

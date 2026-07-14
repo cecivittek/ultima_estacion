@@ -27,6 +27,13 @@ public class DialogoManager : MonoBehaviour
     public Sprite spriteSusanaContento;
     public Sprite spriteFrancellaContento;
     public Sprite spriteVagabundoContento;
+    public Sprite spriteMessiEnojado;
+    public Sprite spriteDukiEnojado;
+    public Sprite spriteMilagrosEnojado;
+    public Sprite spriteWandaEnojado;
+    public Sprite spriteSusanaEnojado;
+    public Sprite spriteFrancellaEnojado;
+    public Sprite spriteVagabundoEnojado;
     public Sprite spriteDukiCharla;
     public Sprite spriteMilagrosCharla;
     public Sprite spriteWandaCharla;
@@ -428,6 +435,25 @@ public class DialogoManager : MonoBehaviour
                 msg = mensajeEquivocadoMate[personajeActual];
             textNombre.text  = personajeActual;
             textDialogo.text = msg;
+
+            Sprite spriteEnojado = SpriteEnojadoDe(personajeActual);
+            if (personajeDialogo != null && spriteEnojado != null)
+                personajeDialogo.MostrarPersonaje(spriteEnojado);
+        }
+    }
+
+    Sprite SpriteEnojadoDe(string personaje)
+    {
+        switch (personaje)
+        {
+            case "Messi":     return spriteMessiEnojado;
+            case "Duki":      return spriteDukiEnojado;
+            case "Milagros":  return spriteMilagrosEnojado;
+            case "Wanda":     return spriteWandaEnojado;
+            case "Susana":    return spriteSusanaEnojado;
+            case "Francella": return spriteFrancellaEnojado;
+            case "Vagabundo": return spriteVagabundoEnojado;
+            default:          return null;
         }
     }
 
