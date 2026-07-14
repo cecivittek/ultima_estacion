@@ -22,6 +22,7 @@ public class InventarioManager : MonoBehaviour
     public Sprite spriteMartinFierro;
     public Sprite spriteMate;
     public Sprite spriteCigarrillo;
+    public Sprite spriteCelular;
 
     [Header("Layout")]
     public float escala = 80f;
@@ -45,6 +46,7 @@ public class InventarioManager : MonoBehaviour
             { "martinFierro", spriteMartinFierro },
             { "mate",         spriteMate },
             { "cigarrillo",   spriteCigarrillo },
+            { "celular",      spriteCelular },
         };
     }
 
