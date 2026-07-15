@@ -391,6 +391,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 246506399}
+        m_TargetAssemblyTypeName: clicks, Assembly-CSharp
+        m_MethodName: ReproducirClic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &198265721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,6 +842,18 @@ MonoBehaviour:
       - m_Target: {fileID: 346682671}
         m_TargetAssemblyTypeName: BotonPersonaje, Assembly-CSharp
         m_MethodName: AlClickear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 246506399}
+        m_TargetAssemblyTypeName: clicks, Assembly-CSharp
+        m_MethodName: ReproducirClic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1333,6 +1357,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 246506399}
+        m_TargetAssemblyTypeName: clicks, Assembly-CSharp
+        m_MethodName: ReproducirClic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &428535975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,6 +1725,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 246506399}
+        m_TargetAssemblyTypeName: clicks, Assembly-CSharp
+        m_MethodName: ReproducirClic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &547046751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,6 +2053,18 @@ MonoBehaviour:
       - m_Target: {fileID: 555594599}
         m_TargetAssemblyTypeName: BotonPersonaje, Assembly-CSharp
         m_MethodName: AlClickear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 246506399}
+        m_TargetAssemblyTypeName: clicks, Assembly-CSharp
+        m_MethodName: ReproducirClic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2406,6 +2466,18 @@ MonoBehaviour:
       - m_Target: {fileID: 655463696}
         m_TargetAssemblyTypeName: BotonPersonaje, Assembly-CSharp
         m_MethodName: AlClickear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 246506399}
+        m_TargetAssemblyTypeName: clicks, Assembly-CSharp
+        m_MethodName: ReproducirClic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3165,6 +3237,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 246506399}
+        m_TargetAssemblyTypeName: clicks, Assembly-CSharp
+        m_MethodName: ReproducirClic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1217418765
 GameObject:
   m_ObjectHideFlags: 0
@@ -3325,9 +3409,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AcusacionManager
   culpable: Milagros
+  escenaVictoria: escena_victoria
+  escenaDerrota: escena_derrota
   panelResultado: {fileID: 758595165}
   textoResultado: {fileID: 1945949249}
-  cambiadorEscena: {fileID: 1221525844}
   colorNormal: {r: 0.05, g: 0.08, b: 0.22352941, a: 1}
   colorSeleccionado: {r: 0.2, g: 0.8, b: 0.2, a: 1}
 --- !u!4 &1221525843

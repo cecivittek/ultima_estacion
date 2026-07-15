@@ -18,6 +18,9 @@ public class HUDManager : MonoBehaviour
     public GameObject fondoOscuro;
     public GameObject panelObjetoNuevo;
 
+    [Header("Escena de Acusacion")]
+    public string escenaAcusacion = "Acusacion";
+
     [Header("Fade")]
     [SerializeField] private iraescena cambiadorEscena;
 
@@ -147,8 +150,8 @@ public class HUDManager : MonoBehaviour
     public void IrAAcusacion()
     {
         if (cambiadorEscena != null)
-            cambiadorEscena.IrAEscena("Acusacion");
+            cambiadorEscena.IrAEscena(escenaAcusacion);
         else
-            SceneManager.LoadScene("Acusacion");
+            SceneManager.LoadScene(escenaAcusacion);
     }
 }

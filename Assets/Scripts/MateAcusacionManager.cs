@@ -2,11 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class AcusacionManager : MonoBehaviour
+public class MateAcusacionManager : MonoBehaviour
 {
     [SerializeField] private string culpable = "Duki";
-    [SerializeField] private string escenaVictoria = "Victoria mate";
-    [SerializeField] private string escenaDerrota = "escena_derrota";
     [SerializeField] private GameObject panelResultado;
     [SerializeField] private TextMeshProUGUI textoResultado;
 
@@ -59,12 +57,12 @@ public class AcusacionManager : MonoBehaviour
             return;
         }
 
-        string destino = (personajeSeleccionado == culpable) ? escenaVictoria : escenaDerrota;
-        fade.IrAEscena(destino);
+        string escenaDestino = (personajeSeleccionado == culpable) ? "Victoria mate" : "escena_derrota";
+        fade.IrAEscena(escenaDestino);
     }
 
     public void VolverAlSubte()
     {
         fade.IrAEscena("ultima_estacion");
     }
-}
+}  
