@@ -100,10 +100,10 @@ TextureImporter:
       name: profe der_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 786
-        width: 282
-        height: 722
+        x: 17
+        y: 785
+        width: 275
+        height: 663
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86dc8a53a655c004d9e546d3dc96f3ca
-      internalID: -300078922
+      spriteID: 7c84d9d15a0a37147a8b26e0122f35d2
+      internalID: 521944620
       vertices: []
       indices: 
       edges: []
@@ -122,10 +122,10 @@ TextureImporter:
       name: profe der_1
       rect:
         serializedVersion: 2
-        x: 342
-        y: 789
-        width: 251
-        height: 719
+        x: 374
+        y: 784
+        width: 185
+        height: 662
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4677e27e6ab24f14096a2a743427f2c9
-      internalID: 708853649
+      spriteID: dc8a9c11404258b4f97699c3b3cd5fa2
+      internalID: -826901211
       vertices: []
       indices: 
       edges: []
@@ -144,10 +144,10 @@ TextureImporter:
       name: profe der_2
       rect:
         serializedVersion: 2
-        x: 23
-        y: 30
-        width: 283
-        height: 704
+        x: 18
+        y: 22
+        width: 266
+        height: 691
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e67e9401b8e3904cae2e05f9b31d61b
-      internalID: 943479358
+      spriteID: 3a8c58951d9c7b841b3c806eac3c3c94
+      internalID: -1407740759
       vertices: []
       indices: 
       edges: []
@@ -166,10 +166,10 @@ TextureImporter:
       name: profe der_3
       rect:
         serializedVersion: 2
-        x: 338
-        y: 25
-        width: 252
-        height: 709
+        x: 366
+        y: 22
+        width: 158
+        height: 691
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae5fb957f5540854eb978361baf92906
-      internalID: 350171984
+      spriteID: 72e2bbc7bfbc293478aa0a589581f589
+      internalID: 83062658
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b5cee59471d777947ac08e1244ca9960
+    spriteID: a14a997f955141347bab811f8ab18b12
     internalID: 0
     vertices: []
     indices: 
@@ -200,10 +200,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      profe der_0: -300078922
-      profe der_1: 708853649
-      profe der_2: 943479358
-      profe der_3: 350171984
+      profe der_0: 521944620
+      profe der_1: -826901211
+      profe der_2: -1407740759
+      profe der_3: 83062658
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

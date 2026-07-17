@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e610f62fbe98fcd4c98938f7a04658df
+guid: 362c2bcd3ff9b5b4f9d3073453d0d3b3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: profe izq_0
+      name: profe quieto png_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 786
-        width: 185
-        height: 662
+        x: 270
+        y: 13
+        width: 291
+        height: 722
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc0516e7719604d4aaa5ccbb1cef0184
-      internalID: -1633243619
+      spriteID: 1123b47d06633034b8fbff877e2c9c71
+      internalID: 577987597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: profe izq_1
+      name: profe quieto png_1
       rect:
         serializedVersion: 2
-        x: 313
-        y: 785
-        width: 275
-        height: 663
+        x: 1071
+        y: 13
+        width: 295
+        height: 731
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 094e3197b1b40584c98d10b7e0d76ba7
-      internalID: 209303097
+      spriteID: 3897eb31aaaae1346882eb1d3af92b3c
+      internalID: -1570593984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: profe izq_2
+      name: profe quieto png_2
       rect:
         serializedVersion: 2
-        x: 81
-        y: 22
-        width: 157
-        height: 691
+        x: 1853
+        y: 13
+        width: 283
+        height: 715
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,30 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b4c24db2d6280e40b49e54529af8961
-      internalID: -207633703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: profe izq_3
-      rect:
-        serializedVersion: 2
-        x: 321
-        y: 22
-        width: 265
-        height: 691
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a651f9f11eb3f54ca6f5daa91640941
-      internalID: 252380115
+      spriteID: 86e187fd28e89614598106b4fb66dce1
+      internalID: 483577300
       vertices: []
       indices: 
       edges: []
@@ -188,7 +166,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7ba0e3075282a2d459bd378022dc726d
+    spriteID: aadba5108bce1ad4bac56e81970bb660
     internalID: 0
     vertices: []
     indices: 
@@ -200,10 +178,9 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      profe izq_0: -1633243619
-      profe izq_1: 209303097
-      profe izq_2: -207633703
-      profe izq_3: 252380115
+      profe quieto png_0: 577987597
+      profe quieto png_1: -1570593984
+      profe quieto png_2: 483577300
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
