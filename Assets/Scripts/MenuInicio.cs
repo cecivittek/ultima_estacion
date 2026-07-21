@@ -6,7 +6,10 @@ public class MenuInicio : MonoBehaviour
     [Header("Nombre exacto de la escena de juego (Build Settings)")]
     [SerializeField] private string nombreEscenaJuego = "Nivel1";
  
-    [Header("Panel de instrucciones (arrastrar el GameObject del panel)")]
+    [Header("Nombre exacto de la escena de Como Jugar (Build Settings)")]
+    [SerializeField] private string nombreEscenaComoJugar = "ComoJugar";
+ 
+    [Header("Panel de instrucciones (opcional, si preferis panel en vez de escena)")]
     [SerializeField] private GameObject panelComoJugar;
  
     [Header("Script de fade (arrastrar el mismo GameObject o uno con Iraescena)")]
@@ -21,14 +24,22 @@ public class MenuInicio : MonoBehaviour
             SceneManager.LoadScene(nombreEscenaJuego); // respaldo si no se asigna el fade
     }
  
-    // Conectar al botón "Cómo Jugar" -> OnClick()
+    // Conectar al botón "Cómo Jugar" -> OnClick() (version escena, con fade)
+    public void IrAComoJugar()
+    {
+        if (cambiadorEscena != null)
+            cambiadorEscena.IrAEscena(nombreEscenaComoJugar);
+        else
+            SceneManager.LoadScene(nombreEscenaComoJugar); // respaldo si no se asigna el fade
+    }
+ 
+    // Metodos viejos del panel, por si en algun lado todavia se usan
     public void AbrirComoJugar()
     {
         if (panelComoJugar != null)
             panelComoJugar.SetActive(true);
     }
  
-    // Conectar al botón de cerrar dentro del panel de instrucciones
     public void CerrarComoJugar()
     {
         if (panelComoJugar != null)
