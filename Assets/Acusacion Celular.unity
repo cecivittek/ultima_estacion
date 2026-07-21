@@ -1758,8 +1758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f56f8753a62dd4598181cddffc2d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AcusacionManager
-  esCaminoMate: 1
-  esCaminoCelular: 0
+  esCaminoMate: 0
+  esCaminoCelular: 1
   panelResultado: {fileID: 1338592039}
   textoResultado: {fileID: 943464219}
   colorNormal: {r: 0.05, g: 0.08, b: 0.22352941, a: 1}

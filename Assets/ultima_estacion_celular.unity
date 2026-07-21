@@ -1761,6 +1761,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1071536976}
     - target: {fileID: 7081905818530465554, guid: fe07dc01b28fe1c40a6b99bdaf3f52ca, type: 3}
+      propertyPath: esCaminoCelular
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081905818530465554, guid: fe07dc01b28fe1c40a6b99bdaf3f52ca, type: 3}
       propertyPath: panelInventario
       value: 
       objectReference: {fileID: 1071536977}
