@@ -27,6 +27,13 @@ public class DialogoManager : MonoBehaviour
     public Sprite spriteSusanaContento;
     public Sprite spriteFrancellaContento;
     public Sprite spriteVagabundoContento;
+    public Sprite spriteMessiEnojado;
+    public Sprite spriteDukiEnojado;
+    public Sprite spriteMilagrosEnojado;
+    public Sprite spriteWandaEnojado;
+    public Sprite spriteSusanaEnojado;
+    public Sprite spriteFrancellaEnojado;
+    public Sprite spriteVagabundoEnojado;
     public Sprite spriteDukiCharla;
     public Sprite spriteMilagrosCharla;
     public Sprite spriteWandaCharla;
@@ -345,44 +352,48 @@ public class DialogoManager : MonoBehaviour
 
     void Start()
     {
-        fondoPrincipal = GameObject.Find("fondo_principal");
+        if (fondoPrincipal == null)
+            fondoPrincipal = GameObject.Find("fondo_principal");
 
         SpriteRenderer[] todosSprites = Resources.FindObjectsOfTypeAll<SpriteRenderer>();
         foreach (SpriteRenderer sr in todosSprites)
         {
-            if (sr.gameObject.scene.isLoaded && sr.gameObject.name == "fondo_dialogos")
+            if (sr.gameObject.scene.isLoaded && sr.gameObject.name == "fondo_dialogos" && fondoDialogos == null)
                 fondoDialogos = sr.gameObject;
         }
 
-        PersonajeDialogo[] pds = Resources.FindObjectsOfTypeAll<PersonajeDialogo>();
-        foreach (PersonajeDialogo pd in pds)
+        if (personajeDialogo == null)
         {
-            if (pd.gameObject.scene.isLoaded) { personajeDialogo = pd; break; }
+            PersonajeDialogo[] pds = Resources.FindObjectsOfTypeAll<PersonajeDialogo>();
+            foreach (PersonajeDialogo pd in pds)
+            {
+                if (pd.gameObject.scene.isLoaded) { personajeDialogo = pd; break; }
+            }
         }
 
         Button[] todosButtons = Resources.FindObjectsOfTypeAll<Button>();
         foreach (Button b in todosButtons)
         {
-            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonSiguiente")      botonSiguiente = b;
-            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonDarObjeto")      botonDarObjeto = b;
-            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonCerrar")         botonCerrar = b;
-            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BtnCerrarInventario") botonCerrarInventario = b;
+            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonSiguiente"      && botonSiguiente == null)     botonSiguiente = b;
+            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonDarObjeto"      && botonDarObjeto == null)     botonDarObjeto = b;
+            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BotonCerrar"         && botonCerrar == null)        botonCerrar = b;
+            if (b.gameObject.scene.isLoaded && b.gameObject.name == "BtnCerrarInventario" && botonCerrarInventario == null) botonCerrarInventario = b;
         }
 
         TextMeshProUGUI[] todosTextos = Resources.FindObjectsOfTypeAll<TextMeshProUGUI>();
         foreach (TextMeshProUGUI t in todosTextos)
         {
-            if (t.gameObject.scene.isLoaded && t.gameObject.name == "TextNombre")  textNombre = t;
-            if (t.gameObject.scene.isLoaded && t.gameObject.name == "TextDialogo") textDialogo = t;
+            if (t.gameObject.scene.isLoaded && t.gameObject.name == "TextNombre"  && textNombre == null)  textNombre = t;
+            if (t.gameObject.scene.isLoaded && t.gameObject.name == "TextDialogo" && textDialogo == null) textDialogo = t;
         }
 
         GameObject[] todosGO = Resources.FindObjectsOfTypeAll<GameObject>();
         foreach (GameObject go in todosGO)
         {
-            if (go.scene.isLoaded && go.name == "PanelDialogo")   panelDialogo = go;
-            if (go.scene.isLoaded && go.name == "HUD")             hud = go;
-            if (go.scene.isLoaded && go.name == "PERSONAJES")      personajesGrupo = go;
-            if (go.scene.isLoaded && go.name == "PanelInventario") panelInventario = go;
+            if (go.scene.isLoaded && go.name == "PanelDialogo"   && panelDialogo == null)   panelDialogo = go;
+            if (go.scene.isLoaded && go.name == "HUD"             && hud == null)             hud = go;
+            if (go.scene.isLoaded && go.name == "PERSONAJES"      && personajesGrupo == null) personajesGrupo = go;
+            if (go.scene.isLoaded && go.name == "PanelInventario" && panelInventario == null) panelInventario = go;
         }
 
         if (botonSiguiente != null)        botonSiguiente.onClick.AddListener(SiguienteLinea);
@@ -550,6 +561,25 @@ public class DialogoManager : MonoBehaviour
                 msg = mensajeEquivocadoMate[personajeActual];
             textNombre.text  = personajeActual;
             textDialogo.text = msg;
+
+            Sprite spriteEnojado = SpriteEnojadoDe(personajeActual);
+            if (personajeDialogo != null && spriteEnojado != null)
+                personajeDialogo.MostrarPersonaje(spriteEnojado);
+        }
+    }
+
+    Sprite SpriteEnojadoDe(string personaje)
+    {
+        switch (personaje)
+        {
+            case "Messi":     return spriteMessiEnojado;
+            case "Duki":      return spriteDukiEnojado;
+            case "Milagros":  return spriteMilagrosEnojado;
+            case "Wanda":     return spriteWandaEnojado;
+            case "Susana":    return spriteSusanaEnojado;
+            case "Francella": return spriteFrancellaEnojado;
+            case "Vagabundo": return spriteVagabundoEnojado;
+            default:          return null;
         }
     }
 

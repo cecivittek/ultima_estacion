@@ -26,7 +26,7 @@ public class Anotador : MonoBehaviour
     public Color colorTexto           = Color.black;
     public FontStyles estiloNombre    = FontStyles.Bold;
 
-    private static readonly Queue<(string personaje, string pista)> cola =
+    private readonly Queue<(string personaje, string pista)> cola =
         new Queue<(string, string)>();
 
     private bool llenandoDerecho = false;
@@ -42,8 +42,10 @@ public class Anotador : MonoBehaviour
 
     public static void AgregarPista(string personaje, string pista)
     {
-        cola.Enqueue((personaje, pista));
-        if (instancia != null && instancia.gameObject.activeInHierarchy && !instancia.procesando)
+        if (instancia == null) return;
+
+        instancia.cola.Enqueue((personaje, pista));
+        if (instancia.gameObject.activeInHierarchy && !instancia.procesando)
             instancia.StartCoroutine(instancia.ProcesarCola());
     }
 

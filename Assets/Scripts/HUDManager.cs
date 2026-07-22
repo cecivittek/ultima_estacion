@@ -21,7 +21,8 @@ public class HUDManager : MonoBehaviour
     public GameObject panelAnotador;
     public GameObject fondoOscuro;
     public GameObject panelObjetoNuevo;
- 
+
+
     [Header("Fade")]
     [SerializeField] private iraescena cambiadorEscena;
  
