@@ -43,6 +43,7 @@ public class DialogoManager : MonoBehaviour
 
     [Header("Camino")]
     public bool esCaminoMate = false;
+    public bool esCaminoCelular = false;
 
     private int indiceDialogo = 0;
     private string[][] dialogoActual;
@@ -246,6 +247,107 @@ public class DialogoManager : MonoBehaviour
         new string[] { "Francella", "Ya te dije todo lo que podía decirte. El resto lo tenés que resolver vos. Apurate." },
     };
 
+    // ── CAMINO CELULAR ───────────────────────────────────────────────────────
+
+    private Dictionary<string, string> objetoCorrectoCelular = new Dictionary<string, string>
+    {
+        { "Milagros",  "celular" },
+        { "Wanda",     "screenshots" },
+        { "Susana",    "cartera" },
+        { "Francella", "martinFierro" },
+        { "Vagabundo", "mate" },
+        { "Duki",      "cigarrillo" },
+        { "Messi",     "autografo" },
+    };
+
+    private Dictionary<string, string> mensajeEquivocadoCelular = new Dictionary<string, string>
+    {
+        { "Milagros",  "Ay, que esperabas, ¿un canje? ¿Tenés algo más interesante?" },
+        { "Wanda",     "¿Esto me lo traés a mí? No, querida. Guardátelo." },
+        { "Susana",    "¿Y qué hago yo con esto? Traéme algo de valor y hablamos." },
+        { "Francella", "Ay, no. Esto no lo necesito. Pero aprecio el gesto." },
+        { "Vagabundo", "No, gracias, pero no puedo hacer nada con eso. ¿No tenés algo calentito para darme?" },
+        { "Duki",      "Bro, ¿qué es esto? No me sirve. Guardatelo." },
+        { "Messi",     "No, esto no es para mí. Pero gracias igual." },
+    };
+
+    private string[][] dialogoMilagrosCelular = new string[][]
+    {
+        new string[] { "Milagros Pilar", "¡Me quedé sin batería, esto es una tragedia! Tengo que avisarles a mis followers ¿Cómo hago ahora? Este contenido hay que aprovecharlo, me tengo que hacer viral." },
+        new string[] { "Jugador",        "¿Viste algo sospechoso?" },
+        new string[] { "Milagros Pilar", "Yo capturo todo, es casi un reflejo. En el video se ve como alguien subió al subte sin correr. Todos corrían y esta persona caminaba. Caminaba como si supiera que el subte la iba a esperar." },
+        new string[] { "Jugador",        "[Dar celular]" },
+        new string[] { "Milagros Pilar", "¡Ay, me muero! ¿Cómo lo conseguiste? Necesito subir una story YA. Te cuento algo que no le dije a nadie: antes de subir, vi a alguien guardar el control cuando empezaron a mirar. Una señora coqueta, bien vestida." },
+        new string[] { "Milagros Pilar", "Mirá estas capturas. Son mi chisme mejor guardado." },
+        new string[] { "Milagros Pilar", "Ya te conté todo, gordi. Ahora dejáme que tengo que editar el reel de los dinosaurios. ¿Sabés el alcance que va a tener?" },
+    };
+
+    private string[][] dialogoWandaCelular = new string[][]
+    {
+        new string[] { "Wanda",   "Esto es un desastre absoluto. No puedo correr con estos tacos. ¿Vos quién sos? No te conozco ¿Trabajas para mí?" },
+        new string[] { "Jugador", "¿Escuchaste algo raro en el vagón?" },
+        new string[] { "Wanda",   "Miro todo. Es un don. Vi a alguien que cuando apareció el control, no puso cara de sorpresa. Todo el mundo abrió los ojos. Pero esta persona, cara plana. Yo sé lo que es actuar sorpresa. Lo hice en televisión por años." },
+        new string[] { "Jugador", "[Dar screenshots]" },
+        new string[] { "Wanda", "Ay, ay, ay, me muero. ¿Sabés todo lo que consigo con esta captura? No te digo el nombre, pero esta persona estaba parada como en un escenario. Eso no lo tiene cualquiera, se nota la experiencia." },
+        new string[] { "Wanda",   "Tomá, se le cayó a alguien en el caos y ya tengo esta edición." },
+        new string[] { "Wanda",   "Ya te dije un montón, no me hables más." },
+    };
+
+    private string[][] dialogoSusanaCelular = new string[][]
+    {
+        new string[] { "Susana",  "¡Esto es una pesadilla! ¡Yo tenía un día muy ocupado! ¿Y vos quién sos, querido? En esta situación todos somos iguales. Bueno, casi." },
+        new string[] { "Jugador", "¿Vió algo sospechoso?" },
+        new string[] { "Susana",  "Mirá, yo tengo ojo clínico. Años de entrevistar gente. Hay alguien acá que tiene un aura rara. Alguien que parece que no se sorprendió cuando vió los dinosaurios." },
+        new string[] { "Jugador", "[Dar cartera Louis Vuitton]" },
+        new string[] { "Susana", "¡MI CARTERA! Pensé que la había perdido. Sos un ángel. Te cuento: cuando encontraron el control, esta persona miró a los demás en vez de mirarlo. Un chico joven, del ambiente artístico, que no quería que lo vieran." },
+        new string[] { "Susana",  "Merecés un premio por toda esta investigación. Tomá." },
+        new string[] { "Susana",  "Ya te dije todo, querido. Ahora necesito sentarme. Este vagón está muy frío." },
+    };
+
+    private string[][] dialogoFrancellaCelular = new string[][]
+    {
+        new string[] { "Francella", "¡Eh! ¡Qué cosa, no! ¡Quién lo iba a decir! Dinosaurios. En Buenos Aires. Esto parece de película." },
+        new string[] { "Jugador",   "¿Notaste algo raro?" },
+        new string[] { "Francella", "Notás cosas cuando sos actor. Cosas que otros no ven. Hay alguien acá que está actuando el miedo. Y el miedo actuado tiene un ritmo distinto al miedo real. Lo noto en la respiración, en los ojos. Años de oficio." },
+        new string[] { "Jugador",   "[Dar Martín Fierro]" },
+        new string[] { "Francella", "Ay, este es mío, ¿sabés? Bueno, era mío. Está bien, te cuento: vi a alguien acariciar el control con el pulgar, como quien busca seguridad. Tenía brillos en la ropa, no reconocí quién era." },
+        new string[] { "Francella", "No tengo nada para vos, disculpá, salí corriendo con lo que tenía en la mano, te puedo ofrecer un mate calentito." },
+        new string[] { "Francella", "Ya te dije todo lo que podía decirte, espero que te sea de ayuda." },
+    };
+
+    private string[][] dialogoVagabundoCelular = new string[][]
+    {
+        new string[] { "Vagabundo", "Ey. No me pises las cosas. Dinosaurios... dinosaurios. Vi cosas peores en Once. ¿Qué querés?" },
+        new string[] { "Jugador",   "¿Viste algo raro en el vagón?" },
+        new string[] { "Vagabundo", "Todo me parece raro. Pero hay alguien acá que no está asustado. Cuando hay dinosaurios afuera, la gente se asusta. Yo vivo en la calle, aprendo a leer a la gente. El que no tiene miedo... algo sabe." },
+        new string[] { "Jugador",   "[Dar mate]" },
+        new string[] { "Vagabundo", "Mmm que rico, está un poco lavado pero por lo menos me calienta el cuerpo. Ya que estamos girando el mate, te cuento; Vi a alguien que cuando encontraron el control, miró a los demás antes de mirarlo. No sé el nombre, tenía tatuajes creo." },
+        new string[] { "Vagabundo", "Tomá igual, en este quilombo no soy la única que necesita uno." },
+        new string[] { "Vagabundo", "Ya te dije todo lo que sé. Déjame tranquilo que el subte me da sueño." },
+    };
+
+    private string[][] dialogoDukiCelular = new string[][]
+    {
+        new string[] { "Duki",    "¿Qué onda? Todo esto es una locura, bro. Venía a bancar a De Paul y ahora estoy huyendo de un T-Rex. Si esto no es una letra de trap, no sé qué es." },
+        new string[] { "Jugador", "¿Escuchaste algo raro?" },
+        new string[] { "Duki",    "Mirá, tenía un auri puesto y el otro libre. Escuché a alguien decir 'Catedral' re tranquilo, bro. Con todo el quilombo que había, hablar así de piola no es normal. Y dijo algo como 'ya está todo listo', bajito, para adentro." },
+        new string[] { "Jugador", "[Dar cigarrillo]" },
+        new string[] { "Duki", "¿Naaa, cómo sabías que necesitaba uno? Dale, te cuento algo más: la voz que escuché era de una mujer, bajito. Dijo algo raro, 'todos me van a mirar'. En medio de los dinosaurios, eso me llamó la atención." },
+        new string[] { "Duki",    "Tomá. No hago favores pero acá tenés. Mi autógrafo." },
+        new string[] { "Duki",    "Ya está, bro. No sé nada más. Estoy inspirándome para componer un nuevo tema. No me interrumpas." },
+    };
+
+    private string[][] dialogoMessiCelular = new string[][]
+    {
+        new string[] { "Messi",   "Hola. Sí, soy yo. Tranquilo, no pasa nada. Igual esto es un despelote, eh. Y mirá que yo vi cosas raras." },
+        new string[] { "Jugador", "¿Escuchaste algo raro en el vagón?" },
+        new string[] { "Messi",   "Mirá, yo no hablo mucho pero escucho. Y acá hay alguien que no está actuando como los demás. Todos gritando, corriendo, y esta persona ni se inmutó. Como si ya supiera lo que iba a pasar." },
+        new string[] { "Jugador", "[Dar autógrafo]" },
+        new string[] { "Messi", "Ah, mirá vos, se lo llevo a los chicos. Te cuento lo que vi: cuando arrancó el subte, alguien tenía una sonrisita, no de nerviosa. Esa cara la conozco, es la del que ya sabe que ganó." },
+        new string[] { "Messi",   "No tengo nada para darte, salí con lo puesto. Pero te dije todo lo que vi." },
+        new string[] { "Messi",   "Listo, eso es todo lo que sé. Ojalá te sirva." },
+    };
+
     // ── INICIO ───────────────────────────────────────────────────────────────
 
     void Start()
@@ -309,7 +411,9 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoMessi()
     {
         personajeActual = "Messi";
-        dialogoActual   = esCaminoMate ? dialogoMessiMate : dialogoMessiPelota;
+        if (esCaminoCelular)   dialogoActual = dialogoMessiCelular;
+        else if (esCaminoMate) dialogoActual = dialogoMessiMate;
+        else                   dialogoActual = dialogoMessiPelota;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteMessiCharla);
         IniciarDialogo();
     }
@@ -317,7 +421,9 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoDuki()
     {
         personajeActual = "Duki";
-        dialogoActual   = esCaminoMate ? dialogoDukiMate : dialogoDukiPelota;
+        if (esCaminoCelular)   dialogoActual = dialogoDukiCelular;
+        else if (esCaminoMate) dialogoActual = dialogoDukiMate;
+        else                   dialogoActual = dialogoDukiPelota;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteDukiCharla);
         IniciarDialogo();
     }
@@ -325,7 +431,9 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoMilagros()
     {
         personajeActual = "Milagros";
-        dialogoActual   = esCaminoMate ? dialogoMilagrosMate : dialogoMilagrosPelota;
+        if (esCaminoCelular)   dialogoActual = dialogoMilagrosCelular;
+        else if (esCaminoMate) dialogoActual = dialogoMilagrosMate;
+        else                   dialogoActual = dialogoMilagrosPelota;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteMilagrosCharla);
         IniciarDialogo();
     }
@@ -333,7 +441,9 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoWanda()
     {
         personajeActual = "Wanda";
-        dialogoActual   = esCaminoMate ? dialogoWandaMate : dialogoWandaPelota;
+        if (esCaminoCelular)   dialogoActual = dialogoWandaCelular;
+        else if (esCaminoMate) dialogoActual = dialogoWandaMate;
+        else                   dialogoActual = dialogoWandaPelota;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteWandaCharla);
         IniciarDialogo();
     }
@@ -341,7 +451,9 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoSusana()
     {
         personajeActual = "Susana";
-        dialogoActual   = esCaminoMate ? dialogoSusanaMate : dialogoSusanaPelota;
+        if (esCaminoCelular)   dialogoActual = dialogoSusanaCelular;
+        else if (esCaminoMate) dialogoActual = dialogoSusanaMate;
+        else                   dialogoActual = dialogoSusanaPelota;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteSusanaCharla);
         IniciarDialogo();
     }
@@ -349,7 +461,9 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoFrancella()
     {
         personajeActual = "Francella";
-        dialogoActual   = esCaminoMate ? dialogoFrancellaMate : dialogoFrancellaPelota;
+        if (esCaminoCelular)   dialogoActual = dialogoFrancellaCelular;
+        else if (esCaminoMate) dialogoActual = dialogoFrancellaMate;
+        else                   dialogoActual = dialogoFrancellaPelota;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteFrancellaCharla);
         IniciarDialogo();
     }
@@ -357,7 +471,9 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogoVagabundo()
     {
         personajeActual = "Vagabundo";
-        dialogoActual   = esCaminoMate ? dialogoVagabundoMate : dialogoVagabundoPelota;
+        if (esCaminoCelular)   dialogoActual = dialogoVagabundoCelular;
+        else if (esCaminoMate) dialogoActual = dialogoVagabundoMate;
+        else                   dialogoActual = dialogoVagabundoPelota;
         if (personajeDialogo != null) personajeDialogo.MostrarPersonaje(spriteVagabundoCharla);
         IniciarDialogo();
     }
@@ -425,8 +541,12 @@ public class DialogoManager : MonoBehaviour
         if (panelInventario != null) panelInventario.SetActive(false);
         if (panelDialogo != null)    panelDialogo.SetActive(true);
 
-        var correcto = esCaminoMate ? objetoCorrectoMate : objetoCorrectoPelota;
-        bool acerto  = correcto.ContainsKey(personajeActual) && correcto[personajeActual] == idObjeto;
+        Dictionary<string, string> correcto;
+        if (esCaminoCelular)   correcto = objetoCorrectoCelular;
+        else if (esCaminoMate) correcto = objetoCorrectoMate;
+        else                   correcto = objetoCorrectoPelota;
+
+        bool acerto = correcto.ContainsKey(personajeActual) && correcto[personajeActual] == idObjeto;
 
         if (acerto)
         {
@@ -435,7 +555,9 @@ public class DialogoManager : MonoBehaviour
         else
         {
             string msg = "No, esto no me sirve. ¿Tenés otra cosa?";
-            if (esCaminoMate && mensajeEquivocadoMate.ContainsKey(personajeActual))
+            if (esCaminoCelular && mensajeEquivocadoCelular.ContainsKey(personajeActual))
+                msg = mensajeEquivocadoCelular[personajeActual];
+            else if (esCaminoMate && mensajeEquivocadoMate.ContainsKey(personajeActual))
                 msg = mensajeEquivocadoMate[personajeActual];
             textNombre.text  = personajeActual;
             textDialogo.text = msg;
@@ -463,9 +585,10 @@ public class DialogoManager : MonoBehaviour
 
     void DarObjeto()
     {
-        Debug.Log("DarObjeto: esCaminoMate=" + esCaminoMate + " personaje=" + personajeActual + " inventario=" + InventarioManager.instancia);
-        if (esCaminoMate) DarObjetoMate();
-        else              DarObjetoPelota();
+        Debug.Log("DarObjeto: celular=" + esCaminoCelular + " mate=" + esCaminoMate + " personaje=" + personajeActual);
+        if (esCaminoCelular)   DarObjetoCelular();
+        else if (esCaminoMate) DarObjetoMate();
+        else                   DarObjetoPelota();
         SiguienteLinea();
     }
 
@@ -579,24 +702,79 @@ public class DialogoManager : MonoBehaviour
         }
     }
 
-   void CerrarDialogo()
-{
-    Debug.Log("CerrarDialogo ejecutado");
-    if (panelInventario != null) panelInventario.SetActive(false);
-    if (InventarioManager.instancia != null)
+    void DarObjetoCelular()
     {
-        InventarioManager.instancia.modoSeleccion    = false;
-        InventarioManager.instancia.alClickearObjeto = null;
+        switch (personajeActual)
+        {
+            case "Milagros":
+                if (personajeDialogo != null && spriteMilagrosContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteMilagrosContento);
+                InventarioManager.instancia?.QuitarObjeto("celular");
+                InventarioManager.instancia?.AgregarObjeto("screenshots");
+                Anotador.AgregarPista("Milagros", "Vi a alguien con el control antes de subir. Lo guardó al ser observada. Una señora coqueta, bien vestida.");
+                break;
+            case "Wanda":
+                if (personajeDialogo != null && spriteWandaContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteWandaContento);
+                InventarioManager.instancia?.QuitarObjeto("screenshots");
+                InventarioManager.instancia?.AgregarObjeto("cartera");
+                Anotador.AgregarPista("Wanda", "Se para como en un escenario. Alguien del espectáculo con experiencia, no es novata.");
+                break;
+            case "Susana":
+                if (personajeDialogo != null && spriteSusanaContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteSusanaContento);
+                InventarioManager.instancia?.QuitarObjeto("cartera");
+                InventarioManager.instancia?.AgregarObjeto("martinFierro");
+                Anotador.AgregarPista("Susana", "Cuando encontraron el control, miró a los demás en vez de mirarlo. Joven, del ambiente artístico.");
+                break;
+            case "Francella":
+                if (personajeDialogo != null && spriteFrancellaContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteFrancellaContento);
+                InventarioManager.instancia?.QuitarObjeto("martinFierro");
+                InventarioManager.instancia?.AgregarObjeto("mate");
+                Anotador.AgregarPista("Francella", "Acariciaba el control con el pulgar. Tenía brillos en la ropa.");
+                break;
+            case "Vagabundo":
+                if (personajeDialogo != null && spriteVagabundoContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteVagabundoContento);
+                InventarioManager.instancia?.QuitarObjeto("mate");
+                InventarioManager.instancia?.AgregarObjeto("cigarrillo");
+                Anotador.AgregarPista("Vagabundo", "Miró a los demás antes de mirar el control. Tenía tatuajes.");
+                break;
+            case "Duki":
+                if (personajeDialogo != null && spriteDukiContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteDukiContento);
+                InventarioManager.instancia?.QuitarObjeto("cigarrillo");
+                InventarioManager.instancia?.AgregarObjeto("autografo");
+                Anotador.AgregarPista("Duki", "Era una mujer. Dijo 'todos me van a mirar' en medio del caos.");
+                break;
+            case "Messi":
+                if (personajeDialogo != null && spriteMessiContento != null)
+                    personajeDialogo.MostrarPersonaje(spriteMessiContento);
+                InventarioManager.instancia?.QuitarObjeto("autografo");
+                Anotador.AgregarPista("Messi", "Tenía una sonrisita cuando arrancó el subte. La cara del que ya sabe que ganó.");
+                break;
+        }
     }
-    if (hud != null)             { hud.SetActive(true); Debug.Log("HUD activado"); }
-    if (personajeDialogo != null) { personajeDialogo.OcultarPersonaje(); Debug.Log("Personaje ocultado"); }
-    if (panelDialogo != null)    panelDialogo.SetActive(false);
-    if (fondoDialogos != null)   { fondoDialogos.SetActive(false); Debug.Log("FondoDialogos desactivado"); }
-    if (fondoPrincipal != null)  { fondoPrincipal.SetActive(true); Debug.Log("FondoPrincipal activado"); }
-    if (botonDarObjeto != null)  botonDarObjeto.gameObject.SetActive(false);
-    if (botonSiguiente != null)  botonSiguiente.gameObject.SetActive(true);
-    if (personajesGrupo != null) { personajesGrupo.SetActive(true); Debug.Log("PersonajesGrupo activado"); }
-}
+
+    void CerrarDialogo()
+    {
+        Debug.Log("CerrarDialogo ejecutado");
+        if (panelInventario != null) panelInventario.SetActive(false);
+        if (InventarioManager.instancia != null)
+        {
+            InventarioManager.instancia.modoSeleccion    = false;
+            InventarioManager.instancia.alClickearObjeto = null;
+        }
+        if (hud != null)              { hud.SetActive(true); Debug.Log("HUD activado"); }
+        if (personajeDialogo != null) { personajeDialogo.OcultarPersonaje(); Debug.Log("Personaje ocultado"); }
+        if (panelDialogo != null)     panelDialogo.SetActive(false);
+        if (fondoDialogos != null)    { fondoDialogos.SetActive(false); Debug.Log("FondoDialogos desactivado"); }
+        if (fondoPrincipal != null)   { fondoPrincipal.SetActive(true); Debug.Log("FondoPrincipal activado"); }
+        if (botonDarObjeto != null)   botonDarObjeto.gameObject.SetActive(false);
+        if (botonSiguiente != null)   botonSiguiente.gameObject.SetActive(true);
+        if (personajesGrupo != null)  { personajesGrupo.SetActive(true); Debug.Log("PersonajesGrupo activado"); }
+    }
 
     public void CancelarSeleccionInventario()
     {

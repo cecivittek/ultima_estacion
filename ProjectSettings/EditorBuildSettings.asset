@@ -38,5 +38,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Acusacion mate.unity
     guid: 30c255893fe45d74d8cef26820ef03bc
+  - enabled: 1
+    path: Assets/escena_victoria_celular.unity
+    guid: 2fe7b987bd9163548a4d99e261b21afb
+  - enabled: 1
+    path: Assets/Acusacion Celular.unity
+    guid: 46b25963309d323419fd54444ab6e312
+  - enabled: 1
+    path: Assets/ComoJugar.unity
+    guid: 54cccb538ca083440890841a53af9bf8
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

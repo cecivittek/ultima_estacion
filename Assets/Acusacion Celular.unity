@@ -1737,8 +1737,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 826028135}
+  - component: {fileID: 826028133}
   - component: {fileID: 826028136}
-  - component: {fileID: 826028137}
   m_Layer: 0
   m_Name: GameManagerAcusacion
   m_TagString: Untagged
@@ -1756,10 +1756,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26f56f8753a62dd4598181cddffc2d7b, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AcusacionManager
-  esCaminoMate: 1
-  esCaminoCelular: 0
+  esCaminoMate: 0
+  esCaminoCelular: 1
   panelResultado: {fileID: 1338592039}
   textoResultado: {fileID: 943464219}
   colorNormal: {r: 0.05, g: 0.08, b: 0.22352941, a: 1}
@@ -1791,25 +1791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05571d320b08e294d8b683d4b41d0ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IraEscenaAcusacion
---- !u!114 &826028137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826028132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26f56f8753a62dd4598181cddffc2d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AcusacionManager
-  culpable: Duki
-  escenaVictoria: Victoria mate
-  escenaDerrota: escena_derrota
-  panelResultado: {fileID: 1338592039}
-  textoResultado: {fileID: 943464219}
-  colorNormal: {r: 0.05, g: 0.08, b: 0.22, a: 1}
-  colorSeleccionado: {r: 0.2, g: 0.8, b: 0.2, a: 1}
 --- !u!1 &848131829
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,7 +3099,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 826028137}
+      - m_Target: {fileID: 826028133}
         m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
         m_MethodName: VolverAlSubte
         m_Mode: 1
@@ -3338,19 +3319,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 73be802f926aeec42936b0d7499143f4, type: 3}
-        m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 269236859}
+        m_TargetAssemblyTypeName: clicks, Assembly-CSharp
+        m_MethodName: ReproducirClic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 826028137}
+      - m_Target: {fileID: 826028133}
         m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
         m_MethodName: HacerAcusacion
         m_Mode: 1
