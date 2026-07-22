@@ -3100,7 +3100,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 826028137}
         m_TargetAssemblyTypeName: AcusacionManager, Assembly-CSharp
         m_MethodName: VolverAlSubte
         m_Mode: 1
