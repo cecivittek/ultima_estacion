@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/MenuInicio.unity
     guid: 3c33f5935d74c4e4c8e4f9af4f83e865
   - enabled: 1
+    path: Assets/ComoJugar.unity
+    guid: 54cccb538ca083440890841a53af9bf8
+  - enabled: 1
     path: Assets/Intro.unity
     guid: 139716d5752402d419f7a87ff34feba1
   - enabled: 1
@@ -22,30 +25,27 @@ EditorBuildSettings:
     guid: 104e441747140dc499c2a7ec0645ddae
   - enabled: 1
     path: Assets/ultima_estacion_celular.unity
-    guid: badc0027ca312224caa14cd0bb406c22
+    guid: 7d8c22f8fb4e94c1b84de9e70e851eec
   - enabled: 1
     path: Assets/Acusacion.unity
     guid: d3ac3e4b8e9714f82ba1cc5a9063bed5
   - enabled: 1
-    path: Assets/escena_victoria.unity
-    guid: 5e7975bc21c2b7441846abc3700d6747
-  - enabled: 1
-    path: Assets/Victoria mate.unity
-    guid: 84e466fd05d20d1439c25b91187e004f
-  - enabled: 1
-    path: Assets/escena_derrota.unity
-    guid: d1def058675cbd44fa31d34b8c57f9ec
-  - enabled: 1
     path: Assets/Acusacion mate.unity
     guid: 30c255893fe45d74d8cef26820ef03bc
-  - enabled: 1
-    path: Assets/escena_victoria_celular.unity
-    guid: 2fe7b987bd9163548a4d99e261b21afb
   - enabled: 1
     path: Assets/Acusacion Celular.unity
     guid: 46b25963309d323419fd54444ab6e312
   - enabled: 1
-    path: Assets/ComoJugar.unity
-    guid: 54cccb538ca083440890841a53af9bf8
+    path: Assets/escena_derrota.unity
+    guid: d1def058675cbd44fa31d34b8c57f9ec
+  - enabled: 1
+    path: Assets/Victoria mate.unity
+    guid: 84e466fd05d20d1439c25b91187e004f
+  - enabled: 1
+    path: Assets/escena_victoria_celular.unity
+    guid: 2fe7b987bd9163548a4d99e261b21afb
+  - enabled: 1
+    path: Assets/escena_victoria.unity
+    guid: 5e7975bc21c2b7441846abc3700d6747
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
